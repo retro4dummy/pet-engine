@@ -1,10 +1,19 @@
 {
   "id": "kronik_lembah_kabut",
-  "title": "KRONIK LEMBAH KABUT",
-  "description": "Petualangan 6 bab di Lembah Orva dengan 5 statistik utama, latar dunia mendalam, dan percabangan menuju 5 True Endings sejak pertengahan cerita.",
+  "title": {
+    "id": "KRONIK LEMBAH KABUT",
+    "en": "CHRONICLES OF THE MIST VALLEY"
+  },
+  "description": {
+    "id": "Petualangan 6 bab di Lembah Orva dengan 5 statistik utama, latar dunia mendalam, dan percabangan menuju 5 True Endings sejak pertengahan cerita.",
+    "en": "A 6-chapter adventure in Orva Valley featuring 5 core stats, rich world lore, and early ending branches starting mid-story."
+  },
   "initialState": {
     "node": "b1_01",
-    "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara",
+    "chapter": {
+      "id": "Bab 1: Gerbang Kabut & Bayangan Menara",
+      "en": "Chapter 1: Gate of Mist & Tower Shadow"
+    },
     "stats": {
       "hp": 10,
       "wit": 2,
@@ -20,36 +29,75 @@
   },
   "endings": {
     "end_sanctuary_guide": {
-      "title": "Ending I: Penunjuk Jalan ke Suaka",
-      "summary": "Kau memandu para penyintas menembus kabut melalui jalur aman dan membuka harapan baru di luar Lembah Orva."
+      "title": {
+        "id": "Ending I: Penunjuk Jalan ke Suaka",
+        "en": "Ending I: Guide to the Safe Haven"
+      },
+      "summary": {
+        "id": "Kau memandu para penyintas menembus kabut melalui jalur aman dan membuka harapan baru di luar Lembah Orva.",
+        "en": "You guide survivors through safe high ground past the mist, opening a new hope beyond Orva Valley."
+      }
     },
     "end_vanished_echo": {
-      "title": "Ending II: Gema di Dalam Kabut",
-      "summary": "Kau menelusuri anomali kabut dan ingatan lembah hingga menyatu dengan rahasia Orva tanpa meninggalkan jejak."
+      "title": {
+        "id": "Ending II: Gema di Dalam Kabut",
+        "en": "Ending II: Echo in the Mist"
+      },
+      "summary": {
+        "id": "Kau menelusuri anomali kabut dan ingatan lembah hingga menyatu dengan rahasia Orva tanpa meninggalkan jejak.",
+        "en": "You delve into the mist anomaly and valley memories until you become part of Orva's enigma without a trace."
+      }
     },
     "end_watchkeeper": {
-      "title": "Ending III: Penjaga Menara Baru",
-      "summary": "Kau menghidupkan kembali mekanisme Menara Jam Orva dan memikul tugas menjaga keseimbangan lembah."
+      "title": {
+        "id": "Ending III: Penjaga Menara Baru",
+        "en": "Ending III: The New Watchkeeper"
+      },
+      "summary": {
+        "id": "Kau menghidupkan kembali mekanisme Menara Jam Orva dan memikul tugas menjaga keseimbangan lembah.",
+        "en": "You restart the Orva Clocktower mechanism and take up the duty of guarding the valley's balance."
+      }
     },
     "end_truth_carrier": {
-      "title": "Ending IV: Pembawa Arsip Kebenaran",
-      "summary": "Kau membawa bukti catatan dan sandi pengawas keluar dari lembah untuk mengungkap kebenaran di balik kabut."
+      "title": {
+        "id": "Ending IV: Pembawa Arsip Kebenaran",
+        "en": "Ending IV: Bearer of the Archive"
+      },
+      "summary": {
+        "id": "Kau membawa bukti catatan dan sandi pengawas keluar dari lembah untuk mengungkap kebenaran di balik kabut.",
+        "en": "You carry archive records and the warden cipher out of the valley to reveal the truth behind the mist."
+      }
     },
     "end_shadow_sovereign": {
-      "title": "Ending V: Penguasa di Balik Kabut",
-      "summary": "Kau menguasai inti mekanisme lembah dengan harga mahal yang mengubah dirimu selamanya."
+      "title": {
+        "id": "Ending V: Penguasa di Balik Kabut",
+        "en": "Ending V: Sovereign Behind the Mist"
+      },
+      "summary": {
+        "id": "Kau menguasai inti mekanisme lembah dengan harga mahal yang mengubah dirimu selamanya.",
+        "en": "You seize control of the valley's core mechanism at a heavy price that transforms you forever."
+      }
     }
   },
   "nodes": {
     "b1_01": {
-      "text": "Angin pegunungan membawa bau besi basah dan abu dingin saat kau tiba di ambang Lembah Orva. Dahulu lembah ini hidup dari penempaan logam murni, jalur kanal beroda air, dan jadwal pergerakan yang teratur. Kini Kabut Kelabu merayap pelan—mengaburkan arah mata angin, meredam suara langkah, dan membuat ingatan terasa kabur jika terlalu lama dihirup.\n\nDi punggung bukit utara yang menjulang di balik kabut, siluet Menara Jam Orva berdiri kaku. Menara itu bukan sekadar penunjuk waktu, melainkan pusat pengatur katup tekanan uap dan lonceng tanda kabut atau banjir bagi seluruh lembah. Jarumnya telah membeku, tepat seperti pesan terenkripsi dari guru pencatatmu—arsitek muda yang menghilang bersama ekspedisi perintis—sebelum kau menyandang tugas rahasia sebagai kurir penyelidik dengan Segel Tembaga di saku mantelmu.\n\nDi depanmu, gerbang batu retak terbelah menjadi tiga arah: pos jaga lama di kiri, jalur menyelinap di balik dinding runtuhan di tengah, dan jalan setapak menurun ke arah dengung roda air di kanan.",
+      "text": {
+        "id": "Angin pegunungan membawa bau besi basah dan abu dingin saat kau tiba di ambang Lembah Orva. Dahulu lembah ini hidup dari penempaan logam murni, jalur kanal beroda air, dan jadwal pergerakan yang teratur. Kini Kabut Kelabu merayap pelan—mengaburkan arah mata angin, meredam suara langkah, dan membuat ingatan terasa kabur jika terlalu lama dihirup.\n\nDi punggung bukit utara yang menjulang di balik kabut, siluet Menara Jam Orva berdiri kaku. Menara itu bukan sekadar penunjuk waktu, melainkan pusat pengatur katup tekanan uap dan lonceng tanda kabut atau banjir bagi seluruh lembah. Jarumnya telah membeku, tepat seperti pesan terenkripsi dari guru pencatatmu—arsitek muda yang menghilang bersama ekspedisi perintis—sebelum kau menyandang tugas rahasia sebagai kurir penyelidik dengan Segel Tembaga di saku mantelmu.\n\nDi depanmu, gerbang batu retak terbelah menjadi tiga arah: pos jaga lama di kiri, jalur menyelinap di balik dinding runtuhan di tengah, dan jalan setapak menurun ke arah dengung roda air di kanan.",
+        "en": "Mountain wind carries wet iron and cold ash as you reach the threshold of Orva Valley. Once this valley thrived on pure metal forging, waterwheel canals, and disciplined schedules. Now the Grey Mist creeps slowly—blurring bearings, muting footsteps, and clouding memory if breathed too long.\n\nAlong the northern ridge rising behind the mist, the silhouette of Orva Clocktower stands rigid. It is no mere timepiece, but the regulator of steam pressure valves and warning bells for mist or flood across the valley. Its hands have frozen—matching the encrypted dispatch from your missing archivist mentor, a young architect lost with the pioneer expedition—before you took up your covert courier inquiry with the Brass Seal in your coat pocket.\n\nAhead, a cracked stone gate splits three ways: an old guard post on the left, a stealth path behind collapsed walls in the center, and a rocky slope descending toward a humming waterwheel on the right."
+      },
       "choices": [
         {
-          "text": "> Memeriksa pos jaga tua di sisi kiri",
+          "text": {
+            "id": "> Memeriksa pos jaga tua di sisi kiri",
+            "en": "> Inspect the old guard post on the left"
+          },
           "next": "b1_02"
         },
         {
-          "text": "> Menyusuri celah bayangan di tengah reruntuhan",
+          "text": {
+            "id": "> Menyusuri celah bayangan di tengah reruntuhan",
+            "en": "> Slip through the shadow gap amidst the ruins"
+          },
           "next": "b1_03",
           "skillCheck": {
             "stat": "agi",
@@ -62,20 +110,29 @@
           }
         },
         {
-          "text": "> Menuruni lereng berbatu menuju suara roda air",
+          "text": {
+            "id": "> Menuruni lereng berbatu menuju suara roda air",
+            "en": "> Descend the rocky slope toward the waterwheel sound"
+          },
           "next": "b1_06"
         }
       ]
     },
     "b1_02": {
-      "text": "Pintu kayu pos jaga bergeser pelan dengan decit kering. Di dalam ruangan sempit berdebu itu, meja kayu lapuk menopang pelita padam, papan jadwal pergeseran penjaga menara, dan sebuah laci besi yang setengah terbuka.\n\nJadwal terakhir terhenti tiga minggu lalu—hari yang sama ketika lonceng Menara Jam Orva berhenti berdentang. Di dasar laci, jari-jarimu menyentuh Kunci Kuningan berat berukir roda gigi, serta secarik log yang menyebut bahwa seorang pengamat sempat melihat bayangan bergerak di dekat kanal sebelum kabut menebal.",
+      "text": {
+        "id": "Pintu kayu pos jaga bergeser pelan dengan decit kering. Di dalam ruangan sempit berdebu itu, meja kayu lapuk menopang pelita padam, papan jadwal pergeseran penjaga menara, dan sebuah laci besi yang setengah terbuka.\n\nJadwal terakhir terhenti tiga minggu lalu—hari yang sama ketika lonceng Menara Jam Orva berhenti berdentang. Di dasar laci, jari-jarimu menyentuh Kunci Kuningan berat berukir roda gigi, serta secarik log yang menyebut bahwa seorang pengamat sempat melihat bayangan bergerak di dekat kanal sebelum kabut menebal.",
+        "en": "The wooden guard post door shifts with a dry creak. Inside the cramped, dusty room, a weathered table holds a cold lamp, a tower guard shift board, and a half-open iron drawer.\n\nThe final shift entry stops three weeks ago—the very day Orva Clocktower's bell fell silent. At the bottom of the drawer, your fingers find a heavy Brass Key etched with gears, along with a log slip noting a watcher spotted a moving shadow near the canal before the mist thickened."
+      },
       "onEnter": {
         "addItem": "Kunci Kuningan",
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Membaca ulang catatan jadwal sambil mengamati jendela belakang",
+          "text": {
+            "id": "> Membaca ulang catatan jadwal sambil mengamati jendela belakang",
+            "en": "> Reread the schedule notes while checking the rear window"
+          },
           "next": "b1_07",
           "skillCheck": {
             "stat": "wit",
@@ -85,62 +142,98 @@
           }
         },
         {
-          "text": "> Keluar dan menyusuri sisi luar menuju tepi jurang/kanal",
+          "text": {
+            "id": "> Keluar dan menyusuri sisi luar menuju tepi jurang/kanal",
+            "en": "> Step outside and skirt along toward the canal edge"
+          },
           "next": "b1_09"
         }
       ]
     },
     "b1_03": {
-      "text": "Kabut menggulung pekat di sela dinding batu yang hancur. Kau mencoba melangkah tanpa suara, tetapi pecahan genting bergeser di bawah sepatumu dan memicu pegas jebakan kawat tua yang disembunyikan di balik semak duri.\n\nSayatan tajam menggores lengan dan betismu sebelum kau berhasil menarik diri menjauh (-2 HP). Meski terluka, kau melihat bekas tapak sepatu yang baru saja melewati celah sempit menuju arah bawah lembah.",
+      "text": {
+        "id": "Kabut menggulung pekat di sela dinding batu yang hancur. Kau mencoba melangkah tanpa suara, tetapi pecahan genting bergeser di bawah sepatumu dan memicu pegas jebakan kawat tua yang disembunyikan di balik semak duri.\n\nSayatan tajam menggores lengan dan betismu sebelum kau berhasil menarik diri menjauh (-2 HP). Meski terluka, kau melihat bekas tapak sepatu yang baru saja melewati celah sempit menuju arah bawah lembah.",
+        "en": "Mist rolls thick through shattered stone walls. You try to move silently, but a loose tile shifts under your boot and trips an old wire-spring snare hidden behind thorn brush.\n\nA sharp cut grazes your arm and calf before you pull back (-2 HP). Despite the wound, you spot fresh boot prints passing through a narrow gap toward the lower valley."
+      },
       "onEnter": {
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Menekan luka dan terus melangkah ke arah bekas jejak",
+          "text": {
+            "id": "> Menekan luka dan terus melangkah ke arah bekas jejak",
+            "en": "> Press the wound and follow the tracks ahead"
+          },
           "next": "b1_09"
         },
         {
-          "text": "> Berhenti sejenak menenangkan napas dan memeriksa sekitar",
+          "text": {
+            "id": "> Berhenti sejenak menenangkan napas dan memeriksa sekitar",
+            "en": "> Pause to steady your breath and check the surroundings"
+          },
           "next": "b1_07"
         }
       ]
     },
     "b1_04": {
-      "text": "Dengan kelincahan terlatih, kau meluncur melewati celah sempit dan melompati kawat pegas tanpa menimbulkan bunyi sedikit pun. Di balik bongkahan batu penahan, kau menemukan sebuah kantong kecil berisi Botol Eliksir penenang luka serta catatan sketsa katup uap.\n\nSketsa itu menunjukkan bagaimana tekanan uap dari kanal bawah terhubung ke ruang mesin Menara Jam Orva—sebuah petunjuk penting tentang mengapa menara tersebut membeku.",
+      "text": {
+        "id": "Dengan kelincahan terlatih, kau meluncur melewati celah sempit dan melompati kawat pegas tanpa menimbulkan bunyi sedikit pun. Di balik bongkahan batu penahan, kau menemukan sebuah kantong kecil berisi Botol Eliksir penenang luka serta catatan sketsa katup uap.\n\nSketsa itu menunjukkan bagaimana tekanan uap dari kanal bawah terhubung ke ruang mesin Menara Jam Orva—sebuah petunjuk penting tentang mengapa menara tersebut membeku.",
+        "en": "With practiced agility, you slip through the narrow gap and clear the tripwire without a sound. Behind a retaining boulder, you find a small pouch holding a soothing Elixir Vial and a steam-valve sketch.\n\nThe sketch shows how steam pressure from the lower canal links to Orva Clocktower's machinery—a vital clue to why the tower froze."
+      },
       "onEnter": {
         "addItem": "Botol Eliksir",
         "setFlags": { "found_warden_trail": true, "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan perjalanan menuju jalur tepi lembah",
+          "text": {
+            "id": "> Melanjutkan perjalanan menuju jalur tepi lembah",
+            "en": "> Continue toward the valley rim path"
+          },
           "next": "b1_09"
         },
         {
-          "text": "> Mempelajari sketsa katup sebelum melangkah lagi",
+          "text": {
+            "id": "> Mempelajari sketsa katup sebelum melangkah lagi",
+            "en": "> Study the valve sketch before moving on"
+          },
           "next": "b1_08"
         }
       ]
     },
     "b1_05": {
-      "text": "Kabut tebal mengaburkan jarak pandang tepat saat kakimu menyentuh pijakan miring. Kau tergelincir dan membentur batu tajam sebelum sempat menyeimbangkan tubuh (-2 HP).\n\nDi balik rasa nyeri dan napas yang memburu, kau menyadari kabut di titik ini terasa lebih dingin dari udara pegunungan biasa—seolah membawa sisa embun dari kedalaman lembah.",
+      "text": {
+        "id": "Kabut tebal mengaburkan jarak pandang tepat saat kakimu menyentuh pijakan miring. Kau tergelincir dan membentur batu tajam sebelum sempat menyeimbangkan tubuh (-2 HP).\n\nDi balik rasa nyeri dan napas yang memburu, kau menyadari kabut di titik ini terasa lebih dingin dari udara pegunungan biasa—seolah membawa sisa embun dari kedalaman lembah.",
+        "en": "Thick mist blurs your sight just as your foot hits a slanted slab. You slip and strike sharp rock before regaining balance (-2 HP).\n\nPast the ache and ragged breath, you notice the mist here feels colder than ordinary mountain air—as if carrying dampness from deep within the valley."
+      },
       "choices": [
         {
-          "text": "> Bangkit pelan dan bergerak menuju arah suara air",
+          "text": {
+            "id": "> Bangkit pelan dan bergerak menuju arah suara air",
+            "en": "> Rise slowly and head toward the sound of water"
+          },
           "next": "b1_09"
         },
         {
-          "text": "> Mengamati pola kabut di sekitar sebelum memilih arah",
+          "text": {
+            "id": "> Mengamati pola kabut di sekitar sebelum memilih arah",
+            "en": "> Observe the mist currents before choosing a route"
+          },
           "next": "b1_07"
         }
       ]
     },
     "b1_06": {
-      "text": "Lereng berbatu menuruni tebing kecil menuju suara gemuruh air yang bercampur dengung logam berirama lambat. Dari ketinggian ini, tampak jelas bagaimana jalur air lembah berliku menuju sumbatan puing dan roda kayu besar yang berputar tersendat.\n\nDi dekat tepi jalur, sebuah peti perkakas lapangan tergeletak setengah tertimbun lumut, sementara dari balik tikungan batu terdengar suara batuk tertahan seseorang yang bersembunyi.",
+      "text": {
+        "id": "Lereng berbatu menuruni tebing kecil menuju suara gemuruh air yang bercampur dengung logam berirama lambat. Dari ketinggian ini, tampak jelas bagaimana jalur air lembah berliku menuju sumbatan puing dan roda kayu besar yang berputar tersendat.\n\nDi dekat tepi jalur, sebuah peti perkakas lapangan tergeletak setengah tertimbun lumut, sementara dari balik tikungan batu terdengar suara batuk tertahan seseorang yang bersembunyi.",
+        "en": "The rocky slope drops down a low bluff toward rushing water mixed with a slow metallic hum. From here, you see how the valley waterway winds toward debris jams and a large wooden wheel turning in fits and starts.\n\nNear the path edge lies a moss-half-buried field crate, while from behind a stone bend comes a muffled cough of someone hiding."
+      },
       "choices": [
         {
-          "text": "> Mendekati suara batuk dengan sikap terbuka dan tenang",
+          "text": {
+            "id": "> Mendekati suara batuk dengan sikap terbuka dan tenang",
+            "en": "> Approach the cough with an open, calm manner"
+          },
           "next": "b1_10",
           "skillCheck": {
             "stat": "cha",
@@ -153,75 +246,120 @@
           }
         },
         {
-          "text": "> Memeriksa peti perkakas sebelum menyapa siapa pun",
+          "text": {
+            "id": "> Memeriksa peti perkakas sebelum menyapa siapa pun",
+            "en": "> Check the field crate before calling out to anyone"
+          },
           "next": "b1_08"
         }
       ]
     },
     "b1_07": {
-      "text": "Kau menyalakan Lentera Minyak dengan nyala kecil yang terjaga agar tidak menarik perhatian terlalu jauh. Di bawah cahaya temaram itu, guratan pada dinding dan batu penanda menunjukkan bahwa Lembah Orva pernah memiliki sistem peringatan dini setiap kali kabut pekat naik dari dasar cekungan.\n\nKini sistem itu bisu. Tanpa lonceng penanda dan katup tekanan yang bekerja, siapa pun yang berada di dalam lembah kehilangan patokan waktu maupun arah.",
+      "text": {
+        "id": "Kau menyalakan Lentera Minyak dengan nyala kecil yang terjaga agar tidak menarik perhatian terlalu jauh. Di bawah cahaya temaram itu, guratan pada dinding dan batu penanda menunjukkan bahwa Lembah Orva pernah memiliki sistem peringatan dini setiap kali kabut pekat naik dari dasar cekungan.\n\nKini sistem itu bisu. Tanpa lonceng penanda dan katup tekanan yang bekerja, siapa pun yang berada di dalam lembah kehilangan patokan waktu maupun arah.",
+        "en": "You light the Oil Lantern with a low, shielded flame so it will not draw attention from afar. In its dim glow, carvings on walls and marker stones show Orva Valley once had an early-warning system whenever dense mist rose from the basin.\n\nNow the system is silent. Without warning bells or working pressure valves, anyone inside the valley loses both sense of time and bearing."
+      },
       "choices": [
         {
-          "text": "> Mengikatkan Segel Tembaga dengan aman lalu melangkah ke depan",
+          "text": {
+            "id": "> Mengikatkan Segel Tembaga dengan aman lalu melangkah ke depan",
+            "en": "> Secure the Brass Seal and step forward"
+          },
           "next": "b1_09"
         },
         {
-          "text": "> Mengintai ke arah bawah sebelum turun",
+          "text": {
+            "id": "> Mengintai ke arah bawah sebelum turun",
+            "en": "> Scout downward before descending"
+          },
           "next": "b1_11"
         }
       ]
     },
     "b1_08": {
-      "text": "Ketelitianmu membuahkan hasil. Pada sudut papan atau peti yang terabaikan, terukir tanda kecil berbentuk roda jam dan garis putus—sandi awal yang biasa dipakai para pencatat Menara Jam Orva untuk menandai jalur aman yang masih bisa dilewati.\n\nPengetahuan ini membuatmu lebih siap membaca tanda-tanda tersembunyi di sepanjang lembah.",
+      "text": {
+        "id": "Ketelitianmu membuahkan hasil. Pada sudut papan atau peti yang terabaikan, terukir tanda kecil berbentuk roda jam dan garis putus—sandi awal yang biasa dipakai para pencatat Menara Jam Orva untuk menandai jalur aman yang masih bisa dilewati.\n\nPengetahuan ini membuatmu lebih siap membaca tanda-tanda tersembunyi di sepanjang lembah.",
+        "en": "Your keen eye pays off. On the corner of a neglected board or crate is a small clock-gear mark and dashed line—an early cipher used by Orva Clocktower archivists to mark safe, passable routes.\n\nThis insight prepares you to spot hidden signs across the valley."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan menyusuri jalur menuju tepi kanal",
+          "text": {
+            "id": "> Melanjutkan menyusuri jalur menuju tepi kanal",
+            "en": "> Continue along the path toward the canal bank"
+          },
           "next": "b1_11"
         },
         {
-          "text": "> Menuju titik pertemuan jalur di bawah",
+          "text": {
+            "id": "> Menuju titik pertemuan jalur di bawah",
+            "en": "> Head to the trail junction below"
+          },
           "next": "b1_09"
         }
       ]
     },
     "b1_09": {
-      "text": "Jalur-jalur kecil di gerbang lembah perlahan menyatu di sebuah persimpangan berbatu yang menghadap ke arah kanal dan bayangan Menara Jam Orva di kejauhan. Kabut bergerak seperti napas lambat di antara pepohonan mati.\n\nDi sini, kau harus memutuskan apakah akan terus menyisir pinggiran jalur untuk mencari jejak penyintas atau langsung menuruni tebing menuju area roda air.",
+      "text": {
+        "id": "Jalur-jalur kecil di gerbang lembah perlahan menyatu di sebuah persimpangan berbatu yang menghadap ke arah kanal dan bayangan Menara Jam Orva di kejauhan. Kabut bergerak seperti napas lambat di antara pepohonan mati.\n\nDi sini, kau harus memutuskan apakah akan terus menyisir pinggiran jalur untuk mencari jejak penyintas atau langsung menuruni tebing menuju area roda air.",
+        "en": "Small paths at the valley gate gradually converge at a rocky crossroads facing the canal and the distant shadow of Orva Clocktower. Mist shifts like a slow breath among dead trees.\n\nHere you must decide whether to sweep the trail edges for survivor signs or head straight down toward the waterwheel."
+      },
       "choices": [
         {
-          "text": "> Menyisir pinggiran jalur untuk mencari tanda penyintas",
+          "text": {
+            "id": "> Menyisir pinggiran jalur untuk mencari tanda penyintas",
+            "en": "> Sweep the trail edges for signs of survivors"
+          },
           "next": "b1_10"
         },
         {
-          "text": "> Menuruni jalur batu menuju kawasan roda air",
+          "text": {
+            "id": "> Menuruni jalur batu menuju kawasan roda air",
+            "en": "> Take the stone path down toward the waterwheel area"
+          },
           "next": "b1_11"
         }
       ]
     },
     "b1_10": {
-      "text": "Dari balik batu besar yang tertutup lumut, muncul sosok bertudung kain kasar dengan wajah pucat bekas terpapar kabut. Ia memperkenalkan diri sebagai mantan pengawas jalur yang bertahan hidup di pinggir lembah, meski sorot matanya penuh kewaspadaan.\n\nMenurutnya, beberapa orang sempat mencoba mencari jalan keluar lewat terowongan lama setelah Menara Jam Orva membeku, namun kabut menelan rute biasa dan memaksa mereka berpencar. Ia bersedia berbagi informasi tentang kondisi jalur ke depan jika kau bersikap jujur dan jelas tentang tujuanmu.",
+      "text": {
+        "id": "Dari balik batu besar yang tertutup lumut, muncul sosok bertudung kain kasar dengan wajah pucat bekas terpapar kabut. Ia memperkenalkan diri sebagai mantan pengawas jalur yang bertahan hidup di pinggir lembah, meski sorot matanya penuh kewaspadaan.\n\nMenurutnya, beberapa orang sempat mencoba mencari jalan keluar lewat terowongan lama setelah Menara Jam Orva membeku, namun kabut menelan rute biasa dan memaksa mereka berpencar. Ia bersedia berbagi informasi tentang kondisi jalur ke depan jika kau bersikap jujur dan jelas tentang tujuanmu.",
+        "en": "From behind a moss-covered boulder steps a figure in a coarse cloth hood with a pale face worn by the mist. They introduce themselves as a former trail warden surviving along the valley rim, though their gaze remains wary.\n\nThey explain that a few tried escaping through old tunnels after Orva Clocktower froze, only for the mist to swallow familiar routes and scatter them. They are willing to share trail conditions ahead if you are honest and clear about your purpose."
+      },
       "onEnter": {
         "setFlags": { "met_stranger_guide": true }
       },
       "choices": [
         {
-          "text": "> Menanyakan rute teraman menuju kawasan roda air dan desa",
+          "text": {
+            "id": "> Menanyakan rute teraman menuju kawasan roda air dan desa",
+            "en": "> Ask for the safest route toward the waterwheel and village"
+          },
           "next": "b1_11"
         },
         {
-          "text": "> Menanyakan kabar ekspedisi dan arsitek Menara Jam Orva",
+          "text": {
+            "id": "> Menanyakan kabar ekspedisi dan arsitek Menara Jam Orva",
+            "en": "> Ask about the expedition and the Orva Clocktower architect"
+          },
           "next": "b1_12"
         }
       ]
     },
     "b1_11": {
-      "text": "Jalur menurun membawamu ke tepian kanal batu yang mengalir pelan di bawah dinding cadas. Air kanal tampak keruh oleh endapan abu, sementara roda kayu raksasa di bagian hilir berputar tersendat dengan suara berderak kering setiap kali tekanan air berubah.\n\nDi balik sisa tiang penyangga jembatan kecil, kabut menggantung rendah. Jika kau ingin terus ke arah hilir menuju kawasan desa dan reruntuhan kanal tanpa menarik perhatian terlalu besar, ketepatan langkah dan kewaspadaan terhadap sumbatan jalur sangat menentukan.",
+      "text": {
+        "id": "Jalur menurun membawamu ke tepian kanal batu yang mengalir pelan di bawah dinding cadas. Air kanal tampak keruh oleh endapan abu, sementara roda kayu raksasa di bagian hilir berputar tersendat dengan suara berderak kering setiap kali tekanan air berubah.\n\nDi balik sisa tiang penyangga jembatan kecil, kabut menggantung rendah. Jika kau ingin terus ke arah hilir menuju kawasan desa dan reruntuhan kanal tanpa menarik perhatian terlalu besar, ketepatan langkah dan kewaspadaan terhadap sumbatan jalur sangat menentukan.",
+        "en": "The descending path brings you to a stone canal bank flowing slowly beneath sheer rock walls. The canal water looks murky with ash silt, while a giant wooden wheel downstream turns in fits with a dry creak whenever water pressure shifts.\n\nBehind the remains of a small bridge support, mist hangs low. If you want to press downstream toward the village and canal ruins without drawing much attention, sure footing and awareness of path blockages are vital."
+      },
       "choices": [
         {
-          "text": "> Menyelinap menyusuri pinggir kanal yang teduh bayangan",
+          "text": {
+            "id": "> Menyelinap menyusuri pinggir kanal yang teduh bayangan",
+            "en": "> Slip along the shadow-lined canal edge"
+          },
           "next": "b1_13",
           "skillCheck": {
             "stat": "agi",
@@ -234,7 +372,10 @@
           }
         },
         {
-          "text": "> Memeriksa sumbatan kayu dan jalur air di dekat roda",
+          "text": {
+            "id": "> Memeriksa sumbatan kayu dan jalur air di dekat roda",
+            "en": "> Inspect the timber jam and waterway near the wheel"
+          },
           "next": "b1_14",
           "skillCheck": {
             "stat": "wit",
@@ -244,19 +385,28 @@
           }
         },
         {
-          "text": "> Melanjutkan langkah ke pos pemeriksaan dekat jembatan",
+          "text": {
+            "id": "> Melanjutkan langkah ke pos pemeriksaan dekat jembatan",
+            "en": "> Continue toward the checkpoint near the bridge"
+          },
           "next": "b1_16"
         }
       ]
     },
     "b1_12": {
-      "text": "Sang mantan pengawas jalur menatap ke arah punggung bukit utara tempat Menara Jam Orva berdiri kaku. Ia bercerita bahwa bertahun-tahun lalu, seorang arsitek muda bersama rombongan pencatat ekspedisi pernah memasang sensor tekanan dan lonceng peringatan di menara agar warga tahu kapan kabut pekat naik dari dasar lembah.\n\nKetika menara itu berhenti berdetak tiga minggu lalu, rombongan pencatat tersebut sedang memeriksa jalur pipa bawah tanah menuju lembah dalam. Sejak itu, sebagian orang mencoba menembus keluar lewat jalur lama, sementara yang lain menghilang ke dalam kabut. Segel Tembaga yang kau bawa membuat sang pengawas yakin bahwa kedatanganmu bukan sekadar kebetulan.",
+      "text": {
+        "id": "Sang mantan pengawas jalur menatap ke arah punggung bukit utara tempat Menara Jam Orva berdiri kaku. Ia bercerita bahwa bertahun-tahun lalu, seorang arsitek muda bersama rombongan pencatat ekspedisi pernah memasang sensor tekanan dan lonceng peringatan di menara agar warga tahu kapan kabut pekat naik dari dasar lembah.\n\nKetika menara itu berhenti berdetak tiga minggu lalu, rombongan pencatat tersebut sedang memeriksa jalur pipa bawah tanah menuju lembah dalam. Sejak itu, sebagian orang mencoba menembus keluar lewat jalur lama, sementara yang lain menghilang ke dalam kabut. Segel Tembaga yang kau bawa membuat sang pengawas yakin bahwa kedatanganmu bukan sekadar kebetulan.",
+        "en": "The former trail warden gazes toward the northern ridge where Orva Clocktower stands rigid. They recount that years ago, a young architect and a pioneer archivist expedition installed pressure sensors and warning bells on the tower so villagers would know when thick mist rose from the valley floor.\n\nWhen the tower stopped ticking three weeks ago, that archivist party was inspecting underground pipes toward the deep valley. Since then, some have tried breaking out via old trails while others vanished into the mist. The Brass Seal you carry convinces the warden your arrival is no coincidence."
+      },
       "onEnter": {
         "setFlags": { "found_warden_trail": true, "met_stranger_guide": true }
       },
       "choices": [
         {
-          "text": "> Memintanya menunjukkan tanda jalur aman menuju Bab 2",
+          "text": {
+            "id": "> Memintanya menunjukkan tanda jalur aman menuju Bab 2",
+            "en": "> Ask them to show safe-route signs toward Chapter 2"
+          },
           "next": "b1_14",
           "skillCheck": {
             "stat": "cha",
@@ -266,16 +416,25 @@
           }
         },
         {
-          "text": "> Berpamitan dan bergerak menuju jalur jembatan lembah",
+          "text": {
+            "id": "> Berpamitan dan bergerak menuju jalur jembatan lembah",
+            "en": "> Take your leave and head toward the valley bridge path"
+          },
           "next": "b1_16"
         }
       ]
     },
     "b1_13": {
-      "text": "Kabut bergulung rapat di sepanjang tepian kanal, menyamarkan batas antara batu pijakan yang kokoh dan lumut basah yang licin. Kau menjaga napas tetap teratur agar langkahmu tidak terdengar oleh siapa pun yang mungkin mengawasi dari balik reruntuhan.\n\nDari kejauhan, dentuman pelan dari arah menara dan desisan uap lemah terdengar seperti bisikan mekanis yang terputus-putus.",
+      "text": {
+        "id": "Kabut bergulung rapat di sepanjang tepian kanal, menyamarkan batas antara batu pijakan yang kokoh dan lumut basah yang licin. Kau menjaga napas tetap teratur agar langkahmu tidak terdengar oleh siapa pun yang mungkin mengawasi dari balik reruntuhan.\n\nDari kejauhan, dentuman pelan dari arah menara dan desisan uap lemah terdengar seperti bisikan mekanis yang terputus-putus.",
+        "en": "Mist rolls thick along the canal bank, blurring the line between solid stone footing and slick wet moss. You keep your breathing steady so your steps go unheard by anyone watching from the ruins.\n\nFrom afar, faint thuds from the tower and weak steam hisses sound like broken mechanical whispers."
+      },
       "choices": [
         {
-          "text": "> Menyingkirkan ranting penghalang dengan tenaga dan terus maju",
+          "text": {
+            "id": "> Menyingkirkan ranting penghalang dengan tenaga dan terus maju",
+            "en": "> Clear obstructing branches by force and press on"
+          },
           "next": "b1_16",
           "skillCheck": {
             "stat": "str",
@@ -288,60 +447,99 @@
           }
         },
         {
-          "text": "> Menuju gerbang transisi di ujung jalur kanal",
+          "text": {
+            "id": "> Menuju gerbang transisi di ujung jalur kanal",
+            "en": "> Head to the transition gate at the end of the canal path"
+          },
           "next": "b1_16"
         }
       ]
     },
     "b1_14": {
-      "text": "Di balik batu penanda kanal, kau menemukan perkakas logam kecil berupa Kunci Inggris & Roda Gigi cadangan milik teknisi air lama, serta catatan singkat tentang arah aliran menuju kawasan kanal dan desa.\n\nMemiliki perkakas mekanis seperti ini bisa sangat berguna saat menghadapi katup macet, pintu besi berkarat, atau perangkat tua di dalam lembah.",
+      "text": {
+        "id": "Di balik batu penanda kanal, kau menemukan perkakas logam kecil berupa Kunci Inggris & Roda Gigi cadangan milik teknisi air lama, serta catatan singkat tentang arah aliran menuju kawasan kanal dan desa.\n\nMemiliki perkakas mekanis seperti ini bisa sangat berguna saat menghadapi katup macet, pintu besi berkarat, atau perangkat tua di dalam lembah.",
+        "en": "Behind a canal marker stone, you find compact metal tools—a spare Wrench & Gear belonging to an old water technician—along with brief notes on flow directions toward the canal district and village.\n\nHaving mechanical tools like this can prove invaluable when dealing with jammed valves, rusted iron doors, or ancient devices in the valley."
+      },
       "onEnter": {
         "addItem": "Kunci Inggris & Roda Gigi",
         "setFlags": { "disabled_weir_trap": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan menuju gerbang Bab 2: Kanal Roda Air & Pinggir Lembah",
+          "text": {
+            "id": "> Melanjutkan menuju gerbang Bab 2: Kanal Roda Air & Pinggir Lembah",
+            "en": "> Continue to the Chapter 2 gate: Waterwheel Canal & Valley Rim"
+          },
           "next": "b2_01",
           "effects": {
-            "chapter": "Bab 2: Kanal Roda Air & Pinggir Lembah"
+            "chapter": {
+              "id": "Bab 2: Kanal Roda Air & Pinggir Lembah",
+              "en": "Chapter 2: Waterwheel Canal & Valley Rim"
+            }
           }
         }
       ]
     },
     "b1_15": {
-      "text": "Pijakan batu yang rapuh bergeser saat kau menumpukan berat badan, membuat kakimu terantuk besi penyangga berkarat (-1 HP). Meski sempat terhuyung, kau berhasil menjaga keseimbangan dan tidak jatuh ke arus kanal yang dingin.\n\nDi balik rasa ngilu, kau mencatat letak pijakan yang rawan agar tidak mengulang kesalahan yang sama.",
+      "text": {
+        "id": "Pijakan batu yang rapuh bergeser saat kau menumpukan berat badan, membuat kakimu terantuk besi penyangga berkarat (-1 HP). Meski sempat terhuyung, kau berhasil menjaga keseimbangan dan tidak jatuh ke arus kanal yang dingin.\n\nDi balik rasa ngilu, kau mencatat letak pijakan yang rawan agar tidak mengulang kesalahan yang sama.",
+        "en": "A brittle stone shifts under your weight, knocking your foot against a rusted support bar (-1 HP). Though momentarily off balance, you steady yourself and avoid falling into the cold canal current.\n\nThrough the ache, you note the hazardous footing so you do not repeat the mistake."
+      },
       "choices": [
         {
-          "text": "> Melangkah hati-hati menuju gerbang Bab 2",
+          "text": {
+            "id": "> Melangkah hati-hati menuju gerbang Bab 2",
+            "en": "> Step carefully toward the Chapter 2 gate"
+          },
           "next": "b2_01",
           "effects": {
-            "chapter": "Bab 2: Kanal Roda Air & Pinggir Lembah"
+            "chapter": {
+              "id": "Bab 2: Kanal Roda Air & Pinggir Lembah",
+              "en": "Chapter 2: Waterwheel Canal & Valley Rim"
+            }
           }
         }
       ]
     },
     "b1_16": {
-      "text": "Di ujung jalur gerbang luar, lengkungan batu berukir lambang roda air dan jam menyambut langkahmu. Kabut di balik lengkungan ini tampak lebih pekat, menandai batas antara gerbang luar dan wilayah kanal yang lebih dalam.\n\nKau menarik napas dalam-dalam, memastikan Lentera Minyak dan Segel Tembaga siap, lalu melangkah memasuki kawasan kanal lembah.",
+      "text": {
+        "id": "Di ujung jalur gerbang luar, lengkungan batu berukir lambang roda air dan jam menyambut langkahmu. Kabut di balik lengkungan ini tampak lebih pekat, menandai batas antara gerbang luar dan wilayah kanal yang lebih dalam.\n\nKau menarik napas dalam-dalam, memastikan Lentera Minyak dan Segel Tembaga siap, lalu melangkah memasuki kawasan kanal lembah.",
+        "en": "At the end of the outer gate trail, a stone arch carved with waterwheel and clock emblems greets your steps. Mist beyond the arch looks thicker, marking the boundary between the outer gate and the deeper canal area.\n\nYou take a deep breath, making sure your Oil Lantern and Brass Seal are ready, then step into the valley canal."
+      },
       "choices": [
         {
-          "text": "> Memasuki Bab 2: Kanal Roda Air & Pinggir Lembah",
+          "text": {
+            "id": "> Memasuki Bab 2: Kanal Roda Air & Pinggir Lembah",
+            "en": "> Enter Chapter 2: Waterwheel Canal & Valley Rim"
+          },
           "next": "b2_01",
           "effects": {
-            "chapter": "Bab 2: Kanal Roda Air & Pinggir Lembah"
+            "chapter": {
+              "id": "Bab 2: Kanal Roda Air & Pinggir Lembah",
+              "en": "Chapter 2: Waterwheel Canal & Valley Rim"
+            }
           }
         }
       ]
     },
     "b2_01": {
-      "text": "Di balik lengkungan gerbang luar, kawasan Kanal Roda Air membentang di sepanjang cekungan batu yang dipenuhi uap dingin dan sisa saluran besi. Pada masa jayanya, kanal ini menyalurkan debit air dari hulu sungai menuju deretan roda air raksasa yang memutar penggilingan, bengkel penempaan, serta pompa tekanan uap yang terhubung hingga ke Menara Jam Orva.\n\nKini sebagian sudu roda kayu patah dimakan usia dan lumut, sementara batang kayu gelondongan serta puing batu menyumbat pintu air utama. Suara air yang terhambat berpadu dengan desis kabut kelabu yang merayap rendah di permukaan saluran.",
+      "text": {
+        "id": "Di balik lengkungan gerbang luar, kawasan Kanal Roda Air membentang di sepanjang cekungan batu yang dipenuhi uap dingin dan sisa saluran besi. Pada masa jayanya, kanal ini menyalurkan debit air dari hulu sungai menuju deretan roda air raksasa yang memutar penggilingan, bengkel penempaan, serta pompa tekanan uap yang terhubung hingga ke Menara Jam Orva.\n\nKini sebagian sudu roda kayu patah dimakan usia dan lumut, sementara batang kayu gelondongan serta puing batu menyumbat pintu air utama. Suara air yang terhambat berpadu dengan desis kabut kelabu yang merayap rendah di permukaan saluran.",
+        "en": "Beyond the outer gate arch, the Waterwheel Canal district stretches along a stone basin filled with cold vapor and remnants of iron conduits. In its prime, this canal channeled water from upstream toward rows of giant waterwheels driving mills, forging workshops, and steam pressure pumps linked all the way to Orva Clocktower.\n\nNow several wooden wheel paddles are broken by age and moss, while driftwood logs and stone debris choke the main sluice. The sound of backed-up water blends with the hiss of grey mist creeping low across the channel."
+      },
       "choices": [
         {
-          "text": "> Memeriksa pintu air utama dan batang penyumbat kanal",
+          "text": {
+            "id": "> Memeriksa pintu air utama dan batang penyumbat kanal",
+            "en": "> Inspect the main sluice and logs blocking the canal"
+          },
           "next": "b2_02"
         },
         {
-          "text": "> Menyusuri jalan setapak di atas dinding kanal yang sempit",
+          "text": {
+            "id": "> Menyusuri jalan setapak di atas dinding kanal yang sempit",
+            "en": "> Walk the narrow path along the top of the canal wall"
+          },
           "next": "b2_03",
           "skillCheck": {
             "stat": "agi",
@@ -354,7 +552,10 @@
           }
         },
         {
-          "text": "> Mengamati tanda aliran dan skema katup di rumah pompa tua",
+          "text": {
+            "id": "> Mengamati tanda aliran dan skema katup di rumah pompa tua",
+            "en": "> Study flow marks and valve diagrams in the old pumphouse"
+          },
           "next": "b2_06",
           "skillCheck": {
             "stat": "wit",
@@ -366,10 +567,16 @@
       ]
     },
     "b2_02": {
-      "text": "Pintu air utama tertahan oleh tumpukan kayu hanyut dan rantai besi yang berkarat. Dari balik timbunan tersebut, tampak celah menuju ruang kontrol kanal tempat para operator dahulu mengatur pembagian air antara irigasi lembah dan saluran tekanan uap ke menara.\n\nSebuah papan peringatan pudar masih terbaca: jika tekanan kanal dibiarkan tidak seimbang terlalu lama, uap panas di saluran bawah akan memicu getaran dan kabut pekat di sekitar cekungan.",
+      "text": {
+        "id": "Pintu air utama tertahan oleh tumpukan kayu hanyut dan rantai besi yang berkarat. Dari balik timbunan tersebut, tampak celah menuju ruang kontrol kanal tempat para operator dahulu mengatur pembagian air antara irigasi lembah dan saluran tekanan uap ke menara.\n\nSebuah papan peringatan pudar masih terbaca: jika tekanan kanal dibiarkan tidak seimbang terlalu lama, uap panas di saluran bawah akan memicu getaran dan kabut pekat di sekitar cekungan.",
+        "en": "The main sluice is held back by piled driftwood and rusted iron chains. Past the blockage lies a gap leading toward the canal control room where operators once regulated water flow between valley irrigation and the steam pressure line to the tower.\n\nA faded warning sign remains legible: if canal pressure is left unbalanced too long, hot vapor in the lower conduit will trigger tremors and dense mist around the basin."
+      },
       "choices": [
         {
-          "text": "> Mengungkit rantai dan kayu penyumbat dengan tenaga penuh",
+          "text": {
+            "id": "> Mengungkit rantai dan kayu penyumbat dengan tenaga penuh",
+            "en": "> Pry the chains and blocking logs loose with full strength"
+          },
           "next": "b2_04",
           "skillCheck": {
             "stat": "str",
@@ -382,86 +589,134 @@
           }
         },
         {
-          "text": "> Memanfaatkan perkakas mekanis untuk melonggarkan baut tuas",
+          "text": {
+            "id": "> Memanfaatkan perkakas mekanis untuk melonggarkan baut tuas",
+            "en": "> Use mechanical tools to loosen the lever bolts"
+          },
           "next": "b2_04",
           "req": {
             "hasItem": "Kunci Inggris & Roda Gigi"
           }
         },
         {
-          "text": "> Meninggalkan pintu air dan menuju pondok tepi kanal",
+          "text": {
+            "id": "> Meninggalkan pintu air dan menuju pondok tepi kanal",
+            "en": "> Leave the sluice and head to the canalside shack"
+          },
           "next": "b2_07"
         }
       ]
     },
     "b2_03": {
-      "text": "Dinding batu kanal hanya selebar dua telapak kaki dan basah oleh percikan air serta embun kabut. Di bawahnya, arus gelap mengalir menuju terowongan kecil yang mengarah ke bagian bawah lembah.\n\nKau melangkah terukur sambil menjaga keseimbangan tubuh, memperhatikan setiap lekukan batu agar tidak terpeleset ke saluran yang dingin.",
+      "text": {
+        "id": "Dinding batu kanal hanya selebar dua telapak kaki dan basah oleh percikan air serta embun kabut. Di bawahnya, arus gelap mengalir menuju terowongan kecil yang mengarah ke bagian bawah lembah.\n\nKau melangkah terukur sambil menjaga keseimbangan tubuh, memperhatikan setiap lekukan batu agar tidak terpeleset ke saluran yang dingin.",
+        "en": "The stone canal wall is barely two boot-lengths wide and slick with water spray and mist condensation. Below it, dark currents flow toward a small tunnel leading to the lower valley.\n\nYou step with measured care while keeping your balance, watching every stone groove so you do not slip into the cold channel."
+      },
       "choices": [
         {
-          "text": "> Melompati celah batu menuju pondok penjaga kanal",
+          "text": {
+            "id": "> Melompati celah batu menuju pondok penjaga kanal",
+            "en": "> Hop across the stone gap toward the canal keeper's shack"
+          },
           "next": "b2_07"
         },
         {
-          "text": "> Mengintai ke arah puing reruntuhan di pinggir lembah",
+          "text": {
+            "id": "> Mengintai ke arah puing reruntuhan di pinggir lembah",
+            "en": "> Scout toward the ruins along the valley rim"
+          },
           "next": "b2_08"
         }
       ]
     },
     "b2_04": {
-      "text": "Dengan usaha yang terukur, aliran kanal mulai bergerak lebih lancar melewati sudu roda air. Roda kayu raksasa itu berputar pelan—belum sempurna, tetapi cukup untuk menggerakkan pompa kecil dan menyingkap sebuah kotak arsip tahan air di bawah kisi saluran.\n\nDi dalamnya tersimpan catatan tekanan kanal terakhir yang ditulis oleh teknisi air sebelum ekspedisi pencatat menghilang, memuat petunjuk mengenai Sandi Pengawas yang digunakan di Menara Jam Orva.",
+      "text": {
+        "id": "Dengan usaha yang terukur, aliran kanal mulai bergerak lebih lancar melewati sudu roda air. Roda kayu raksasa itu berputar pelan—belum sempurna, tetapi cukup untuk menggerakkan pompa kecil dan menyingkap sebuah kotak arsip tahan air di bawah kisi saluran.\n\nDi dalamnya tersimpan catatan tekanan kanal terakhir yang ditulis oleh teknisi air sebelum ekspedisi pencatat menghilang, memuat petunjuk mengenai Sandi Pengawas yang digunakan di Menara Jam Orva.",
+        "en": "With steady effort, canal flow begins moving more smoothly past the waterwheel paddles. The giant wooden wheel turns slowly—not yet whole, yet enough to drive a small pump and uncover a watertight archive box beneath the grate.\n\nInside lies the final canal pressure log written by the water technician before the archivist expedition vanished, containing clues to the Warden Cipher used at Orva Clocktower."
+      },
       "onEnter": {
         "addItem": "Sandi Pengawas",
         "setFlags": { "disabled_weir_trap": true, "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Melangkah menuju pondok tepi kanal",
+          "text": {
+            "id": "> Melangkah menuju pondok tepi kanal",
+            "en": "> Head toward the canalside shack"
+          },
           "next": "b2_07"
         },
         {
-          "text": "> Menelusuri pinggir lembah ke arah Desa Bawah Kabut",
+          "text": {
+            "id": "> Menelusuri pinggir lembah ke arah Desa Bawah Kabut",
+            "en": "> Follow the valley rim toward Mist-Below Village"
+          },
           "next": "b2_09"
         }
       ]
     },
     "b2_05": {
-      "text": "Pijakan yang licin dan hentakan mekanis yang tiba-tiba membuatmu kehilangan keseimbangan sesaat. Benturan keras di pinggir saluran meninggalkan memar dan nyeri yang cukup menguras tenaga (-2 HP).\n\nMeski begitu, kau berhasil merangkak naik ke daratan yang lebih kering dengan napas masih memburu.",
+      "text": {
+        "id": "Pijakan yang licin dan hentakan mekanis yang tiba-tiba membuatmu kehilangan keseimbangan sesaat. Benturan keras di pinggir saluran meninggalkan memar dan nyeri yang cukup menguras tenaga (-2 HP).\n\nMeski begitu, kau berhasil merangkak naik ke daratan yang lebih kering dengan napas masih memburu.",
+        "en": "Slick footing and a sudden mechanical jolt throw off your balance for a moment. A hard impact along the channel edge leaves bruises and soreness that drain your strength (-2 HP).\n\nEven so, you scramble onto drier ground with your breath still coming fast."
+      },
       "choices": [
         {
-          "text": "> Beristirahat sejenak lalu menuju pondok tepi kanal",
+          "text": {
+            "id": "> Beristirahat sejenak lalu menuju pondok tepi kanal",
+            "en": "> Rest briefly, then head to the canalside shack"
+          },
           "next": "b2_07"
         },
         {
-          "text": "> Terus bergerak menyisir pinggir lembah",
+          "text": {
+            "id": "> Terus bergerak menyisir pinggir lembah",
+            "en": "> Keep sweeping along the valley rim"
+          },
           "next": "b2_08"
         }
       ]
     },
     "b2_06": {
-      "text": "Di dalam rumah pompa tua yang berbau minyak mesin dan lumut, bagan pipa di dinding menunjukkan bahwa saluran uap dari kanal dulu dialirkan ke menara bukan sekadar untuk menggerakkan lonceng, melainkan juga menjaga kestabilan udara di cekungan bawah.\n\nSebuah catatan kecil di meja pengawas menyebutkan bahwa salah satu anggota ekspedisi sempat turun ke arah Desa Bawah Kabut membawa kunci dan perangkat pengukur.",
+      "text": {
+        "id": "Di dalam rumah pompa tua yang berbau minyak mesin dan lumut, bagan pipa di dinding menunjukkan bahwa saluran uap dari kanal dulu dialirkan ke menara bukan sekadar untuk menggerakkan lonceng, melainkan juga menjaga kestabilan udara di cekungan bawah.\n\nSebuah catatan kecil di meja pengawas menyebutkan bahwa salah satu anggota ekspedisi sempat turun ke arah Desa Bawah Kabut membawa kunci dan perangkat pengukur.",
+        "en": "Inside the old pumphouse smelling of machine oil and moss, wall pipe charts show that steam lines from the canal once fed the tower not merely to ring bells, but also to maintain air stability in the lower basin.\n\nA small note on the supervisor's desk mentions that an expedition member descended toward Mist-Below Village carrying keys and measuring gear."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Menuju pondok tepi kanal di dekat jembatan",
+          "text": {
+            "id": "> Menuju pondok tepi kanal di dekat jembatan",
+            "en": "> Head to the canalside shack near the bridge"
+          },
           "next": "b2_07"
         },
         {
-          "text": "> Menyusuri jalur pinggir lembah menuju area desa",
+          "text": {
+            "id": "> Menyusuri jalur pinggir lembah menuju area desa",
+            "en": "> Follow the valley rim trail toward the village area"
+          },
           "next": "b2_09"
         }
       ]
     },
     "b2_07": {
-      "text": "Sebuah pondok kayu beratap seng penyok berdiri di tikungan kanal. Di dekat ambang pintunya, seseorang duduk bersandar sambil membalut pergelangan kaki dengan kain lusuh—ia adalah mantan teknisi kanal yang dulu merawat katup air bersama para pencatat menara.\n\nIa menatapmu dengan mata lelah namun tajam. Baginya, kabut kelabu ini bukan kutukan gaib semata, melainkan dampak berantai dari matinya sistem tekanan dan hilangnya catatan pengawas di bawah lembah.",
+      "text": {
+        "id": "Sebuah pondok kayu beratap seng penyok berdiri di tikungan kanal. Di dekat ambang pintunya, seseorang duduk bersandar sambil membalut pergelangan kaki dengan kain lusuh—ia adalah mantan teknisi kanal yang dulu merawat katup air bersama para pencatat menara.\n\nIa menatapmu dengan mata lelah namun tajam. Baginya, kabut kelabu ini bukan kutukan gaib semata, melainkan dampak berantai dari matinya sistem tekanan dan hilangnya catatan pengawas di bawah lembah.",
+        "en": "A wooden shack with a dented tin roof stands at a bend in the canal. Near the threshold, someone sits leaning back while wrapping an ankle in worn cloth—a former canal technician who once maintained water valves alongside the tower archivists.\n\nThey look at you with tired yet sharp eyes. To them, this grey mist is not a mere curse, but a chain reaction from dead pressure systems and lost warden logs below the valley."
+      },
       "onEnter": {
         "setFlags": { "met_stranger_guide": true }
       },
       "choices": [
         {
-          "text": "> Berbicara tenang dengannya tentang kondisi jalur dan penyintas",
+          "text": {
+            "id": "> Berbicara tenang dengannya tentang kondisi jalur dan penyintas",
+            "en": "> Speak calmly with them about trail conditions and survivors"
+          },
           "next": "b2_08",
           "skillCheck": {
             "stat": "cha",
@@ -471,33 +726,51 @@
           }
         },
         {
-          "text": "> Menanyakan rahasia di balik kabut dan Menara Jam Orva",
+          "text": {
+            "id": "> Menanyakan rahasia di balik kabut dan Menara Jam Orva",
+            "en": "> Ask about the secret behind the mist and Orva Clocktower"
+          },
           "next": "b2_10"
         }
       ]
     },
     "b2_08": {
-      "text": "Sang teknisi kanal memberi tahu bahwa beberapa warga dan perintis sempat berkumpul di tepi selatan pinggir lembah sebelum kabut menebal, mencari celah keluar atau tempat berlindung yang lebih tinggi dari genangan kabut.\n\nIa juga menggambar sketsa kasar rute pinggir lembah di atas tanah berdebu—petunjuk awal yang berguna jika suatu saat kau perlu memandu orang lain melewati kabut.",
+      "text": {
+        "id": "Sang teknisi kanal memberi tahu bahwa beberapa warga dan perintis sempat berkumpul di tepi selatan pinggir lembah sebelum kabut menebal, mencari celah keluar atau tempat berlindung yang lebih tinggi dari genangan kabut.\n\nIa juga menggambar sketsa kasar rute pinggir lembah di atas tanah berdebu—petunjuk awal yang berguna jika suatu saat kau perlu memandu orang lain melewati kabut.",
+        "en": "The canal technician tells you that several villagers and pioneers gathered along the southern valley rim before the mist thickened, seeking an exit gap or higher ground above the pooling mist.\n\nThey also sketch a rough rim route in the dusty earth—an early clue that will help if you ever need to guide others through the mist."
+      },
       "onEnter": {
         "stats": { "cha": 1 },
         "setFlags": { "evac_route_mapped": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan perjalanan ke titik persimpangan pinggir lembah",
+          "text": {
+            "id": "> Melanjutkan perjalanan ke titik persimpangan pinggir lembah",
+            "en": "> Continue to the valley rim crossroads"
+          },
           "next": "b2_09"
         },
         {
-          "text": "> Memeriksa catatan arah menuju bagian tengah Bab 2",
+          "text": {
+            "id": "> Memeriksa catatan arah menuju bagian tengah Bab 2",
+            "en": "> Check direction notes toward the middle of Chapter 2"
+          },
           "next": "b2_11"
         }
       ]
     },
     "b2_09": {
-      "text": "Jalur di pinggir lembah membentang di antara tebing berlumut dan kabut yang bergulung pelan dari arah cekungan. Dari kejauhan, atap-atap batu Desa Bawah Kabut mulai terlihat samar seperti pulau karang di tengah laut kelabu.\n\nDi balik kabut itu, terdengar samar suara lonceng kecil atau ketukan besi—tanda bahwa tidak seluruh bagian lembah benar-benar kosong.",
+      "text": {
+        "id": "Jalur di pinggir lembah membentang di antara tebing berlumut dan kabut yang bergulung pelan dari arah cekungan. Dari kejauhan, atap-atap batu Desa Bawah Kabut mulai terlihat samar seperti pulau karang di tengah laut kelabu.\n\nDi balik kabut itu, terdengar samar suara lonceng kecil atau ketukan besi—tanda bahwa tidak seluruh bagian lembah benar-benar kosong.",
+        "en": "The valley rim path runs between mossy cliffs and mist rolling slowly from the basin. Afar, the stone roofs of Mist-Below Village emerge dimly like rocky islands in a grey sea.\n\nBeyond the mist, a faint small bell or metal tap echoes—a sign that not every part of the valley is truly empty."
+      },
       "choices": [
         {
-          "text": "> Mengendap mendekati batas pinggir lembah untuk mengawasi",
+          "text": {
+            "id": "> Mengendap mendekati batas pinggir lembah untuk mengawasi",
+            "en": "> Creep near the valley rim edge to scout ahead"
+          },
           "next": "b2_11",
           "skillCheck": {
             "stat": "agi",
@@ -507,32 +780,50 @@
           }
         },
         {
-          "text": "> Melanjutkan menyusuri jalur utama menuju Bab 2 Klaster B",
+          "text": {
+            "id": "> Melanjutkan menyusuri jalur utama menuju Bab 2 Klaster B",
+            "en": "> Keep following the main path toward Chapter 2 Cluster B"
+          },
           "next": "b2_11"
         }
       ]
     },
     "b2_10": {
-      "text": "Dengan nada suara merendah, sang teknisi berbisik bahwa sebelum menghilang ke arah bawah lembah, guru pencatat yang kau cari sempat mempelajari anomali pada inti mesin tua—benda yang memancarkan getaran aneh setiap kali kabut memadat.\n\nSejak saat itu, siapa pun yang terlalu lama memandangi kabut di titik tertentu sering mengaku mendengar suara atau ingatan yang bukan miliknya sendiri.",
+      "text": {
+        "id": "Dengan nada suara merendah, sang teknisi berbisik bahwa sebelum menghilang ke arah bawah lembah, guru pencatat yang kau cari sempat mempelajari anomali pada inti mesin tua—benda yang memancarkan getaran aneh setiap kali kabut memadat.\n\nSejak saat itu, siapa pun yang terlalu lama memandangi kabut di titik tertentu sering mengaku mendengar suara atau ingatan yang bukan miliknya sendiri.",
+        "en": "Lowering their voice, the technician whispers that before vanishing toward the lower valley, the archivist mentor you seek studied an anomaly in an old machine core—something emitting strange vibrations whenever the mist thickens.\n\nSince then, anyone staring too long into the mist at certain spots often claims to hear voices or memories that are not their own."
+      },
       "onEnter": {
         "setFlags": { "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> Mencatat peringatan tersebut dan melangkah ke depan",
+          "text": {
+            "id": "> Mencatat peringatan tersebut dan melangkah ke depan",
+            "en": "> Note the warning and step forward"
+          },
           "next": "b2_11"
         },
         {
-          "text": "> Menyisir sisi luar jalur menuju lanjutan Bab 2",
+          "text": {
+            "id": "> Menyisir sisi luar jalur menuju lanjutan Bab 2",
+            "en": "> Sweep the outer trail toward the rest of Chapter 2"
+          },
           "next": "b2_12"
         }
       ]
     },
     "b2_11": {
-      "text": "Di sepanjang lereng selatan pinggir lembah, tumpukan karung logistik tua dan patok kayu berkarat menandai rute darurat yang dulu pernah dibuka para perintis dan penyelundup jalur pegunungan. Di balik kabut yang bergulung pelan, samar terdengar suara percakapan lirih dari arah ceruk batu yang agak tinggi.\n\nTempat itu tampak menjadi titik singgah sementara bagi mereka yang mencoba menghindari kabut pekat di dasar lembah, meski suasananya penuh kewaspadaan dan saling curiga.",
+      "text": {
+        "id": "Di sepanjang lereng selatan pinggir lembah, tumpukan karung logistik tua dan patok kayu berkarat menandai rute darurat yang dulu pernah dibuka para perintis dan penyelundup jalur pegunungan. Di balik kabut yang bergulung pelan, samar terdengar suara percakapan lirih dari arah ceruk batu yang agak tinggi.\n\nTempat itu tampak menjadi titik singgah sementara bagi mereka yang mencoba menghindari kabut pekat di dasar lembah, meski suasananya penuh kewaspadaan dan saling curiga.",
+        "en": "Along the southern slope of the valley rim, stacked old supply sacks and rusted wooden stakes mark an emergency route once opened by pioneers and mountain smugglers. Behind slowly rolling mist, faint hushed voices carry from a slightly elevated rock alcove.\n\nThe spot seems to serve as a temporary refuge for those trying to avoid thick mist on the valley floor, though the mood is tense and guarded."
+      },
       "choices": [
         {
-          "text": "> Menyelinap mendekati ceruk batu tanpa mengeluarkan suara",
+          "text": {
+            "id": "> Menyelinap mendekati ceruk batu tanpa mengeluarkan suara",
+            "en": "> Slip toward the rock alcove without making a sound"
+          },
           "next": "b2_13",
           "skillCheck": {
             "stat": "agi",
@@ -545,7 +836,10 @@
           }
         },
         {
-          "text": "> Memperkenalkan diri secara terbuka dengan nada tenang",
+          "text": {
+            "id": "> Memperkenalkan diri secara terbuka dengan nada tenang",
+            "en": "> Introduce yourself openly in a calm tone"
+          },
           "next": "b2_14",
           "skillCheck": {
             "stat": "cha",
@@ -555,74 +849,116 @@
           }
         },
         {
-          "text": "> Menuju langsung ke jalur turun menuju Desa Bawah Kabut",
+          "text": {
+            "id": "> Menuju langsung ke jalur turun menuju Desa Bawah Kabut",
+            "en": "> Head straight down the trail toward Mist-Below Village"
+          },
           "next": "b2_16"
         }
       ]
     },
     "b2_12": {
-      "text": "Kabut di sisi luar jalur terasa lebih sunyi namun menipu mata. Di balik semak duri dan batu runtuhan, kau menemukan tanda panah ukiran lama milik kurir terdahulu yang pernah menyusuri pinggir lembah menuju Desa Bawah Kabut.\n\nTanda itu menunjukkan bahwa sebelum Menara Jam Orva membeku, para kurir dan pencatat ekspedisi sering menggunakan lorong-lorong kecil di pinggir lembah untuk mengirim laporan tanpa melewati jalan utama yang ramai.",
+      "text": {
+        "id": "Kabut di sisi luar jalur terasa lebih sunyi namun menipu mata. Di balik semak duri dan batu runtuhan, kau menemukan tanda panah ukiran lama milik kurir terdahulu yang pernah menyusuri pinggir lembah menuju Desa Bawah Kabut.\n\nTanda itu menunjukkan bahwa sebelum Menara Jam Orva membeku, para kurir dan pencatat ekspedisi sering menggunakan lorong-lorong kecil di pinggir lembah untuk mengirim laporan tanpa melewati jalan utama yang ramai.",
+        "en": "Mist along the outer trail feels quieter yet deceives the eye. Behind thorn bushes and fallen rock, you find old carved arrows left by earlier couriers who traced the valley rim toward Mist-Below Village.\n\nThe marks show that before Orva Clocktower froze, couriers and expedition archivists often used narrow rim passages to deliver reports away from busy main roads."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Mengikuti tanda ukiran lama menuju jalur turun desa",
+          "text": {
+            "id": "> Mengikuti tanda ukiran lama menuju jalur turun desa",
+            "en": "> Follow the old carved marks toward the village descent"
+          },
           "next": "b2_16"
         },
         {
-          "text": "> Memeriksa sisa perbekalan di dekat patok kayu",
+          "text": {
+            "id": "> Memeriksa sisa perbekalan di dekat patok kayu",
+            "en": "> Check remaining supplies near the wooden stakes"
+          },
           "next": "b2_14"
         }
       ]
     },
     "b2_13": {
-      "text": "Dengan langkah pelan dan bertumpu pada bagian batu yang kering, kau menyusuri tepi ceruk tanpa menimbulkan suara. Dari balik bayangan, tampak seorang penyelundup rute tua sedang memeriksa kompas logamnya yang jarumnya berputar tidak menentu akibat pengaruh kabut.\n\nIa bergumam bahwa sejak katup air dan menara jam berhenti selaras, kompas biasa sering kehilangan arah di sekitar cekungan desa, sementara sebagian penyintas memilih bertahan di bangunan batu yang lebih kokoh.",
+      "text": {
+        "id": "Dengan langkah pelan dan bertumpu pada bagian batu yang kering, kau menyusuri tepi ceruk tanpa menimbulkan suara. Dari balik bayangan, tampak seorang penyelundup rute tua sedang memeriksa kompas logamnya yang jarumnya berputar tidak menentu akibat pengaruh kabut.\n\nIa bergumam bahwa sejak katup air dan menara jam berhenti selaras, kompas biasa sering kehilangan arah di sekitar cekungan desa, sementara sebagian penyintas memilih bertahan di bangunan batu yang lebih kokoh.",
+        "en": "With slow steps braced on dry stone, you trace the alcove edge without a sound. From the shadows, an old route smuggler checks a metal compass whose needle spins erratically under the mist's influence.\n\nThey mutter that ever since water valves and the clocktower fell out of sync, ordinary compasses often lose direction around the village basin, while some survivors choose to hold out in sturdier stone buildings."
+      },
       "onEnter": {
         "setFlags": { "met_stranger_guide": true, "evac_route_mapped": true }
       },
       "choices": [
         {
-          "text": "> Menanyakan detail jalur aman di pinggir lembah",
+          "text": {
+            "id": "> Menanyakan detail jalur aman di pinggir lembah",
+            "en": "> Ask for details on safe routes along the valley rim"
+          },
           "next": "b2_14"
         },
         {
-          "text": "> Melangkah turun menuju Desa Bawah Kabut",
+          "text": {
+            "id": "> Melangkah turun menuju Desa Bawah Kabut",
+            "en": "> Step down toward Mist-Below Village"
+          },
           "next": "b2_16"
         }
       ]
     },
     "b2_14": {
-      "text": "Di dekat sudut ceruk batu, kau menemukan sebuah peta lipat berbahan kain lilin yang pudar serta catatan rute pelarian lama yang sempat dirintis sebelum kabut menebal.\n\nPeta tersebut menandai titik-titik pijakan tinggi di pinggir lembah dan arah menuju tangga batu utama Desa Bawah Kabut—informasi berharga saat menyusun rencana keselamatan maupun menyelidiki pusat lembah.",
+      "text": {
+        "id": "Di dekat sudut ceruk batu, kau menemukan sebuah peta lipat berbahan kain lilin yang pudar serta catatan rute pelarian lama yang sempat dirintis sebelum kabut menebal.\n\nPeta tersebut menandai titik-titik pijakan tinggi di pinggir lembah dan arah menuju tangga batu utama Desa Bawah Kabut—informasi berharga saat menyusun rencana keselamatan maupun menyelidiki pusat lembah.",
+        "en": "Near a corner of the rock alcove, you find a faded oilcloth folding map and notes on an old escape route blazed before the mist thickened.\n\nThe map marks high ledges along the valley rim and the way to the main stone stairs of Mist-Below Village—valuable intelligence whether planning a safe exit or investigating the valley center."
+      },
       "onEnter": {
         "addItem": "Peta Rute Lembah",
         "setFlags": { "evac_route_mapped": true }
       },
       "choices": [
         {
-          "text": "> Menggulung peta dan menuruni jalur menuju Desa Bawah Kabut",
+          "text": {
+            "id": "> Menggulung peta dan menuruni jalur menuju Desa Bawah Kabut",
+            "en": "> Roll up the map and descend toward Mist-Below Village"
+          },
           "next": "b2_16"
         }
       ]
     },
     "b2_15": {
-      "text": "Sebuah kerikil bergulir di bawah tumitmu dan memicu suara gemeretak kecil di tebing curam. Saat berusaha menahan tubuh agar tidak jatuh, lenganmu tergores tepi batu tajam (-1 HP).\n\nMeski gagal menyelinap sepenuhnya tanpa suara, kau berhasil menstabilkan pijakan dan melihat arah tangga batu yang menurun ke kawasan desa di bawah.",
+      "text": {
+        "id": "Sebuah kerikil bergulir di bawah tumitmu dan memicu suara gemeretak kecil di tebing curam. Saat berusaha menahan tubuh agar tidak jatuh, lenganmu tergores tepi batu tajam (-1 HP).\n\nMeski gagal menyelinap sepenuhnya tanpa suara, kau berhasil menstabilkan pijakan dan melihat arah tangga batu yang menurun ke kawasan desa di bawah.",
+        "en": "A pebble rolls under your heel and sets off a small clatter on the steep cliff. Catching yourself before falling, your arm scrapes against sharp rock (-1 HP).\n\nThough you fail to slip past completely unheard, you steady your footing and spot the stone stairs descending to the village below."
+      },
       "choices": [
         {
-          "text": "> Melangkah hati-hati menuju tangga batu di ujung jalur",
+          "text": {
+            "id": "> Melangkah hati-hati menuju tangga batu di ujung jalur",
+            "en": "> Step carefully toward the stone stairs at the end of the trail"
+          },
           "next": "b2_16"
         }
       ]
     },
     "b2_16": {
-      "text": "Tangga batu berlumut menurun perlahan di balik tirai kabut kelabu, mengarah langsung ke jantung Desa Bawah Kabut. Di atas sana, Menara Jam Orva tetap berdiri membisu di punggung bukit utara, seolah mengawasi setiap langkah yang turun ke dasar cekungan.\n\nDi sinilah kisah memasuki pertengahan perjalanan—tempat berbagai jejak masa lalu, nasib para penyintas, dan rahasia kabut mulai saling bertaut.",
+      "text": {
+        "id": "Tangga batu berlumut menurun perlahan di balik tirai kabut kelabu, mengarah langsung ke jantung Desa Bawah Kabut. Di atas sana, Menara Jam Orva tetap berdiri membisu di punggung bukit utara, seolah mengawasi setiap langkah yang turun ke dasar cekungan.\n\nDi sinilah kisah memasuki pertengahan perjalanan—tempat berbagai jejak masa lalu, nasib para penyintas, dan rahasia kabut mulai saling bertaut.",
+        "en": "Mossy stone stairs descend slowly behind a curtain of grey mist, leading straight into the heart of Mist-Below Village. High above, Orva Clocktower remains silent on the northern ridge, as if watching every step descending into the basin.\n\nHere the journey enters its midpoint—where traces of the past, the fate of survivors, and the mystery of the mist begin to intertwine."
+      },
       "choices": [
         {
-          "text": "> Memasuki Bab 3: Desa Bawah Kabut & Percabangan Ending Awal",
+          "text": {
+            "id": "> Memasuki Bab 3: Desa Bawah Kabut & Percabangan Ending Awal",
+            "en": "> Enter Chapter 3: Mist-Below Village & Early Ending Branches"
+          },
           "next": "b3_01",
           "effects": {
-            "chapter": "Bab 3: Desa Bawah Kabut & Percabangan Ending Awal"
+            "chapter": {
+              "id": "Bab 3: Desa Bawah Kabut & Percabangan Ending Awal",
+              "en": "Chapter 3: Mist-Below Village & Early Ending Branches"
+            }
           }
         }
       ]
