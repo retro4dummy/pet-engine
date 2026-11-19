@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Pocket Tabletop — Micro Web Game Engine</title>
+<style>
+  :root {
+    --bg: #efefeb;
+    --card: #ffffff;
+    --fg: #141414;
+    --muted: #555555;
+    --border: #141414;
+    --tint: #e4e4de;
+  }
+  * { box-sizing: border-box; font-family: 'Courier New', Courier, monospace; }
+  body {
+    margin: 0; padding: 12px;
+    background: var(--bg); color: var(--fg);
+    display: flex; justify-content: center; align-items: flex-start;
+    min-height: 100vh;
+  }
+  #container {
+    width: 100%; max-width: 460px;
+    background: var(--card);
+    border: 3px solid var(--border);
+    box-shadow: 5px 5px 0 var(--border);
+    padding: 16px;
+  }
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px; margin-bottom: 14px;
+  }
+  header h1 { font-size: 16px; margin: 0; letter-spacing: 0.5px; }
+  .badge {
+    font-size: 11px; padding: 2px 6px;
+    border: 1px solid var(--border); background: var(--tint);
+  }
+  .btn {
+    display: block; width: 100%; text-align: left;
+    padding: 12px 14px; margin-bottom: 8px;
+    font-size: 14px; font-weight: bold;
+    background: var(--card); color: var(--fg);
+    border: 2px solid var(--border);
+    cursor: pointer; transition: background 0.1s;
+  }
+  .btn:hover { background: var(--tint); }
+  .btn:active { background: var(--fg); color: var(--card); }
+  .btn:disabled { opacity: 0.4; border-style: dashed; cursor: not-allowed; }
+  .btn-sm {
+    padding: 8px 10px; font-size: 12px; text-align: center; margin-bottom: 0;
+  }
+  .stats-bar {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    background: var(--tint); border: 1px solid var(--border);
+    padding: 8px 10px; margin-bottom: 14px; font-size: 13px;
+  }
+  .narrative {
+    font-size: 15px; line-height: 1.6;
+    margin-bottom: 18px; min-height: 140px;
+    white-space: pre-line;
+  }
+  .footer-nav {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+    margin-top: 16px; padding-top: 12px;
+    border-top: 2px dashed var(--border);
+  }
+  .panel {
+    margin-top: 12px; padding: 10px;
+    border: 2px solid var(--border); background: var(--bg);
+    font-size: 13px; display: none;
+  }
+  .game-card {
+    border: 2px solid var(--border); padding: 12px; margin-bottom: 10px;
+  }
+  .game-card h3 { margin: 0 0 4px 0; font-size: 15px; }
+  .game-card p { margin: 0 0 10px 0; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <header>
+    <h1 id="header-title">POCKET TABLETOP</h1>
+    <span class="badge" id="mode-badge">HUB</span>
+  </header>
+
+  <!-- VIEW 1: MENU UTAMA -->
+  <div id="view-hub">
+    <p style="font-size:13px; margin-top:0;">Pilih mode permainan. Semua progres tersimpan otomatis di perangkatmu.</p>
+    
+    <div class="game-card">
+      <h3>1. Ekspedisi Menara Bisu</h3>
+      <p>Genre: Interactive Gamebook (CYOA) • Aktif</p>
+      <button class="btn btn-sm" onclick="startGame('tower_cyoa')">[ MAINKAN SEKARANG ]</button>
+    </div>
+
+    <div class="game-card">
+      <h3>2. Kasus Kereta Malam 04</h3>
+      <p>Genre: Detective Investigation • Tahap 2</p>
+      <button class="btn btn-sm" disabled>[ SEGERA HADIR ]</button>
+    </div>
+
+    <div class="game-card">
+      <h3>3. Kedalaman Katakombe</h3>
+      <p>Genre: Turn-Based Roguelike • Tahap 3</p>
+      <button class="btn btn-sm" disabled>[ SEGERA HADIR ]</button>
+    </div>
+
+    <div class="game-card">
+      <h3>4. Pos Penjaga Orbit</h3>
+      <p>Genre: Idle Strategy / Virtual Pet • Tahap 4</p>
+      <button class="btn btn-sm" disabled>[ SEGERA HADIR ]</button>
+    </div>
+  </div>
+
+  <!-- VIEW 2: LAYAR PERMAINAN CYOA -->
+  <div id="view-cyoa" style="display:none;">
+    <div class="stats-bar">
+      <span>HP: <b id="ui-hp">10</b></span>
+      <span>STAMINA: <b id="ui-sta">5</b></span>
+      <span>TAS: <b id="ui-inv">Kosong</b></span>
+    </div>
+
+    <div class="narrative" id="ui-text"></div>
+    <div id="ui-choices"></div>
+
+    <div class="footer-nav">
+      <button class="btn btn-sm" onclick="togglePanel('notes')">CATATAN</button>
+      <button class="btn btn-sm" onclick="resetCurrentGame()">ULANGI</button>
+      <button class="btn btn-sm" onclick="backToHub()">MENU</button>
+    </div>
+    <div class="panel" id="ui-panel"></div>
+  </div>
+</div>
+
+<script>
+// === DATABASE SKENARIO (Bisa dipecah menjadi file .json terpisah di server) ===
+const GAMES = {
+  tower_cyoa: {
+    id: "tower_cyoa",
+    title: "MENARA BISU",
+    mode: "GAMEBOOK",
+    init: { node: "n1", hp: 10, sta: 5, inv: [], notes: [] },
+    nodes: {
+      n1: {
+        text: "Gerbang besi Menara Bisu berderit saat kau mendorongnya. Di halaman dalam terdapat sumur kering dan pintu kayu berukir simbol matahari.",
+        choices: [
+          { text: "> Periksa dasar sumur kering", next: "n2" },
+          { text: "> Buka pintu kayu berukir", next: "n3" },
+          { text: "> Amati dinding menara sekitar", next: "n4", note: "Ukiran dinding menunjukkan matahari terbit membuka jalan rahasia." }
+        ]
+      },
+      n2: {
+        text: "Di sela batu sumur kau menemukan sebuah Lencana Perunggu berkarat. Namun saat memanjat naik, batu pijakan runtuh dan menggores kakimu! (-2 HP)",
+        hp: -2,
+        item: "Lencana Perunggu",
+        choices: [
+          { text: "> Menuju pintu kayu berukir", next: "n3" }
+        ]
+      },
+      n3: {
+        text: "Pintu terbuka menuju aula gelap. Di tengah ruangan berdiri patung penjaga batu dengan cekungan bulat di dadanya.",
+        choices: [
+          { text: "> Pasang Lencana Perunggu ke patung", next: "n5", req: "Lencana Perunggu" },
+          { text: "> Paksa dorong patung dengan tenaga (-2 Stamina)", next: "n6", sta: -2 },
+          { text: "> Kembali ke halaman luar", next: "n1" }
+        ]
+      },
+      n4: {
+        text: "Kau menemukan tuas tersembunyi di balik lumut. Setelah ditarik, sebuah kompartemen kecil terbuka berisi Ramuan Herbal.",
+        item: "Ramuan Herbal",
+        choices: [
+          { text: "> Masuk melalui pintu kayu berukir", next: "n3" }
+        ]
+      },
+      n5: {
+        text: "Lencana Perunggu menyala redup! Patung bergeser membuka tangga spiral menuju puncak menara.\n\n[ BAB 1 SELESAI — SELAMAT! ]",
+        choices: [
+          { text: "> Kembali ke Menu Utama", next: "HUB" }
+        ]
+      },
+      n6: {
+        text: "Dengan tenaga penuh patung berhasil digeser sedikit, cukup untuk menyelinap masuk ke tangga rahasia.\n\n[ BAB 1 SELESAI — JALUR KEKUATAN! ]",
+        choices: [
+          { text: "> Kembali ke Menu Utama", next: "HUB" }
+        ]
+      }
+    }
+  }
+};
+
+// === ENGINE STATE & CONTROLLER ===
+let currentGame = null;
+let state = null;
+
+function startGame(gameId) {
+  currentGame = GAMES[gameId];
+  const saved = localStorage.getItem("pt_save_" + gameId);
+  state = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(currentGame.init));
+
+  document.getElementById("view-hub").style.display = "none";
+  document.getElementById("view-cyoa").style.display = "block";
+  document.getElementById("header-title").innerText = currentGame.title;
+  document.getElementById("mode-badge").innerText = currentGame.mode;
+  document.getElementById("ui-panel").style.display = "none";
+  renderCYOA();
+}
+
+function renderCYOA() {
+  const node = currentGame.nodes[state.node];
+  document.getElementById("ui-hp").innerText = state.hp;
+  document.getElementById("ui-sta").innerText = state.sta;
+  document.getElementById("ui-inv").innerText = state.inv.length ? state.inv.join(", ") : "Kosong";
+
+  if (state.hp <= 0) {
+    document.getElementById("ui-text").innerText = "Energi kehidupanmu habis di dalam menara.\n\n[ GAME OVER ]";
+    document.getElementById("ui-choices").innerHTML = `<button class="btn" onclick="resetCurrentGame()">> Coba Lagi</button>`;
+    return;
+  }
+
+  document.getElementById("ui-text").innerText = node.text;
+  const box = document.getElementById("ui-choices");
+  box.innerHTML = "";
+
+  node.choices.forEach(ch => {
+    const btn = document.createElement("button");
+    btn.className = "btn";
+    const allowed = !ch.req || state.inv.includes(ch.req);
+    btn.innerText = ch.req && !allowed ? `${ch.text} [Butuh: ${ch.req}]` : ch.text;
+    btn.disabled = !allowed;
+    btn.onclick = () => makeChoice(ch);
+    box.appendChild(btn);
+  });
+}
+
+function makeChoice(ch) {
+  if (ch.next === "HUB") { backToHub(); return; }
+  if (ch.sta && state.sta + ch.sta < 0) {
+    alert("Stamina tidak mencukupi!");
+    return;
+  }
+  if (ch.sta) state.sta += ch.sta;
+  if (ch.note && !state.notes.includes(ch.note)) state.notes.push(ch.note);
+
+  const target = currentGame.nodes[ch.next];
+  state.node = ch.next;
+  if (target.hp) state.hp += target.hp;
+  if (target.item && !state.inv.includes(target.item)) state.inv.push(target.item);
+
+  localStorage.setItem("pt_save_" + currentGame.id, JSON.stringify(state));
+  renderCYOA();
+}
+
+function togglePanel() {
+  const p = document.getElementById("ui-panel");
+  if (p.style.display === "block") { p.style.display = "none"; return; }
+  p.style.display = "block";
+  p.innerHTML = "<b>CATATAN PETUALANGAN:</b><br>" +
+    (state.notes.length ? state.notes.map(n => "• " + n).join("<br>") : "<i>Belum ada catatan.</i>");
+}
+
+function resetCurrentGame() {
+  localStorage.removeItem("pt_save_" + currentGame.id);
+  startGame(currentGame.id);
+}
+
+function backToHub() {
+  document.getElementById("view-cyoa").style.display = "none";
+  document.getElementById("view-hub").style.display = "block";
+  document.getElementById("header-title").innerText = "POCKET TABLETOP";
+  document.getElementById("mode-badge").innerText = "HUB";
+}
+</script>
+</body>
+</html>
