@@ -626,6 +626,223 @@
           }
         }
       ]
+    },
+    "b3_01": {
+      "text": "Tangga batu berakhir di sebuah alun-alun kecil yang sunyi di jantung Desa Bawah Kabut. Rumah-rumah batu beratap genting gelap berdiri berdempetan di sisi cekungan, dengan bengkel logam yang padam dan Balai Arsip beratap kubah rendah di ujung jalan utama.\n\nSebelum kabut menyelimuti lembah, desa ini menjadi pusat penunjang bagi Menara Jam Orva di bukit utara: para pengrajin di sini menempa suku cadang perunggu dan katup tekanan, sementara para pencatat menyimpan salinan log ekspedisi serta peta terowongan di Balai Arsip. Di sudut alun-alun, kabut berputar pelan membentuk pusaran tipis yang memantulkan bayangan samar.",
+      "choices": [
+        {
+          "text": "> Memasuki Balai Arsip untuk memeriksa catatan dan log ekspedisi",
+          "next": "b3_02"
+        },
+        {
+          "text": "> Menyelinap melewati bayangan rumah menuju bengkel tua dan jalur keluar",
+          "next": "b3_03",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b3_04",
+            "onFail": "b3_05",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Mendekati pusaran kabut aneh di tengah alun-alun",
+          "next": "b3_06",
+          "req": {
+            "flagTrue": "mist_memory_touched"
+          }
+        }
+      ]
+    },
+    "b3_02": {
+      "text": "Di dalam Balai Arsip yang berbau kertas lembap dan minyak pengawet, rak-rak kayu penuh gulungan log ekspedisi dan bagan pipa menuju Menara Jam Orva. Sebuah berkas terbuka di atas meja kayu menyebut bahwa guru pencatat yang kau cari sempat menemukan ketidaksesuaian pada tekanan uap menara sesaat sebelum kabut menebal.\n\nDi balik lemari arsip yang bergeser sedikit, tampak pintu besi kecil mengarah ke ruang bawah tanah dan terowongan tua.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "unlocked_archive_lore": true }
+      },
+      "choices": [
+        {
+          "text": "> Mempelajari sandi dan peta pada berkas arsip",
+          "next": "b3_07",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 6,
+            "onSuccess": "b3_08",
+            "onFail": "b3_07"
+          }
+        },
+        {
+          "text": "> Kembali ke alun-alun desa untuk menilai jalur lain",
+          "next": "b3_07"
+        }
+      ]
+    },
+    "b3_03": {
+      "text": "Kabut di sela gang sempit desa terasa padat dan berat. Kau berusaha bergerak cepat di balik dinding batu, tetapi lantai papan lapuk di dekat bengkel ambles di bawah kakimu (-2 HP).\n\nMeski sempat terjatuh ke sudut berdebu, kau melihat celah pintu belakang bengkel dan beberapa warga yang bersembunyi di balik dinding halaman.",
+      "choices": [
+        {
+          "text": "> Berbicara pelan kepada warga yang bersembunyi di halaman",
+          "next": "b3_09",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b3_09",
+            "onFail": "b3_07"
+          }
+        },
+        {
+          "text": "> Melangkah menuju titik tengah jalur Bab 3",
+          "next": "b3_07"
+        }
+      ]
+    },
+    "b3_04": {
+      "text": "Dengan langkah senyap dan lincah, kau menyusuri bayangan dinding tanpa terdeteksi hingga tiba di sisi bengkel tua. Di meja kerja berdebu tergeletak catatan jalur evakuasi samping yang pernah disiapkan warga bersama pemandu rute.\n\nJalur ini menyambung ke celah tebing yang berpotensi mengantar rombongan keluar dari lembah jika jalur pekat dihindari.",
+      "onEnter": {
+        "setFlags": { "evac_route_mapped": true }
+      },
+      "choices": [
+        {
+          "text": "> Menemui kelompok warga di halaman belakang",
+          "next": "b3_09"
+        },
+        {
+          "text": "> Bergerak menuju persimpangan utama Desa Bawah Kabut",
+          "next": "b3_07"
+        }
+      ]
+    },
+    "b3_05": {
+      "text": "Papan lantai yang rapuh patah dan membuat kakimu terperosok ke celah batu tajam di sisi bengkel (-2 HP). Udara dingin bercampur debu kapur membuatmu harus berhenti sejenak untuk mengatur napas.\n\nDari kejauhan, suara dengung pelan dari arah Menara Jam Orva dan bisikan kabut terdengar bersahutan.",
+      "choices": [
+        {
+          "text": "> Bangkit dan menuju persimpangan utama desa",
+          "next": "b3_07"
+        }
+      ]
+    },
+    "b3_06": {
+      "text": "Saat kau mendekati pusaran kabut di tengah alun-alun, getaran halus yang pernah kau rasakan sebelumnya kembali muncul. Di dalam gulungan kabut kelabu itu tampak kilasan ingatan para pencatat terdahulu—seolah kabut menyimpan gema suara dan jejak waktu dari masa lalu Lembah Orva.\n\nSebuah bisikan samar menawarkan jalan masuk ke lapisan kabut yang lebih dalam, jauh dari hiruk-pikuk perebutan menara maupun pelarian biasa.",
+      "onEnter": {
+        "setFlags": { "mist_memory_touched": true }
+      },
+      "choices": [
+        {
+          "text": "> [Jalur Ending Awal] Melangkah ke pusaran anomali dan menyatu dengan gema kabut",
+          "next": "end_node_vanished_echo"
+        },
+        {
+          "text": "> Menarik diri dari pusaran dan kembali ke alun-alun desa",
+          "next": "b3_07"
+        }
+      ]
+    },
+    "b3_07": {
+      "text": "Di tengah alun-alun Desa Bawah Kabut, berbagai arah mulai terbuka: tangga menuju terowongan bawah tanah di Bab 4, Balai Arsip, serta jalur samping menuju titik kumpul para penyintas.\n\nKini pertengahan perjalanan terasa nyata—keputusan yang kau ambil di sini mulai menentukan apakah fokusmu adalah menyelamatkan yang tersisa, menelusuri misteri kabut, atau menembus ke ruang mesin dan Menara Jam Orva.",
+      "choices": [
+        {
+          "text": "> Menuju jalur penyintas & titik evakuasi samping",
+          "next": "b3_09"
+        },
+        {
+          "text": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+          "next": "b3_11"
+        },
+        {
+          "text": "> Menuruni tangga menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "next": "b4_01",
+          "effects": {
+            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+          }
+        }
+      ]
+    },
+    "b3_08": {
+      "text": "Dengan membaca pola angka dan simbol pada berkas arsip, kau berhasil menyusun keterkaitan antara sandi pengawas, katup tekanan di kanal, dan ruang arsip bawah tanah.\n\nInformasi ini menjadi bekal penting bila kau kelak menelusuri lorong bawah tanah atau mengungkap kebenaran di balik berhentinya Menara Jam Orva.",
+      "onEnter": {
+        "addItem": "Catatan Arsip Orva",
+        "setFlags": { "unlocked_archive_lore": true, "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan ke persimpangan utama desa",
+          "next": "b3_07"
+        },
+        {
+          "text": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+          "next": "b3_11"
+        }
+      ]
+    },
+    "b3_09": {
+      "text": "Di balik halaman batu yang terlindung dinding rumah, sekelompok kecil warga desa dan perintis berkumpul dalam diam. Mereka kelelahan, kekurangan bekal, dan takut melangkah sendirian ke dalam kabut yang menyesatkan.\n\nKetika kau menunjukkan pemahaman tentang rute lembah atau tanda dari pengawas jalur, mereka menaruh harapan besar agar kau mau memimpin perjalanan keluar menuju tempat yang lebih aman.",
+      "onEnter": {
+        "setFlags": { "met_stranger_guide": true }
+      },
+      "choices": [
+        {
+          "text": "> [Jalur Ending Awal] Memimpin rombongan penyintas menembus jalur aman suaka",
+          "next": "end_node_sanctuary_guide",
+          "req": {
+            "flagTrue": "evac_route_mapped"
+          }
+        },
+        {
+          "text": "> Berjanji mengurus jalur bawah tanah dulu sebelum memutuskan evakuasi",
+          "next": "b3_11"
+        },
+        {
+          "text": "> Menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "next": "b4_01",
+          "effects": {
+            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+          }
+        }
+      ]
+    },
+    "b3_10": {
+      "text": "Di sudut gerbang selatan desa, suara lonceng kecil dari arah menara terdengar samar lalu menghilang ditelan kabut. Kau menatap ke atas bukit utara tempat Menara Jam Orva berdiri, lalu menoleh ke lorong-lorong yang menanti di depan.",
+      "choices": [
+        {
+          "text": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+          "next": "b3_11"
+        },
+        {
+          "text": "> Menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "next": "b4_01",
+          "effects": {
+            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+          }
+        }
+      ]
+    },
+    "end_node_sanctuary_guide": {
+      "text": "Dengan memanfaatkan peta dan tanda jalur aman yang telah kau susun, kau memimpin para penyintas menyusuri pijakan tinggi di pinggir lembah, menjauhi cekungan kabut paling pekat dan jebakan lama.\n\nLangkah demi langkah, cahaya fajar di luar pegunungan Orva akhirnya terlihat di depan mata. Para penyintas selamat mencapai kawasan suaka yang terlindung, sementara kisahmu sebagai penunjuk jalan tercatat abadi di antara mereka.\n\n[ TAMAT — PENUNJUK JALAN KE SUAKA ]",
+      "ending": "end_sanctuary_guide",
+      "choices": [
+        {
+          "text": "> Mulai Ulang dari Awal",
+          "next": "b1_01",
+          "effects": {
+            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+          }
+        }
+      ]
+    },
+    "end_node_vanished_echo": {
+      "text": "Kau melangkah masuk ke pusat pusaran kabut tanpa ragu. Dinginnya kabut tidak lagi terasa menyiksa, melainkan mengalir seperti ingatan panjang yang menyatukan jejak para pencatat, suara lonceng menara, dan bisikan waktu di Lembah Orva.\n\nTubuhmu perlahan memudar menjadi gema tipis di dalam kabut kelabu—bukan lenyap sia-sia, melainkan menjadi bagian abadi dari misteri lembah yang terus bergema bagi siapa pun yang datang.\n\n[ TAMAT — GEMA DI DALAM KABUT ]",
+      "ending": "end_vanished_echo",
+      "choices": [
+        {
+          "text": "> Mulai Ulang dari Awal",
+          "next": "b1_01",
+          "effects": {
+            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+          }
+        }
+      ]
     }
 }
 }
