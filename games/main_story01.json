@@ -964,14 +964,23 @@
       ]
     },
     "b3_01": {
-      "text": "Tangga batu berakhir di sebuah alun-alun kecil yang sunyi di jantung Desa Bawah Kabut. Rumah-rumah batu beratap genting gelap berdiri berdempetan di sisi cekungan, dengan bengkel logam yang padam dan Balai Arsip beratap kubah rendah di ujung jalan utama.\n\nSebelum kabut menyelimuti lembah, desa ini menjadi pusat penunjang bagi Menara Jam Orva di bukit utara: para pengrajin di sini menempa suku cadang perunggu dan katup tekanan, sementara para pencatat menyimpan salinan log ekspedisi serta peta terowongan di Balai Arsip. Di sudut alun-alun, kabut berputar pelan membentuk pusaran tipis yang memantulkan bayangan samar.",
+      "text": {
+        "id": "Tangga batu berakhir di sebuah alun-alun kecil yang sunyi di jantung Desa Bawah Kabut. Rumah-rumah batu beratap genting gelap berdiri berdempetan di sisi cekungan, dengan bengkel logam yang padam dan Balai Arsip beratap kubah rendah di ujung jalan utama.\n\nSebelum kabut menyelimuti lembah, desa ini menjadi pusat penunjang bagi Menara Jam Orva di bukit utara: para pengrajin di sini menempa suku cadang perunggu dan katup tekanan, sementara para pencatat menyimpan salinan log ekspedisi serta peta terowongan di Balai Arsip. Di sudut alun-alun, kabut berputar pelan membentuk pusaran tipis yang memantulkan bayangan samar.",
+        "en": "The stone stairs end at a quiet little plaza in the heart of Mist-Below Village. Dark-tiled stone houses stand huddled along the basin, with a cold forge and a low-domed Archive Hall at the far end of the main lane.\n\nBefore mist blanketed the valley, this village supported Orva Clocktower on the northern ridge: artisans here forged bronze parts and pressure valves, while archivists kept copies of expedition logs and tunnel maps in the Archive Hall. In a corner of the plaza, mist swirls slowly into a thin vortex reflecting faint shadows."
+      },
       "choices": [
         {
-          "text": "> Memasuki Balai Arsip untuk memeriksa catatan dan log ekspedisi",
+          "text": {
+            "id": "> Memasuki Balai Arsip untuk memeriksa catatan dan log ekspedisi",
+            "en": "> Enter the Archive Hall to inspect records and expedition logs"
+          },
           "next": "b3_02"
         },
         {
-          "text": "> Menyelinap melewati bayangan rumah menuju bengkel tua dan jalur keluar",
+          "text": {
+            "id": "> Menyelinap melewati bayangan rumah menuju bengkel tua dan jalur keluar",
+            "en": "> Slip past house shadows toward the old forge and exit path"
+          },
           "next": "b3_03",
           "skillCheck": {
             "stat": "agi",
@@ -984,7 +993,10 @@
           }
         },
         {
-          "text": "> Mendekati pusaran kabut aneh di tengah alun-alun",
+          "text": {
+            "id": "> Mendekati pusaran kabut aneh di tengah alun-alun",
+            "en": "> Approach the strange mist vortex in the middle of the plaza"
+          },
           "next": "b3_06",
           "req": {
             "flagTrue": "mist_memory_touched"
@@ -993,14 +1005,20 @@
       ]
     },
     "b3_02": {
-      "text": "Di dalam Balai Arsip yang berbau kertas lembap dan minyak pengawet, rak-rak kayu penuh gulungan log ekspedisi dan bagan pipa menuju Menara Jam Orva. Sebuah berkas terbuka di atas meja kayu menyebut bahwa guru pencatat yang kau cari sempat menemukan ketidaksesuaian pada tekanan uap menara sesaat sebelum kabut menebal.\n\nDi balik lemari arsip yang bergeser sedikit, tampak pintu besi kecil mengarah ke ruang bawah tanah dan terowongan tua.",
+      "text": {
+        "id": "Di dalam Balai Arsip yang berbau kertas lembap dan minyak pengawet, rak-rak kayu penuh gulungan log ekspedisi dan bagan pipa menuju Menara Jam Orva. Sebuah berkas terbuka di atas meja kayu menyebut bahwa guru pencatat yang kau cari sempat menemukan ketidaksesuaian pada tekanan uap menara sesaat sebelum kabut menebal.\n\nDi balik lemari arsip yang bergeser sedikit, tampak pintu besi kecil mengarah ke ruang bawah tanah dan terowongan tua.",
+        "en": "Inside the Archive Hall smelling of damp paper and preservative oil, wooden shelves hold scrolls of expedition logs and pipe charts toward Orva Clocktower. An open dossier on a timber desk notes that the archivist mentor you seek found a discrepancy in tower steam pressure just before the mist thickened.\n\nBehind a slightly shifted archive cabinet, a small iron door leads toward a basement and old tunnels."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "unlocked_archive_lore": true }
       },
       "choices": [
         {
-          "text": "> Mempelajari sandi dan peta pada berkas arsip",
+          "text": {
+            "id": "> Mempelajari sandi dan peta pada berkas arsip",
+            "en": "> Study the ciphers and maps in the archive dossier"
+          },
           "next": "b3_07",
           "skillCheck": {
             "stat": "wit",
@@ -1010,16 +1028,25 @@
           }
         },
         {
-          "text": "> Kembali ke alun-alun desa untuk menilai jalur lain",
+          "text": {
+            "id": "> Kembali ke alun-alun desa untuk menilai jalur lain",
+            "en": "> Return to the village plaza to assess other paths"
+          },
           "next": "b3_07"
         }
       ]
     },
     "b3_03": {
-      "text": "Kabut di sela gang sempit desa terasa padat dan berat. Kau berusaha bergerak cepat di balik dinding batu, tetapi lantai papan lapuk di dekat bengkel ambles di bawah kakimu (-2 HP).\n\nMeski sempat terjatuh ke sudut berdebu, kau melihat celah pintu belakang bengkel dan beberapa warga yang bersembunyi di balik dinding halaman.",
+      "text": {
+        "id": "Kabut di sela gang sempit desa terasa padat dan berat. Kau berusaha bergerak cepat di balik dinding batu, tetapi lantai papan lapuk di dekat bengkel ambles di bawah kakimu (-2 HP).\n\nMeski sempat terjatuh ke sudut berdebu, kau melihat celah pintu belakang bengkel dan beberapa warga yang bersembunyi di balik dinding halaman.",
+        "en": "Mist in the narrow village lanes feels dense and heavy. You try moving briskly behind stone walls, but rotted floorboards near the forge give way beneath your foot (-2 HP).\n\nThough you drop into a dusty corner, you spot a gap at the back forge door and several villagers hiding behind a courtyard wall."
+      },
       "choices": [
         {
-          "text": "> Berbicara pelan kepada warga yang bersembunyi di halaman",
+          "text": {
+            "id": "> Berbicara pelan kepada warga yang bersembunyi di halaman",
+            "en": "> Speak softly to the villagers hiding in the courtyard"
+          },
           "next": "b3_09",
           "skillCheck": {
             "stat": "cha",
@@ -1029,166 +1056,271 @@
           }
         },
         {
-          "text": "> Melangkah menuju titik tengah jalur Bab 3",
+          "text": {
+            "id": "> Melangkah menuju titik tengah jalur Bab 3",
+            "en": "> Head toward the central crossroads of Chapter 3"
+          },
           "next": "b3_07"
         }
       ]
     },
     "b3_04": {
-      "text": "Dengan langkah senyap dan lincah, kau menyusuri bayangan dinding tanpa terdeteksi hingga tiba di sisi bengkel tua. Di meja kerja berdebu tergeletak catatan jalur evakuasi samping yang pernah disiapkan warga bersama pemandu rute.\n\nJalur ini menyambung ke celah tebing yang berpotensi mengantar rombongan keluar dari lembah jika jalur pekat dihindari.",
+      "text": {
+        "id": "Dengan langkah senyap dan lincah, kau menyusuri bayangan dinding tanpa terdeteksi hingga tiba di sisi bengkel tua. Di meja kerja berdebu tergeletak catatan jalur evakuasi samping yang pernah disiapkan warga bersama pemandu rute.\n\nJalur ini menyambung ke celah tebing yang berpotensi mengantar rombongan keluar dari lembah jika jalur pekat dihindari.",
+        "en": "With quiet, nimble steps, you trace wall shadows undetected until reaching the side of the old forge. On a dusty workbench lies a side-evacuation note once drafted by villagers with a route guide.\n\nThis route connects to a cliff gap that could lead a group out of the valley if dense mist pockets are avoided."
+      },
       "onEnter": {
         "setFlags": { "evac_route_mapped": true }
       },
       "choices": [
         {
-          "text": "> Menemui kelompok warga di halaman belakang",
+          "text": {
+            "id": "> Menemui kelompok warga di halaman belakang",
+            "en": "> Meet the group of villagers in the back courtyard"
+          },
           "next": "b3_09"
         },
         {
-          "text": "> Bergerak menuju persimpangan utama Desa Bawah Kabut",
+          "text": {
+            "id": "> Bergerak menuju persimpangan utama Desa Bawah Kabut",
+            "en": "> Move toward the main crossroads of Mist-Below Village"
+          },
           "next": "b3_07"
         }
       ]
     },
     "b3_05": {
-      "text": "Papan lantai yang rapuh patah dan membuat kakimu terperosok ke celah batu tajam di sisi bengkel (-2 HP). Udara dingin bercampur debu kapur membuatmu harus berhenti sejenak untuk mengatur napas.\n\nDari kejauhan, suara dengung pelan dari arah Menara Jam Orva dan bisikan kabut terdengar bersahutan.",
+      "text": {
+        "id": "Papan lantai yang rapuh patah dan membuat kakimu terperosok ke celah batu tajam di sisi bengkel (-2 HP). Udara dingin bercampur debu kapur membuatmu harus berhenti sejenak untuk mengatur napas.\n\nDari kejauhan, suara dengung pelan dari arah Menara Jam Orva dan bisikan kabut terdengar bersahutan.",
+        "en": "Brittle floorboards snap and send your foot into a sharp stone gap beside the forge (-2 HP). Cold air mixed with lime dust forces you to pause and catch your breath.\n\nAfar, a faint hum from Orva Clocktower and whispers in the mist echo back and forth."
+      },
       "choices": [
         {
-          "text": "> Bangkit dan menuju persimpangan utama desa",
+          "text": {
+            "id": "> Bangkit dan menuju persimpangan utama desa",
+            "en": "> Rise and head to the main village crossroads"
+          },
           "next": "b3_07"
         }
       ]
     },
     "b3_06": {
-      "text": "Saat kau mendekati pusaran kabut di tengah alun-alun, getaran halus yang pernah kau rasakan sebelumnya kembali muncul. Di dalam gulungan kabut kelabu itu tampak kilasan ingatan para pencatat terdahulu—seolah kabut menyimpan gema suara dan jejak waktu dari masa lalu Lembah Orva.\n\nSebuah bisikan samar menawarkan jalan masuk ke lapisan kabut yang lebih dalam, jauh dari hiruk-pikuk perebutan menara maupun pelarian biasa.",
+      "text": {
+        "id": "Saat kau mendekati pusaran kabut di tengah alun-alun, getaran halus yang pernah kau rasakan sebelumnya kembali muncul. Di dalam gulungan kabut kelabu itu tampak kilasan ingatan para pencatat terdahulu—seolah kabut menyimpan gema suara dan jejak waktu dari masa lalu Lembah Orva.\n\nSebuah bisikan samar menawarkan jalan masuk ke lapisan kabut yang lebih dalam, jauh dari hiruk-pikuk perebutan menara maupun pelarian biasa.",
+        "en": "As you near the mist vortex in the plaza center, the subtle vibration you felt earlier returns. Inside the grey coils flicker memory fragments of past archivists—as if the mist holds echoed voices and time-traces from Orva Valley's past.\n\nA faint whisper offers entry into deeper layers of mist, far from tower struggles or ordinary flight."
+      },
       "onEnter": {
         "setFlags": { "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> [Jalur Ending Awal] Melangkah ke pusaran anomali dan menyatu dengan gema kabut",
+          "text": {
+            "id": "> [Jalur Ending Awal] Melangkah ke pusaran anomali dan menyatu dengan gema kabut",
+            "en": "> [Early Ending Path] Step into the anomaly vortex and merge with the mist echo"
+          },
           "next": "end_node_vanished_echo"
         },
         {
-          "text": "> Menarik diri dari pusaran dan kembali ke alun-alun desa",
+          "text": {
+            "id": "> Menarik diri dari pusaran dan kembali ke alun-alun desa",
+            "en": "> Pull back from the vortex and return to the village plaza"
+          },
           "next": "b3_07"
         }
       ]
     },
     "b3_07": {
-      "text": "Di tengah alun-alun Desa Bawah Kabut, berbagai arah mulai terbuka: tangga menuju terowongan bawah tanah di Bab 4, Balai Arsip, serta jalur samping menuju titik kumpul para penyintas.\n\nKini pertengahan perjalanan terasa nyata—keputusan yang kau ambil di sini mulai menentukan apakah fokusmu adalah menyelamatkan yang tersisa, menelusuri misteri kabut, atau menembus ke ruang mesin dan Menara Jam Orva.",
+      "text": {
+        "id": "Di tengah alun-alun Desa Bawah Kabut, berbagai arah mulai terbuka: tangga menuju terowongan bawah tanah di Bab 4, Balai Arsip, serta jalur samping menuju titik kumpul para penyintas.\n\nKini pertengahan perjalanan terasa nyata—keputusan yang kau ambil di sini mulai menentukan apakah fokusmu adalah menyelamatkan yang tersisa, menelusuri misteri kabut, atau menembus ke ruang mesin dan Menara Jam Orva.",
+        "en": "In the center of Mist-Below Village plaza, several routes open up: stairs to the underground tunnels in Chapter 4, the Archive Hall, and a side path toward the survivor gathering spot.\n\nNow the midpoint feels real—the choices you make here begin shaping whether your focus is saving those left behind, probing the mist mystery, or pushing toward the machine hall and Orva Clocktower."
+      },
       "choices": [
         {
-          "text": "> Menuju jalur penyintas & titik evakuasi samping",
+          "text": {
+            "id": "> Menuju jalur penyintas & titik evakuasi samping",
+            "en": "> Head toward the survivor path & side evacuation point"
+          },
           "next": "b3_09"
         },
         {
-          "text": "> Menyisir sisi gerbang selatan sebelum melangkah lebih jauh",
+          "text": {
+            "id": "> Menyisir sisi gerbang selatan sebelum melangkah lebih jauh",
+            "en": "> Sweep the southern gate edge before pressing further"
+          },
           "next": "b3_10"
         },
         {
-          "text": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+          "text": {
+            "id": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+            "en": "> Head to the rest of Chapter 3 on the south side of the village"
+          },
           "next": "b3_11"
         },
         {
-          "text": "> Menuruni tangga menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "text": {
+            "id": "> Menuruni tangga menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+            "en": "> Descend the stairs to Chapter 4: Old Tunnels & Hidden Archive"
+          },
           "next": "b4_01",
           "effects": {
-            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+            "chapter": {
+              "id": "Bab 4: Terowongan Tua & Arsip Tersembunyi",
+              "en": "Chapter 4: Old Tunnels & Hidden Archive"
+            }
           }
         }
       ]
     },
     "b3_08": {
-      "text": "Dengan membaca pola angka dan simbol pada berkas arsip, kau berhasil menyusun keterkaitan antara sandi pengawas, katup tekanan di kanal, dan ruang arsip bawah tanah.\n\nInformasi ini menjadi bekal penting bila kau kelak menelusuri lorong bawah tanah atau mengungkap kebenaran di balik berhentinya Menara Jam Orva.",
+      "text": {
+        "id": "Dengan membaca pola angka dan simbol pada berkas arsip, kau berhasil menyusun keterkaitan antara sandi pengawas, katup tekanan di kanal, dan ruang arsip bawah tanah.\n\nInformasi ini menjadi bekal penting bila kau kelak menelusuri lorong bawah tanah atau mengungkap kebenaran di balik berhentinya Menara Jam Orva.",
+        "en": "By reading number patterns and symbols in the archive dossier, you piece together how the warden cipher, canal pressure valves, and underground archive chamber connect.\n\nThis insight will serve you well if you explore subterranean passages or uncover the truth behind Orva Clocktower's stoppage."
+      },
       "onEnter": {
         "addItem": "Catatan Arsip Orva",
         "setFlags": { "unlocked_archive_lore": true, "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan ke persimpangan utama desa",
+          "text": {
+            "id": "> Melanjutkan ke persimpangan utama desa",
+            "en": "> Continue to the main village crossroads"
+          },
           "next": "b3_07"
         },
         {
-          "text": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+          "text": {
+            "id": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+            "en": "> Head to the rest of Chapter 3 on the south side of the village"
+          },
           "next": "b3_11"
         }
       ]
     },
     "b3_09": {
-      "text": "Di balik halaman batu yang terlindung dinding rumah, sekelompok kecil warga desa dan perintis berkumpul dalam diam. Mereka kelelahan, kekurangan bekal, dan takut melangkah sendirian ke dalam kabut yang menyesatkan.\n\nKetika kau menunjukkan pemahaman tentang rute lembah atau tanda dari pengawas jalur, mereka menaruh harapan besar agar kau mau memimpin perjalanan keluar menuju tempat yang lebih aman.",
+      "text": {
+        "id": "Di balik halaman batu yang terlindung dinding rumah, sekelompok kecil warga desa dan perintis berkumpul dalam diam. Mereka kelelahan, kekurangan bekal, dan takut melangkah sendirian ke dalam kabut yang menyesatkan.\n\nKetika kau menunjukkan pemahaman tentang rute lembah atau tanda dari pengawas jalur, mereka menaruh harapan besar agar kau mau memimpin perjalanan keluar menuju tempat yang lebih aman.",
+        "en": "Behind a stone courtyard sheltered by house walls, a small group of villagers and pioneers huddles in silence. They are exhausted, low on supplies, and afraid to step alone into the disorienting mist.\n\nWhen you show knowledge of valley routes or signs from the trail warden, they place strong hope in you leading them out toward safer ground."
+      },
       "onEnter": {
         "setFlags": { "met_stranger_guide": true }
       },
       "choices": [
         {
-          "text": "> [Jalur Ending Awal] Memimpin rombongan penyintas menembus jalur aman suaka",
+          "text": {
+            "id": "> [Jalur Ending Awal] Memimpin rombongan penyintas menembus jalur aman suaka",
+            "en": "> [Early Ending Path] Lead the survivors through the safe haven route"
+          },
           "next": "end_node_sanctuary_guide",
           "req": {
             "flagTrue": "evac_route_mapped"
           }
         },
         {
-          "text": "> Berjanji mengurus jalur bawah tanah dulu sebelum memutuskan evakuasi",
+          "text": {
+            "id": "> Berjanji mengurus jalur bawah tanah dulu sebelum memutuskan evakuasi",
+            "en": "> Promise to handle the underground path first before deciding on evacuation"
+          },
           "next": "b3_11"
         },
         {
-          "text": "> Menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "text": {
+            "id": "> Menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+            "en": "> Head to Chapter 4: Old Tunnels & Hidden Archive"
+          },
           "next": "b4_01",
           "effects": {
-            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+            "chapter": {
+              "id": "Bab 4: Terowongan Tua & Arsip Tersembunyi",
+              "en": "Chapter 4: Old Tunnels & Hidden Archive"
+            }
           }
         }
       ]
     },
     "b3_10": {
-      "text": "Di sudut gerbang selatan desa, suara lonceng kecil dari arah menara terdengar samar lalu menghilang ditelan kabut. Kau menatap ke atas bukit utara tempat Menara Jam Orva berdiri, lalu menoleh ke lorong-lorong yang menanti di depan.",
+      "text": {
+        "id": "Di sudut gerbang selatan desa, suara lonceng kecil dari arah menara terdengar samar lalu menghilang ditelan kabut. Kau menatap ke atas bukit utara tempat Menara Jam Orva berdiri, lalu menoleh ke lorong-lorong yang menanti di depan.",
+        "en": "At the corner of the south village gate, a small bell sound from the tower echoes faintly before being swallowed by mist. You look up toward the northern ridge where Orva Clocktower stands, then turn to the passages waiting ahead."
+      },
       "choices": [
         {
-          "text": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+          "text": {
+            "id": "> Menuju lanjutan Bab 3 di sisi selatan desa",
+            "en": "> Head to the rest of Chapter 3 on the south side of the village"
+          },
           "next": "b3_11"
         },
         {
-          "text": "> Menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "text": {
+            "id": "> Menuju Bab 4: Terowongan Tua & Arsip Tersembunyi",
+            "en": "> Head to Chapter 4: Old Tunnels & Hidden Archive"
+          },
           "next": "b4_01",
           "effects": {
-            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+            "chapter": {
+              "id": "Bab 4: Terowongan Tua & Arsip Tersembunyi",
+              "en": "Chapter 4: Old Tunnels & Hidden Archive"
+            }
           }
         }
       ]
     },
     "end_node_sanctuary_guide": {
-      "text": "Dengan memanfaatkan peta dan tanda jalur aman yang telah kau susun, kau memimpin para penyintas menyusuri pijakan tinggi di pinggir lembah, menjauhi cekungan kabut paling pekat dan jebakan lama.\n\nLangkah demi langkah, cahaya fajar di luar pegunungan Orva akhirnya terlihat di depan mata. Para penyintas selamat mencapai kawasan suaka yang terlindung, sementara kisahmu sebagai penunjuk jalan tercatat abadi di antara mereka.\n\n[ TAMAT — PENUNJUK JALAN KE SUAKA ]",
+      "text": {
+        "id": "Dengan memanfaatkan peta dan tanda jalur aman yang telah kau susun, kau memimpin para penyintas menyusuri pijakan tinggi di pinggir lembah, menjauhi cekungan kabut paling pekat dan jebakan lama.\n\nLangkah demi langkah, cahaya fajar di luar pegunungan Orva akhirnya terlihat di depan mata. Para penyintas selamat mencapai kawasan suaka yang terlindung, sementara kisahmu sebagai penunjuk jalan tercatat abadi di antara mereka.\n\n[ TAMAT — PENUNJUK JALAN KE SUAKA ]",
+        "en": "Using the map and safe-route signs you pieced together, you lead the survivors along high valley-rim ledges, steering clear of the thickest mist basins and old traps.\n\nStep by step, dawn light beyond the Orva mountains finally comes into view. The survivors reach a sheltered safe haven, while your tale as their guide endures among them.\n\n[ ENDING — GUIDE TO THE SAFE HAVEN ]"
+      },
       "ending": "end_sanctuary_guide",
       "choices": [
         {
-          "text": "> Mulai Ulang dari Awal",
+          "text": {
+            "id": "> Mulai Ulang dari Awal",
+            "en": "> Restart from the Beginning"
+          },
           "next": "b1_01",
           "effects": {
-            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+            "chapter": {
+              "id": "Bab 1: Gerbang Kabut & Bayangan Menara",
+              "en": "Chapter 1: Gate of Mist & Tower Shadow"
+            }
           }
         }
       ]
     },
     "end_node_vanished_echo": {
-      "text": "Kau melangkah masuk ke pusat pusaran kabut tanpa ragu. Dinginnya kabut tidak lagi terasa menyiksa, melainkan mengalir seperti ingatan panjang yang menyatukan jejak para pencatat, suara lonceng menara, dan bisikan waktu di Lembah Orva.\n\nTubuhmu perlahan memudar menjadi gema tipis di dalam kabut kelabu—bukan lenyap sia-sia, melainkan menjadi bagian abadi dari misteri lembah yang terus bergema bagi siapa pun yang datang.\n\n[ TAMAT — GEMA DI DALAM KABUT ]",
+      "text": {
+        "id": "Kau melangkah masuk ke pusat pusaran kabut tanpa ragu. Dinginnya kabut tidak lagi terasa menyiksa, melainkan mengalir seperti ingatan panjang yang menyatukan jejak para pencatat, suara lonceng menara, dan bisikan waktu di Lembah Orva.\n\nTubuhmu perlahan memudar menjadi gema tipis di dalam kabut kelabu—bukan lenyap sia-sia, melainkan menjadi bagian abadi dari misteri lembah yang terus bergema bagi siapa pun yang datang.\n\n[ TAMAT — GEMA DI DALAM KABUT ]",
+        "en": "You step into the center of the mist vortex without hesitation. The mist's chill no longer stings, flowing instead like a long memory uniting archivist traces, tower bells, and whispers of time in Orva Valley.\n\nYour form slowly fades into a thin echo within the grey mist—not lost in vain, but becoming an eternal thread of the valley's mystery echoing for all who come.\n\n[ ENDING — ECHO IN THE MIST ]"
+      },
       "ending": "end_vanished_echo",
       "choices": [
         {
-          "text": "> Mulai Ulang dari Awal",
+          "text": {
+            "id": "> Mulai Ulang dari Awal",
+            "en": "> Restart from the Beginning"
+          },
           "next": "b1_01",
           "effects": {
-            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+            "chapter": {
+              "id": "Bab 1: Gerbang Kabut & Bayangan Menara",
+              "en": "Chapter 1: Gate of Mist & Tower Shadow"
+            }
           }
         }
       ]
     },
     "b3_11": {
-      "text": "Di sisi selatan desa, deretan rumah batu yang setengah runtuh berbatasan langsung dengan tebing terowongan tua. Pipa-pipa tembaga berdiameter besar melintang di sepanjang dinding—bekas jalur distribusi uap dan sinyal yang dulu menghubungkan area permukiman bawah dengan ruang mesin dan Menara Jam Orva.\n\nDi balik pintu besi yang separuh terbuka, udara dingin berembus keluar membawa aroma mineral dan logam basah. Dari sini, kau bisa menelusuri celah samping, memeriksa ruang pompa selatan, atau bersiap turun ke kedalaman.",
+      "text": {
+        "id": "Di sisi selatan desa, deretan rumah batu yang setengah runtuh berbatasan langsung dengan tebing terowongan tua. Pipa-pipa tembaga berdiameter besar melintang di sepanjang dinding—bekas jalur distribusi uap dan sinyal yang dulu menghubungkan area permukiman bawah dengan ruang mesin dan Menara Jam Orva.\n\nDi balik pintu besi yang separuh terbuka, udara dingin berembus keluar membawa aroma mineral dan logam basah. Dari sini, kau bisa menelusuri celah samping, memeriksa ruang pompa selatan, atau bersiap turun ke kedalaman.",
+        "en": "Along the south edge of the village, rows of half-collapsed stone houses border the cliff of an old tunnel. Large-diameter copper pipes run across the walls—remnants of steam and signal lines that once linked the lower settlement to the machine hall and Orva Clocktower.\n\nBeyond a half-open iron door, cool air drifts out carrying scents of minerals and damp metal. From here, you can trace a side gap, inspect the south pump alcove, or prepare to descend into the depths."
+      },
       "choices": [
         {
-          "text": "> Menyelinap ke balik dinding pipa menuju celah observasi",
+          "text": {
+            "id": "> Menyelinap ke balik dinding pipa menuju celah observasi",
+            "en": "> Slip behind the pipe wall toward an observation gap"
+          },
           "next": "b3_12",
           "skillCheck": {
             "stat": "agi",
@@ -1201,7 +1333,10 @@
           }
         },
         {
-          "text": "> Memeriksa katup pipa dan ukiran tanda pada dinding selatan",
+          "text": {
+            "id": "> Memeriksa katup pipa dan ukiran tanda pada dinding selatan",
+            "en": "> Inspect pipe valves and carved marks on the south wall"
+          },
           "next": "b3_15",
           "skillCheck": {
             "stat": "wit",
@@ -1211,67 +1346,103 @@
           }
         },
         {
-          "text": "> Melanjutkan langkah ke arah pintu masuk terowongan",
+          "text": {
+            "id": "> Melanjutkan langkah ke arah pintu masuk terowongan",
+            "en": "> Continue toward the tunnel entrance"
+          },
           "next": "b3_17"
         }
       ]
     },
     "b3_12": {
-      "text": "Dengan gerak pelan dan terukur, kau merayap di balik bayangan pipa tembaga yang berembun. Dari titik tersebut, tampak jelas bagaimana jalur terowongan di bawah desa mengarah langsung ke ruang arsip tersembunyi dan saluran utama menuju Menara Jam Orva.\n\nTidak ada penjaga di sekitar sini, tetapi kabut yang merembes dari celah lantai terasa jauh lebih pekat dibanding di alun-alun.",
+      "text": {
+        "id": "Dengan gerak pelan dan terukur, kau merayap di balik bayangan pipa tembaga yang berembun. Dari titik tersebut, tampak jelas bagaimana jalur terowongan di bawah desa mengarah langsung ke ruang arsip tersembunyi dan saluran utama menuju Menara Jam Orva.\n\nTidak ada penjaga di sekitar sini, tetapi kabut yang merembes dari celah lantai terasa jauh lebih pekat dibanding di alun-alun.",
+        "en": "With slow, measured movement, you creep behind condensation-slicked copper pipes. From this vantage point, it is clear how the tunnel beneath the village leads straight to a hidden archive chamber and the main conduit toward Orva Clocktower.\n\nNo guards are in sight here, yet mist seeping through floor cracks feels noticeably thicker than in the plaza."
+      },
       "choices": [
         {
-          "text": "> Memeriksa sudut ceruk di dekat jalur pipa",
+          "text": {
+            "id": "> Memeriksa sudut ceruk di dekat jalur pipa",
+            "en": "> Check a nook near the pipe run"
+          },
           "next": "b3_13"
         },
         {
-          "text": "> Bergerak menuju mulut terowongan di ujung selatan",
+          "text": {
+            "id": "> Bergerak menuju mulut terowongan di ujung selatan",
+            "en": "> Move toward the tunnel mouth at the south end"
+          },
           "next": "b3_17"
         }
       ]
     },
     "b3_13": {
-      "text": "Di balik tumpukan kotak penyimpanan tua, kau menemukan sebuah Resonator Inti kecil berbahan kuningan dan kristal buram—perangkat pengukur getaran yang dulu dipakai pencatat ekspedisi untuk memantau denyut mekanisme di kedalaman lembah.\n\nSaat kau menggenggamnya, perangkat itu bergetar pelan seirama dengan dengung samar yang datang dari bawah tanah.",
+      "text": {
+        "id": "Di balik tumpukan kotak penyimpanan tua, kau menemukan sebuah Resonator Inti kecil berbahan kuningan dan kristal buram—perangkat pengukur getaran yang dulu dipakai pencatat ekspedisi untuk memantau denyut mekanisme di kedalaman lembah.\n\nSaat kau menggenggamnya, perangkat itu bergetar pelan seirama dengan dengung samar yang datang dari bawah tanah.",
+        "en": "Behind stacked old storage crates, you find a compact Core Resonator made of brass and cloudy crystal—a vibration gauge once used by expedition archivists to monitor mechanical pulses deep in the valley.\n\nAs you hold it, the device hums softly in rhythm with a faint drone rising from underground."
+      },
       "onEnter": {
         "addItem": "Resonator Inti",
         "setFlags": { "resonator_attuned": true, "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Menyimpan Resonator Inti dan melangkah ke mulut terowongan",
+          "text": {
+            "id": "> Menyimpan Resonator Inti dan melangkah ke mulut terowongan",
+            "en": "> Stow the Core Resonator and step to the tunnel mouth"
+          },
           "next": "b3_17"
         }
       ]
     },
     "b3_14": {
-      "text": "Tanganmu menyentuh permukaan pipa yang licin oleh kondensasi dan lumut saat kau berusaha menjaga keseimbangan di atas batu miring. Pijakan bergeser sedikit dan membuat lututmu terbentur tepi logam (-1 HP).\n\nMeski kurang mulus, kau berhasil bertahan dan melihat arah tangga menuju terowongan di depan.",
+      "text": {
+        "id": "Tanganmu menyentuh permukaan pipa yang licin oleh kondensasi dan lumut saat kau berusaha menjaga keseimbangan di atas batu miring. Pijakan bergeser sedikit dan membuat lututmu terbentur tepi logam (-1 HP).\n\nMeski kurang mulus, kau berhasil bertahan dan melihat arah tangga menuju terowongan di depan.",
+        "en": "Your hand slips on a pipe slick with condensation and moss while trying to keep balance on tilted stone. Your footing shifts slightly and knocks your knee against a metal rim (-1 HP).\n\nThough clumsy, you stay upright and spot the stairs leading to the tunnel ahead."
+      },
       "choices": [
         {
-          "text": "> Melangkah hati-hati menuju mulut terowongan",
+          "text": {
+            "id": "> Melangkah hati-hati menuju mulut terowongan",
+            "en": "> Step carefully toward the tunnel mouth"
+          },
           "next": "b3_17"
         }
       ]
     },
     "b3_15": {
-      "text": "Pada pelat penunjuk di dekat katup selatan, terukir catatan singkat bahwa sebagian pencatat ekspedisi turun ke terowongan bawah tanah membawa kunci arsip dan perangkat penyelarasan sebelum kabut menguasai lembah.\n\nCatatan itu juga mengingatkan bahwa setiap perubahan besar pada katup atau inti mekanisme akan berdampak langsung pada kestabilan Menara Jam Orva.",
+      "text": {
+        "id": "Pada pelat penunjuk di dekat katup selatan, terukir catatan singkat bahwa sebagian pencatat ekspedisi turun ke terowongan bawah tanah membawa kunci arsip dan perangkat penyelarasan sebelum kabut menguasai lembah.\n\nCatatan itu juga mengingatkan bahwa setiap perubahan besar pada katup atau inti mekanisme akan berdampak langsung pada kestabilan Menara Jam Orva.",
+        "en": "On a marker plate near the south valve, a brief engraving notes that several expedition archivists descended into the underground tunnels carrying archive keys and tuning gear before the mist claimed the valley.\n\nThe note also warns that any major shift to valves or core mechanisms will directly affect Orva Clocktower's stability."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "unlocked_archive_lore": true }
       },
       "choices": [
         {
-          "text": "> Menuju mulut terowongan di ujung sisi selatan",
+          "text": {
+            "id": "> Menuju mulut terowongan di ujung sisi selatan",
+            "en": "> Head to the tunnel mouth at the south end"
+          },
           "next": "b3_17"
         }
       ]
     },
     "b3_16": {
-      "text": "Di dekat sudut dinding batu, kau berpapasan dengan seorang warga tua penjaga gerbang selatan yang enggan turun ke bawah tanah. Dengan nada ragu, ia memperingatkan bahwa lorong di bawah penuh udara lembap, percabangan tua, dan sisa mekanisme yang tidak lagi patuh pada perintah biasa.\n\nJika kau ingin menembus rintangan fisik di bawah sana, kekuatan tubuh atau kecermatan membaca jalur akan sangat membantu.",
+      "text": {
+        "id": "Di dekat sudut dinding batu, kau berpapasan dengan seorang warga tua penjaga gerbang selatan yang enggan turun ke bawah tanah. Dengan nada ragu, ia memperingatkan bahwa lorong di bawah penuh udara lembap, percabangan tua, dan sisa mekanisme yang tidak lagi patuh pada perintah biasa.\n\nJika kau ingin menembus rintangan fisik di bawah sana, kekuatan tubuh atau kecermatan membaca jalur akan sangat membantu.",
+        "en": "Near a corner of the stone wall, you cross paths with an elderly south-gate watcher reluctant to go underground. In a hesitant voice, they warn that the passages below hold damp air, old forks, and leftover mechanisms no longer obeying routine commands.\n\nIf you mean to force through physical obstacles down there, raw strength or sharp route-reading will serve you well."
+      },
       "onEnter": {
         "setFlags": { "met_stranger_guide": true }
       },
       "choices": [
         {
-          "text": "> Menguatkan tekad dan melangkah ke mulut terowongan",
+          "text": {
+            "id": "> Menguatkan tekad dan melangkah ke mulut terowongan",
+            "en": "> Steel your resolve and step to the tunnel mouth"
+          },
           "next": "b3_17",
           "skillCheck": {
             "stat": "str",
@@ -1281,28 +1452,46 @@
           }
         },
         {
-          "text": "> Berterima kasih atas peringatannya lalu menuju terowongan",
+          "text": {
+            "id": "> Berterima kasih atas peringatannya lalu menuju terowongan",
+            "en": "> Thank them for the warning, then head to the tunnel"
+          },
           "next": "b3_17"
         }
       ]
     },
     "b3_17": {
-      "text": "Di hadapanmu terbuka mulut terowongan batu yang menurun ke dalam perut Lembah Orva. Udara sejuk bercampur bau minyak tanah dan batu basah mengalir dari bawah, sementara di atas kepala, bayangan Menara Jam Orva seolah menanti jawaban atas mengapa waktunya terhenti.\n\nKau menarik napas dalam-dalam, menata langkah, dan bersiap turun ke kegelapan terowongan tua.",
+      "text": {
+        "id": "Di hadapanmu terbuka mulut terowongan batu yang menurun ke dalam perut Lembah Orva. Udara sejuk bercampur bau minyak tanah dan batu basah mengalir dari bawah, sementara di atas kepala, bayangan Menara Jam Orva seolah menanti jawaban atas mengapa waktunya terhenti.\n\nKau menarik napas dalam-dalam, menata langkah, dan bersiap turun ke kegelapan terowongan tua.",
+        "en": "Before you opens the mouth of a stone tunnel descending into the belly of Orva Valley. Cool air mixed with lamp oil and wet rock rises from below, while overhead, the shadow of Orva Clocktower seems to await an answer to why its time stopped.\n\nYou take a deep breath, steady your stride, and prepare to descend into the dark old tunnel."
+      },
       "choices": [
         {
-          "text": "> Memasuki Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "text": {
+            "id": "> Memasuki Bab 4: Terowongan Tua & Arsip Tersembunyi",
+            "en": "> Enter Chapter 4: Old Tunnels & Hidden Archive"
+          },
           "next": "b4_01",
           "effects": {
-            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+            "chapter": {
+              "id": "Bab 4: Terowongan Tua & Arsip Tersembunyi",
+              "en": "Chapter 4: Old Tunnels & Hidden Archive"
+            }
           }
         }
       ]
     },
     "b4_01": {
-      "text": "Tangga batu berujung pada terowongan tua yang dindingnya dipahat langsung ke batuan cadas dan diperkuat penyangga besi berkarat. Jauh sebelum Desa Bawah Kabut berkembang menjadi permukiman padat, terowongan ini digali sebagai jalur perawatan tersembunyi antara kanal, ruang arsip bawah tanah, dan poros bawah Menara Jam Orva.\n\nDi balik tirai kabut tipis yang merayap dari celah lantai, cahaya pantulan dari Lentera Minyak memperlihatkan rel kereta lori kecil yang telah bengkok serta ruang arsip tersembunyi di sisi barat lorong. Udara di sini terasa dingin dan senyap, seolah menyimpan rahasia ekspedisi perintis dan guru pencatatmu.",
+      "text": {
+        "id": "Tangga batu berujung pada terowongan tua yang dindingnya dipahat langsung ke batuan cadas dan diperkuat penyangga besi berkarat. Jauh sebelum Desa Bawah Kabut berkembang menjadi permukiman padat, terowongan ini digali sebagai jalur perawatan tersembunyi antara kanal, ruang arsip bawah tanah, dan poros bawah Menara Jam Orva.\n\nDi balik tirai kabut tipis yang merayap dari celah lantai, cahaya pantulan dari Lentera Minyak memperlihatkan rel kereta lori kecil yang telah bengkok serta ruang arsip tersembunyi di sisi barat lorong. Udara di sini terasa dingin dan senyap, seolah menyimpan rahasia ekspedisi perintis dan guru pencatatmu.",
+        "en": "The stone stairs end at an old tunnel whose walls are hewn straight into bedrock and reinforced with rusted iron supports. Long before Mist-Below Village grew into a dense settlement, this tunnel was dug as a concealed maintenance route linking the canal, an underground archive chamber, and the lower shaft of Orva Clocktower.\n\nBehind a thin mist curtain creeping from floor cracks, light reflected from your Oil Lantern reveals bent rails of a small ore cart and a hidden archive room on the west side of the corridor. The air here feels cold and hushed, as if holding secrets of the pioneer expedition and your archivist mentor."
+      },
       "choices": [
         {
-          "text": "> Menyelinap melewati bayangan pilar menuju ruang arsip tersembunyi",
+          "text": {
+            "id": "> Menyelinap melewati bayangan pilar menuju ruang arsip tersembunyi",
+            "en": "> Slip past pillar shadows toward the hidden archive room"
+          },
           "next": "b4_02",
           "skillCheck": {
             "stat": "agi",
@@ -1315,7 +1504,10 @@
           }
         },
         {
-          "text": "> Memeriksa rel lori, dinding ukiran, dan mekanisme pintu arsip",
+          "text": {
+            "id": "> Memeriksa rel lori, dinding ukiran, dan mekanisme pintu arsip",
+            "en": "> Inspect the cart rails, carved walls, and archive door mechanism"
+          },
           "next": "b4_05",
           "skillCheck": {
             "stat": "wit",
@@ -1325,23 +1517,35 @@
           }
         },
         {
-          "text": "> Menelusuri cabang lorong tengah yang mengarah ke dalam terowongan",
+          "text": {
+            "id": "> Menelusuri cabang lorong tengah yang mengarah ke dalam terowongan",
+            "en": "> Trace the central branch passage leading deeper into the tunnel"
+          },
           "next": "b4_06"
         }
       ]
     },
     "b4_02": {
-      "text": "Di hadapanmu berdiri pintu besi berukir lambang roda jam dan jam pasir yang separuh tertutup runtuhan batu. Di samping kusen pintu terdapat lubang kunci mekanis dan panel tuas kecil yang kaku karena embun bawah tanah.\n\nDari celah engselnya, tercium bau kertas tua, minyak pelumas kering, dan sisa uap hangat dari saluran yang lebih dalam.",
+      "text": {
+        "id": "Di hadapanmu berdiri pintu besi berukir lambang roda jam dan jam pasir yang separuh tertutup runtuhan batu. Di samping kusen pintu terdapat lubang kunci mekanis dan panel tuas kecil yang kaku karena embun bawah tanah.\n\nDari celah engselnya, tercium bau kertas tua, minyak pelumas kering, dan sisa uap hangat dari saluran yang lebih dalam.",
+        "en": "Before you stands an iron door engraved with clock-gear and hourglass emblems, half-covered by fallen rock. Beside the frame sit a mechanical keyhole and a small lever panel stiff from subterranean damp.\n\nFrom the hinge gaps drift scents of old paper, dried lubricant oil, and residual warmth from deeper conduits."
+      },
       "choices": [
         {
-          "text": "> Membuka kunci pintu dengan Kunci Kuningan",
+          "text": {
+            "id": "> Membuka kunci pintu dengan Kunci Kuningan",
+            "en": "> Unlock the door using the Brass Key"
+          },
           "next": "b4_03",
           "req": {
             "hasItem": "Kunci Kuningan"
           }
         },
         {
-          "text": "> Mencongkel engsel pintu yang macet dengan tenaga penuh",
+          "text": {
+            "id": "> Mencongkel engsel pintu yang macet dengan tenaga penuh",
+            "en": "> Force the jammed door hinges open with full strength"
+          },
           "next": "b4_03",
           "skillCheck": {
             "stat": "str",
@@ -1354,13 +1558,19 @@
           }
         },
         {
-          "text": "> Melanjutkan langkah ke cabang lorong utama terowongan",
+          "text": {
+            "id": "> Melanjutkan langkah ke cabang lorong utama terowongan",
+            "en": "> Continue toward the main tunnel branch corridor"
+          },
           "next": "b4_06"
         }
       ]
     },
     "b4_03": {
-      "text": "Ruang Arsip Tersembunyi terbuka menampakkan meja panjang penuh gulungan peta, buku catatan eksperimen tekanan, dan peti kayu berlapis tembaga. Di atas meja utama tergeletak jurnal milik guru pencatatmu yang hilang—menjelaskan bahwa Menara Jam Orva sebenarnya dirancang untuk menahan tekanan inti kabut di bawah lembah, bukan sekadar mengatur air dan waktu.\n\nKetika katup penyeimbang di menara melemah dan inti di bawah mulai bergejolak, kabut kelabu meluap ke permukaan dan mengaburkan ingatan siapa pun yang berada terlalu dekat.",
+      "text": {
+        "id": "Ruang Arsip Tersembunyi terbuka menampakkan meja panjang penuh gulungan peta, buku catatan eksperimen tekanan, dan peti kayu berlapis tembaga. Di atas meja utama tergeletak jurnal milik guru pencatatmu yang hilang—menjelaskan bahwa Menara Jam Orva sebenarnya dirancang untuk menahan tekanan inti kabut di bawah lembah, bukan sekadar mengatur air dan waktu.\n\nKetika katup penyeimbang di menara melemah dan inti di bawah mulai bergejolak, kabut kelabu meluap ke permukaan dan mengaburkan ingatan siapa pun yang berada terlalu dekat.",
+        "en": "The Hidden Archive opens to reveal a long table stacked with rolled maps, pressure-experiment notebooks, and copper-lined wooden chests. On the main desk lies the journal of your missing archivist mentor—explaining that Orva Clocktower was actually built to contain pressure from the mist core beneath the valley, not merely to regulate water and time.\n\nWhen balancing valves in the tower weakened and the core below began surging, grey mist spilled upward and clouded the memories of anyone lingering too close."
+      },
       "onEnter": {
         "addItem": "Jurnal Pencatat Orva",
         "stats": { "wit": 1 },
@@ -1368,52 +1578,82 @@
       },
       "choices": [
         {
-          "text": "> Menyelaraskan Resonator Inti dengan catatan jurnal di meja",
+          "text": {
+            "id": "> Menyelaraskan Resonator Inti dengan catatan jurnal di meja",
+            "en": "> Align the Core Resonator with the journal notes on the desk"
+          },
           "next": "b4_07",
           "req": {
             "hasItem": "Resonator Inti"
           }
         },
         {
-          "text": "> Keluar dari ruang arsip dan menuju lorong tengah terowongan",
+          "text": {
+            "id": "> Keluar dari ruang arsip dan menuju lorong tengah terowongan",
+            "en": "> Exit the archive room and head to the central tunnel corridor"
+          },
           "next": "b4_06"
         }
       ]
     },
     "b4_04": {
-      "text": "Pijakan batu yang basah bergeser tiba-tiba saat kau berusaha menghindar dari bongkahan puing yang menggantung. Benturan keras di sisi lengan dan tulang rusuk membuatmu meringis tertahan (-2 HP).\n\nKau menarik diri ke sudut lorong sambil mengatur napas, memastikan perlengkapanmu tetap aman sebelum melangkah lagi.",
+      "text": {
+        "id": "Pijakan batu yang basah bergeser tiba-tiba saat kau berusaha menghindar dari bongkahan puing yang menggantung. Benturan keras di sisi lengan dan tulang rusuk membuatmu meringis tertahan (-2 HP).\n\nKau menarik diri ke sudut lorong sambil mengatur napas, memastikan perlengkapanmu tetap aman sebelum melangkah lagi.",
+        "en": "Wet stone footing shifts suddenly as you dodge hanging debris. A hard knock along your arm and ribs leaves you wincing (-2 HP).\n\nYou pull back into a corridor corner to steady your breath, making sure your gear remains secure before moving on."
+      },
       "choices": [
         {
-          "text": "> Bangkit pelan dan menuju cabang lorong tengah terowongan",
+          "text": {
+            "id": "> Bangkit pelan dan menuju cabang lorong tengah terowongan",
+            "en": "> Rise slowly and head to the central tunnel branch"
+          },
           "next": "b4_06"
         },
         {
-          "text": "> Menuju titik pertemuan jalur di Bab 4 Klaster A",
+          "text": {
+            "id": "> Menuju titik pertemuan jalur di Bab 4 Klaster A",
+            "en": "> Head to the path junction in Chapter 4 Cluster A"
+          },
           "next": "b4_08"
         }
       ]
     },
     "b4_05": {
-      "text": "Dengan mengamati lekukan rel lori dan tanda pahatan di dinding terowongan, kau melihat bagaimana gerobak material dulu mengangkut blok logam dan tabung tekanan dari ruang arsip menuju poros bawah menara.\n\nTanda panah kecil pada batu menunjukkan adanya celah tersembunyi di balik ceruk dekat persimpangan lorong.",
+      "text": {
+        "id": "Dengan mengamati lekukan rel lori dan tanda pahatan di dinding terowongan, kau melihat bagaimana gerobak material dulu mengangkut blok logam dan tabung tekanan dari ruang arsip menuju poros bawah menara.\n\nTanda panah kecil pada batu menunjukkan adanya celah tersembunyi di balik ceruk dekat persimpangan lorong.",
+        "en": "By examining cart rail grooves and chiseled marks on the tunnel walls, you see how material wagons once hauled metal blocks and pressure canisters from the archive room toward the lower tower shaft.\n\nA small stone arrow indicates a concealed gap behind a recess near the corridor junction."
+      },
       "onEnter": {
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Memeriksa ceruk di dekat jalur lori",
+          "text": {
+            "id": "> Memeriksa ceruk di dekat jalur lori",
+            "en": "> Inspect the recess near the cart track"
+          },
           "next": "b4_07"
         },
         {
-          "text": "> Melangkah ke lorong tengah terowongan",
+          "text": {
+            "id": "> Melangkah ke lorong tengah terowongan",
+            "en": "> Step into the central tunnel corridor"
+          },
           "next": "b4_06"
         }
       ]
     },
     "b4_06": {
-      "text": "Lorong tengah terowongan menyempit dengan lengkungan batu yang ditumbuhi lumut pucat dan akar-akar halus yang merayap dari atas. Dari kejauhan, terdengar suara detak logam pelan yang tidak beraturan—seperti bandul yang mencoba berayun tetapi tertahan sesuatu di kedalaman.\n\nDi persimpangan kecil, kabut menebal membentuk bayangan samar yang menyerupai siluet seseorang yang berdiri diam.",
+      "text": {
+        "id": "Lorong tengah terowongan menyempit dengan lengkungan batu yang ditumbuhi lumut pucat dan akar-akar halus yang merayap dari atas. Dari kejauhan, terdengar suara detak logam pelan yang tidak beraturan—seperti bandul yang mencoba berayun tetapi tertahan sesuatu di kedalaman.\n\nDi persimpangan kecil, kabut menebal membentuk bayangan samar yang menyerupai siluet seseorang yang berdiri diam.",
+        "en": "The central tunnel corridor narrows under stone arches grown with pale moss and fine roots creeping down from above. Afar comes a slow, irregular metallic tick—like a pendulum trying to swing yet held back by something in the depths.\n\nAt a small junction, mist thickens into a faint shadow resembling a motionless silhouette."
+      },
       "choices": [
         {
-          "text": "> Menyapa bayangan itu dengan suara tenang dan berhati-hati",
+          "text": {
+            "id": "> Menyapa bayangan itu dengan suara tenang dan berhati-hati",
+            "en": "> Greet the shadow in a calm, careful voice"
+          },
           "next": "b4_07",
           "skillCheck": {
             "stat": "cha",
@@ -1423,7 +1663,10 @@
           }
         },
         {
-          "text": "> Menyelinap melewati sisi bayangan tanpa menarik perhatian",
+          "text": {
+            "id": "> Menyelinap melewati sisi bayangan tanpa menarik perhatian",
+            "en": "> Slip past the shadow's side without drawing notice"
+          },
           "next": "b4_08",
           "skillCheck": {
             "stat": "agi",
@@ -1433,46 +1676,73 @@
           }
         },
         {
-          "text": "> Maju langsung ke persimpangan lanjutan Bab 4",
+          "text": {
+            "id": "> Maju langsung ke persimpangan lanjutan Bab 4",
+            "en": "> Push straight to the next junction in Chapter 4"
+          },
           "next": "b4_08"
         }
       ]
     },
     "b4_07": {
-      "text": "Di balik ceruk batu yang teduh, kau menemukan sisa perbekalan ekspedisi serta pelat sandi yang memperjelas cara kerja Sandi Pengawas dan Resonator Inti.\n\nKini kau memahami bahwa kunci menuju ruang inti dan puncak Menara Jam Orva tidak hanya bergantung pada kekuatan fisik, tetapi juga pemahaman atas catatan, sandi, dan kondisi mekanisme lembah.",
+      "text": {
+        "id": "Di balik ceruk batu yang teduh, kau menemukan sisa perbekalan ekspedisi serta pelat sandi yang memperjelas cara kerja Sandi Pengawas dan Resonator Inti.\n\nKini kau memahami bahwa kunci menuju ruang inti dan puncak Menara Jam Orva tidak hanya bergantung pada kekuatan fisik, tetapi juga pemahaman atas catatan, sandi, dan kondisi mekanisme lembah.",
+        "en": "Behind a shaded stone recess, you find leftover expedition supplies and a cipher plate clarifying how the Warden Cipher and Core Resonator work.\n\nYou now grasp that the key to the core chamber and the summit of Orva Clocktower depends not only on physical strength, but on understanding records, ciphers, and valley mechanism states."
+      },
       "onEnter": {
         "addItem": "Botol Eliksir",
         "setFlags": { "resonator_attuned": true, "unlocked_archive_lore": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan ke persimpangan Bab 4 Klaster A",
+          "text": {
+            "id": "> Melanjutkan ke persimpangan Bab 4 Klaster A",
+            "en": "> Continue to the Chapter 4 Cluster A junction"
+          },
           "next": "b4_08"
         },
         {
-          "text": "> Menuju lanjutan Bab 4 di kedalaman terowongan",
+          "text": {
+            "id": "> Menuju lanjutan Bab 4 di kedalaman terowongan",
+            "en": "> Head deeper into the tunnel for the rest of Chapter 4"
+          },
           "next": "b4_09"
         }
       ]
     },
     "b4_08": {
-      "text": "Di ujung lorong terowongan tua, dua jalur besar mulai terlihat: satu menurun ke arah ruang mesin dan anomali inti kabut, sementara jalur lainnya menanjak ke arah poros tangga batu menuju Menara Jam Orva.\n\nSuara dengung dari bawah tanah kian terasa di telapak kaki, menandakan bahwa kau semakin dekat dengan pusat rahasia Lembah Orva.",
+      "text": {
+        "id": "Di ujung lorong terowongan tua, dua jalur besar mulai terlihat: satu menurun ke arah ruang mesin dan anomali inti kabut, sementara jalur lainnya menanjak ke arah poros tangga batu menuju Menara Jam Orva.\n\nSuara dengung dari bawah tanah kian terasa di telapak kaki, menandakan bahwa kau semakin dekat dengan pusat rahasia Lembah Orva.",
+        "en": "At the end of the old tunnel corridor, two major routes come into view: one descending toward the machine hall and mist core anomaly, while the other climbs toward stone shaft stairs leading to Orva Clocktower.\n\nThe hum from below grows clearer beneath your boots, signaling that you are drawing closer to the heart of Orva Valley's mystery."
+      },
       "choices": [
         {
-          "text": "> Menuju lanjutan Bab 4 di kedalaman terowongan",
+          "text": {
+            "id": "> Menuju lanjutan Bab 4 di kedalaman terowongan",
+            "en": "> Head deeper into the tunnel for the rest of Chapter 4"
+          },
           "next": "b4_09"
         },
         {
-          "text": "> Memeriksa jalur alternatif menuju Bab 4 Klaster B",
+          "text": {
+            "id": "> Memeriksa jalur alternatif menuju Bab 4 Klaster B",
+            "en": "> Check the alternate route toward Chapter 4 Cluster B"
+          },
           "next": "b4_10"
         }
       ]
     },
     "b4_09": {
-      "text": "Lorong dalam terowongan mengarah ke ruang peralihan di bawah poros Menara Jam Orva. Di dinding batu yang menghitam oleh jelaga dan uap lama, tampak roda gigi perunggu raksasa yang terhubung ke rantai penyeimbang vertikal—mekanisme yang dulu menjaga sinkronisasi antara tekanan bawah tanah dan lonceng menara di puncak bukit.\n\nDi sudut ruangan, sebuah meja kerja lapangan memuat catatan terakhir ekspedisi pencatat, lengkap dengan sketsa katup pengaman yang macet akibat endapan mineral dan kabut pekat.",
+      "text": {
+        "id": "Lorong dalam terowongan mengarah ke ruang peralihan di bawah poros Menara Jam Orva. Di dinding batu yang menghitam oleh jelaga dan uap lama, tampak roda gigi perunggu raksasa yang terhubung ke rantai penyeimbang vertikal—mekanisme yang dulu menjaga sinkronisasi antara tekanan bawah tanah dan lonceng menara di puncak bukit.\n\nDi sudut ruangan, sebuah meja kerja lapangan memuat catatan terakhir ekspedisi pencatat, lengkap dengan sketsa katup pengaman yang macet akibat endapan mineral dan kabut pekat.",
+        "en": "The inner tunnel corridor leads to a transition chamber beneath the shaft of Orva Clocktower. Along stone walls blackened by soot and old steam sit giant bronze gears linked to a vertical counterweight chain—the mechanism that once kept underground pressure and the ridge-top tower bell in sync.\n\nIn a corner of the room, a field table holds final notes from the archivist expedition, complete with sketches of safety valves jammed by mineral deposits and thick mist."
+      },
       "choices": [
         {
-          "text": "> Menyelinap ke balik pilar penyangga untuk mengamati mekanisme rantai",
+          "text": {
+            "id": "> Menyelinap ke balik pilar penyangga untuk mengamati mekanisme rantai",
+            "en": "> Slip behind a support pillar to observe the chain mechanism"
+          },
           "next": "b4_11",
           "skillCheck": {
             "stat": "agi",
@@ -1485,7 +1755,10 @@
           }
         },
         {
-          "text": "> Memeriksa pola mekanisme rantai dan catatan lapangan pencatat",
+          "text": {
+            "id": "> Memeriksa pola mekanisme rantai dan catatan lapangan pencatat",
+            "en": "> Inspect the chain gear pattern and archivist field notes"
+          },
           "next": "b4_12",
           "skillCheck": {
             "stat": "wit",
@@ -1495,16 +1768,25 @@
           }
         },
         {
-          "text": "> Melanjutkan langkah menuju jalur akhir Bab 4",
+          "text": {
+            "id": "> Melanjutkan langkah menuju jalur akhir Bab 4",
+            "en": "> Continue toward the final stretch of Chapter 4"
+          },
           "next": "b4_15"
         }
       ]
     },
     "b4_10": {
-      "text": "Jalur alternatif di sisi terowongan menyusuri saluran drainase lama yang lebih sempit namun terlindung dari reruntuhan utama. Kabut di sini merayap pelan seperti cairan perak pudar, membawa gema suara langkah serta potongan percakapan lama dari masa ketika lembah masih ramai.\n\nDi balik tikungan, sebuah pintu kisi besi mengarah ke ruang peralihan bawah tanah.",
+      "text": {
+        "id": "Jalur alternatif di sisi terowongan menyusuri saluran drainase lama yang lebih sempit namun terlindung dari reruntuhan utama. Kabut di sini merayap pelan seperti cairan perak pudar, membawa gema suara langkah serta potongan percakapan lama dari masa ketika lembah masih ramai.\n\nDi balik tikungan, sebuah pintu kisi besi mengarah ke ruang peralihan bawah tanah.",
+        "en": "An alternate tunnel route follows an older drainage channel—narrower yet sheltered from the main collapses. Mist creeps slowly here like dull liquid silver, carrying echoed footsteps and snatches of old conversation from when the valley was lively.\n\nPast the bend, an iron grate door leads into the underground transition chamber."
+      },
       "choices": [
         {
-          "text": "> Mendorong kisi besi yang berkarat dengan tenaga penuh",
+          "text": {
+            "id": "> Mendorong kisi besi yang berkarat dengan tenaga penuh",
+            "en": "> Force the rusted iron grate open with full strength"
+          },
           "next": "b4_12",
           "skillCheck": {
             "stat": "str",
@@ -1517,83 +1799,131 @@
           }
         },
         {
-          "text": "> Memeriksa engsel dan mekanisme kisi sebelum melintas",
+          "text": {
+            "id": "> Memeriksa engsel dan mekanisme kisi sebelum melintas",
+            "en": "> Check the grate hinges and latch before passing through"
+          },
           "next": "b4_11"
         },
         {
-          "text": "> Bergerak menuju gerbang transisi Bab 4",
+          "text": {
+            "id": "> Bergerak menuju gerbang transisi Bab 4",
+            "en": "> Move toward the Chapter 4 transition gate"
+          },
           "next": "b4_15"
         }
       ]
     },
     "b4_11": {
-      "text": "Di ruang peralihan bawah tanah, kau menemukan bekas perkemahan singkat salah satu anggota ekspedisi yang sempat bertahan sebelum kabut semakin pekat. Sebuah pelat kuningan bertuliskan sandi darurat menempel di sisi kotak peralatan.\n\nPelat itu menjelaskan bahwa inti kabut di ruang mesin merespons getaran resonansi maupun keseimbangan katup tekanan.",
+      "text": {
+        "id": "Di ruang peralihan bawah tanah, kau menemukan bekas perkemahan singkat salah satu anggota ekspedisi yang sempat bertahan sebelum kabut semakin pekat. Sebuah pelat kuningan bertuliskan sandi darurat menempel di sisi kotak peralatan.\n\nPelat itu menjelaskan bahwa inti kabut di ruang mesin merespons getaran resonansi maupun keseimbangan katup tekanan.",
+        "en": "In the underground transition chamber, you find signs of a brief camp made by an expedition member who held out before the mist thickened. A brass plate stamped with an emergency cipher is fixed to the side of a tool chest.\n\nThe plate explains that the mist core in the machine hall responds to both resonant vibrations and pressure-valve balance."
+      },
       "onEnter": {
         "setFlags": { "unlocked_archive_lore": true, "resonator_attuned": true }
       },
       "choices": [
         {
-          "text": "> Menyusun catatan dan menuju gerbang akhir Bab 4",
+          "text": {
+            "id": "> Menyusun catatan dan menuju gerbang akhir Bab 4",
+            "en": "> Organize your notes and head to the Chapter 4 exit gate"
+          },
           "next": "b4_15"
         },
         {
-          "text": "> Memeriksa celah samping ruang peralihan",
+          "text": {
+            "id": "> Memeriksa celah samping ruang peralihan",
+            "en": "> Check a side alcove in the transition chamber"
+          },
           "next": "b4_14"
         }
       ]
     },
     "b4_12": {
-      "text": "Dengan ketelitian dan pemahaman atas catatan yang terkumpul, kau berhasil menstabilkan katup bantu kecil di dekat poros sehingga uap berlebih tidak menyembur sembarangan. Di balik panel katup, tersimpan sebuah tabung kecil berisi pelumas mekanis serta petunjuk arah menuju ruang inti.\n\nLangkah ini membuatmu lebih siap menghadapi gejolak mekanisme dan anomali kabut di Bab 5.",
+      "text": {
+        "id": "Dengan ketelitian dan pemahaman atas catatan yang terkumpul, kau berhasil menstabilkan katup bantu kecil di dekat poros sehingga uap berlebih tidak menyembur sembarangan. Di balik panel katup, tersimpan sebuah tabung kecil berisi pelumas mekanis serta petunjuk arah menuju ruang inti.\n\nLangkah ini membuatmu lebih siap menghadapi gejolak mekanisme dan anomali kabut di Bab 5.",
+        "en": "With care and insight from the records gathered, you stabilize a small auxiliary valve near the shaft so excess steam stops venting wildly. Behind the valve panel sits a small canister of mechanical oil along with directions toward the core chamber.\n\nThis leaves you better prepared for mechanical surges and mist anomalies in Chapter 5."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "disabled_weir_trap": true, "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan menuju gerbang akhir Bab 4",
+          "text": {
+            "id": "> Melanjutkan menuju gerbang akhir Bab 4",
+            "en": "> Continue toward the Chapter 4 exit gate"
+          },
           "next": "b4_15"
         }
       ]
     },
     "b4_13": {
-      "text": "Besi penyangga yang licin dan tepian batu tajam membuat pijakanmu goyah saat mencoba melewati rintangan di bawah tanah. Luka dan memar ringan membuat tenagamu sedikit terkuras (-2 HP), meski perlengkapan utamamu tetap aman.\n\nKau menarik napas pelan sebelum melanjutkan langkah ke depan.",
+      "text": {
+        "id": "Besi penyangga yang licin dan tepian batu tajam membuat pijakanmu goyah saat mencoba melewati rintangan di bawah tanah. Luka dan memar ringan membuat tenagamu sedikit terkuras (-2 HP), meski perlengkapan utamamu tetap aman.\n\nKau menarik napas pelan sebelum melanjutkan langkah ke depan.",
+        "en": "Slick iron braces and sharp rock edges throw off your footing as you push past underground obstacles. Cuts and bruises drain a bit of your stamina (-2 HP), though your core gear stays intact.\n\nYou draw a slow breath before stepping ahead."
+      },
       "choices": [
         {
-          "text": "> Menuju gerbang akhir Bab 4 dengan hati-hati",
+          "text": {
+            "id": "> Menuju gerbang akhir Bab 4 dengan hati-hati",
+            "en": "> Head carefully toward the Chapter 4 exit gate"
+          },
           "next": "b4_15"
         }
       ]
     },
     "b4_14": {
-      "text": "Di sudut ruang peralihan yang redup, kau mendengar suara napas pelan dari balik tumpukan peti kayu—seorang perintis ekspedisi yang terluka dan terpisah dari rombongannya. Dengan sikap tenang dan meyakinkan, kau membantunya menenangkan diri dan mencatat informasi terakhir tentang ruang inti di bawah sana.\n\nIa berpesan bahwa di ruang inti terdapat dua pilihan besar: menahan dan menata ulang sistem, atau mengambil kendali penuh atas kekuatan mekanisme dan kabut.",
+      "text": {
+        "id": "Di sudut ruang peralihan yang redup, kau mendengar suara napas pelan dari balik tumpukan peti kayu—seorang perintis ekspedisi yang terluka dan terpisah dari rombongannya. Dengan sikap tenang dan meyakinkan, kau membantunya menenangkan diri dan mencatat informasi terakhir tentang ruang inti di bawah sana.\n\nIa berpesan bahwa di ruang inti terdapat dua pilihan besar: menahan dan menata ulang sistem, atau mengambil kendali penuh atas kekuatan mekanisme dan kabut.",
+        "en": "In a dim corner of the transition chamber, you hear slow breathing behind stacked crates—an injured expedition pioneer separated from their party. Calm and reassuring, you help them steady their nerves and note final details about the core chamber below.\n\nThey warn that in the core chamber lie two major paths: containing and resetting the system, or seizing full command over the machinery and mist."
+      },
       "onEnter": {
         "stats": { "cha": 1 },
         "setFlags": { "met_stranger_guide": true, "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> Melangkah menuju gerbang akhir Bab 4",
+          "text": {
+            "id": "> Melangkah menuju gerbang akhir Bab 4",
+            "en": "> Step toward the Chapter 4 exit gate"
+          },
           "next": "b4_15"
         }
       ]
     },
     "b4_15": {
-      "text": "Di ujung lorong terdalam terowongan tua, pintu bundar berlapis baja kuno berdiri di hadapanmu. Getaran rendah terasa menembus lantai batu—denyut nadi mekanisme dan anomali kabut yang menyatukan seluruh misteri Lembah Orva.\n\nDi balik pintu ini menanti Nadi Mekanisme & Ruang Inti, tempat seluruh jejak ekspedisi, guru pencatatmu, dan Menara Jam Orva akan diuji.",
+      "text": {
+        "id": "Di ujung lorong terdalam terowongan tua, pintu bundar berlapis baja kuno berdiri di hadapanmu. Getaran rendah terasa menembus lantai batu—denyut nadi mekanisme dan anomali kabut yang menyatukan seluruh misteri Lembah Orva.\n\nDi balik pintu ini menanti Nadi Mekanisme & Ruang Inti, tempat seluruh jejak ekspedisi, guru pencatatmu, dan Menara Jam Orva akan diuji.",
+        "en": "At the end of the deepest old tunnel passage, a circular door plated in ancient armor stands before you. A low vibration pulses through the stone floor—the heartbeat of machinery and mist anomaly that ties together Orva Valley's mysteries.\n\nBeyond this door awaits the Mechanism Pulse & Core Chamber, where every expedition trace, your archivist mentor, and Orva Clocktower will be tested."
+      },
       "choices": [
         {
-          "text": "> Memasuki Bab 5: Nadi Mekanisme & Ruang Inti",
+          "text": {
+            "id": "> Memasuki Bab 5: Nadi Mekanisme & Ruang Inti",
+            "en": "> Enter Chapter 5: Mechanism Pulse & Core Chamber"
+          },
           "next": "b5_01",
           "effects": {
-            "chapter": "Bab 5: Nadi Mekanisme & Ruang Inti"
+            "chapter": {
+              "id": "Bab 5: Nadi Mekanisme & Ruang Inti",
+              "en": "Chapter 5: Mechanism Pulse & Core Chamber"
+            }
           }
         }
       ]
     },
     "b5_01": {
-      "text": "Pintu baja bundar terbuka dengan derit berat, memperlihatkan ruang luas berkubah batu yang menjadi pusat Nadi Mekanisme Lembah Orva. Di tengah ruangan berdiri inti silinder berbalut cincin tembaga dan kristal pucat yang berdenyut lambat, dikelilingi pipa tekanan tebal yang menjulang lurus ke arah poros bawah Menara Jam Orva.\n\nDi sinilah rahasia utama lembah terungkap: inti mekanisme ini dahulu dirancang untuk menyerap serta mengarahkan energi uap dan resonansi bawah tanah agar tidak meluap menjadi Kabut Kelabu yang mengacaukan ingatan. Namun sejak katup penyelarasan terganggu dan ekspedisi pencatat menghilang, denyut inti menjadi tidak stabil, sementara bayangan kabut yang menyerupai sosok pencatat sesekali melintas di tepi ruangan.",
+      "text": {
+        "id": "Pintu baja bundar terbuka dengan derit berat, memperlihatkan ruang luas berkubah batu yang menjadi pusat Nadi Mekanisme Lembah Orva. Di tengah ruangan berdiri inti silinder berbalut cincin tembaga dan kristal pucat yang berdenyut lambat, dikelilingi pipa tekanan tebal yang menjulang lurus ke arah poros bawah Menara Jam Orva.\n\nDi sinilah rahasia utama lembah terungkap: inti mekanisme ini dahulu dirancang untuk menyerap serta mengarahkan energi uap dan resonansi bawah tanah agar tidak meluap menjadi Kabut Kelabu yang mengacaukan ingatan. Namun sejak katup penyelarasan terganggu dan ekspedisi pencatat menghilang, denyut inti menjadi tidak stabil, sementara bayangan kabut yang menyerupai sosok pencatat sesekali melintas di tepi ruangan.",
+        "en": "The circular steel door swings open with a heavy groan, revealing a wide stone-vaulted chamber that forms the heart of Orva Valley's Mechanism Pulse. At the center stands a cylindrical core wrapped in copper rings and pale crystal pulsing slowly, surrounded by thick pressure pipes rising straight toward the lower shaft of Orva Clocktower.\n\nHere the valley's core secret comes to light: this core mechanism was built to absorb and channel subterranean steam and resonance so they would not overflow into memory-clouding Grey Mist. Yet ever since tuning valves were disrupted and the archivist expedition vanished, the core's pulse has grown unstable, while mist shadows resembling archivist figures occasionally drift along the room's edge."
+      },
       "choices": [
         {
-          "text": "> Menyelinap di balik lengkungan pipa untuk mendekati inti tanpa memicu getaran",
+          "text": {
+            "id": "> Menyelinap di balik lengkungan pipa untuk mendekati inti tanpa memicu getaran",
+            "en": "> Slip behind pipe curves to approach the core without triggering tremors"
+          },
           "next": "b5_02",
           "skillCheck": {
             "stat": "agi",
@@ -1606,7 +1936,10 @@
           }
         },
         {
-          "text": "> Memeriksa panel kendali inti, cincin tembaga, dan aliran resonator",
+          "text": {
+            "id": "> Memeriksa panel kendali inti, cincin tembaga, dan aliran resonator",
+            "en": "> Inspect the core control panel, copper rings, and resonator flow"
+          },
           "next": "b5_05",
           "skillCheck": {
             "stat": "wit",
@@ -1616,7 +1949,10 @@
           }
         },
         {
-          "text": "> Menahan lonjakan tekanan pipa dengan tenaga fisik dan ketahanan",
+          "text": {
+            "id": "> Menahan lonjakan tekanan pipa dengan tenaga fisik dan ketahanan",
+            "en": "> Brace against pipe pressure surges with physical strength and grit"
+          },
           "next": "b5_04",
           "skillCheck": {
             "stat": "str",
@@ -1631,79 +1967,124 @@
       ]
     },
     "b5_02": {
-      "text": "Di sisi kiri ruang inti, sebuah meja instrumen kuno menampung tuas penyalur energi, slot resonansi kristal, dan catatan tangan yang tampak mirip tulisan guru pencatatmu. Tulisan itu memperingatkan bahwa inti ini dapat ditenangkan untuk memulihkan keseimbangan menara, atau dibuka paksa untuk menyerap kekuatan kabut bagi kepentingan yang lebih besar.\n\nSetiap pilihan memiliki konsekuensi besar terhadap arah akhir perjalananmu di puncak Menara Jam Orva.",
+      "text": {
+        "id": "Di sisi kiri ruang inti, sebuah meja instrumen kuno menampung tuas penyalur energi, slot resonansi kristal, dan catatan tangan yang tampak mirip tulisan guru pencatatmu. Tulisan itu memperingatkan bahwa inti ini dapat ditenangkan untuk memulihkan keseimbangan menara, atau dibuka paksa untuk menyerap kekuatan kabut bagi kepentingan yang lebih besar.\n\nSetiap pilihan memiliki konsekuensi besar terhadap arah akhir perjalananmu di puncak Menara Jam Orva.",
+        "en": "On the left side of the core chamber, an antique instrument table holds energy-routing levers, a crystal resonance slot, and handwritten notes resembling your archivist mentor's script. The writing warns that this core can be calmed to restore tower balance, or forced open to draw in mist power for greater ends.\n\nEvery choice carries heavy consequences for your final path atop Orva Clocktower."
+      },
       "choices": [
         {
-          "text": "> Memasang Resonator Inti pada dudukan instrumen",
+          "text": {
+            "id": "> Memasang Resonator Inti pada dudukan instrumen",
+            "en": "> Mount the Core Resonator into the instrument socket"
+          },
           "next": "b5_03",
           "req": {
             "hasItem": "Resonator Inti"
           }
         },
         {
-          "text": "> Menyesuaikan katup bantu dengan perkakas mekanis",
+          "text": {
+            "id": "> Menyesuaikan katup bantu dengan perkakas mekanis",
+            "en": "> Adjust the auxiliary valve using mechanical tools"
+          },
           "next": "b5_03",
           "req": {
             "hasItem": "Kunci Inggris & Roda Gigi"
           }
         },
         {
-          "text": "> Melangkah ke area tengah ruang inti untuk menilai situasi",
+          "text": {
+            "id": "> Melangkah ke area tengah ruang inti untuk menilai situasi",
+            "en": "> Step into the center of the core chamber to assess the situation"
+          },
           "next": "b5_06"
         }
       ]
     },
     "b5_03": {
-      "text": "Denyut kristal di pusat ruangan perlahan merespons tindakanmu dengan cahaya keperakan yang lebih teratur. Melalui resonansi yang selaras, kau menangkap kilasan ingatan terakhir guru pencatatmu sebelum menghilang: ia berusaha menahan kebocoran inti agar Menara Jam Orva tidak kolaps dan menelan seluruh lembah.\n\nKini jalur menuju puncak menara terbuka dengan tekanan yang jauh lebih terkendali.",
+      "text": {
+        "id": "Denyut kristal di pusat ruangan perlahan merespons tindakanmu dengan cahaya keperakan yang lebih teratur. Melalui resonansi yang selaras, kau menangkap kilasan ingatan terakhir guru pencatatmu sebelum menghilang: ia berusaha menahan kebocoran inti agar Menara Jam Orva tidak kolaps dan menelan seluruh lembah.\n\nKini jalur menuju puncak menara terbuka dengan tekanan yang jauh lebih terkendali.",
+        "en": "The crystal pulse at the chamber's center slowly answers your action with a steadier silver glow. Through tuned resonance, you catch a flash of your archivist mentor's final memory before vanishing: they fought to contain a core leak so Orva Clocktower would not collapse and swallow the valley.\n\nNow the way toward the tower summit opens under far more controlled pressure."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "resonator_attuned": true, "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan ke jalur pendakian menuju Bab 5 Klaster B",
+          "text": {
+            "id": "> Melanjutkan ke jalur pendakian menuju Bab 5 Klaster B",
+            "en": "> Continue along the ascent route toward Chapter 5 Cluster B"
+          },
           "next": "b5_09"
         },
         {
-          "text": "> Memeriksa sudut bayangan di sisi kanan ruang inti",
+          "text": {
+            "id": "> Memeriksa sudut bayangan di sisi kanan ruang inti",
+            "en": "> Check the shadow corner on the right side of the core chamber"
+          },
           "next": "b5_07"
         }
       ]
     },
     "b5_04": {
-      "text": "Gelombang tekanan uap dan getaran mekanis menghantam lantai batu saat keseimbangan ruang inti terganggu sesaat. Hantaman puing serta hawa panas yang menyengat membuat tubuhmu terasa perih dan kehabisan stamina (-2 HP).\n\nKau mundur selangkah ke balik pilar batu sambil mengatur napas, memastikan seluruh barang bawaanmu tetap utuh.",
+      "text": {
+        "id": "Gelombang tekanan uap dan getaran mekanis menghantam lantai batu saat keseimbangan ruang inti terganggu sesaat. Hantaman puing serta hawa panas yang menyengat membuat tubuhmu terasa perih dan kehabisan stamina (-2 HP).\n\nKau mundur selangkah ke balik pilar batu sambil mengatur napas, memastikan seluruh barang bawaanmu tetap utuh.",
+        "en": "A wave of steam pressure and mechanical tremor slams across the stone floor as the core chamber's balance falters briefly. Flying debris and searing heat leave your body aching and drained (-2 HP).\n\nYou step back behind a stone pillar to catch your breath, checking that all your gear remains intact."
+      },
       "choices": [
         {
-          "text": "> Menuju area tengah ruang inti dengan hati-hati",
+          "text": {
+            "id": "> Menuju area tengah ruang inti dengan hati-hati",
+            "en": "> Head carefully toward the center of the core chamber"
+          },
           "next": "b5_06"
         },
         {
-          "text": "> Bergerak ke jalur lanjutan Bab 5 Klaster A",
+          "text": {
+            "id": "> Bergerak ke jalur lanjutan Bab 5 Klaster A",
+            "en": "> Move to the next stretch of Chapter 5 Cluster A"
+          },
           "next": "b5_08"
         }
       ]
     },
     "b5_05": {
-      "text": "Dari pembacaan skala tekanan dan ukiran pada cincin tembaga, kau melihat bahwa saluran utama ruang inti terhubung langsung ke bandul serta lonceng di Menara Jam Orva. Jika mekanisme menara di puncak kelak diaktifkan kembali dengan sandi yang tepat, nadi bawah tanah ini akan kembali berdetak selaras.\n\nSebuah catatan kecil di sisi panel juga menyinggung cara mengunci atau mengalihkan arsip kebenaran bila kau ingin membawanya keluar dari lembah.",
+      "text": {
+        "id": "Dari pembacaan skala tekanan dan ukiran pada cincin tembaga, kau melihat bahwa saluran utama ruang inti terhubung langsung ke bandul serta lonceng di Menara Jam Orva. Jika mekanisme menara di puncak kelak diaktifkan kembali dengan sandi yang tepat, nadi bawah tanah ini akan kembali berdetak selaras.\n\nSebuah catatan kecil di sisi panel juga menyinggung cara mengunci atau mengalihkan arsip kebenaran bila kau ingin membawanya keluar dari lembah.",
+        "en": "From pressure scale readings and engravings on the copper rings, you see that the core chamber's main line links straight to the pendulum and bell in Orva Clocktower. If the summit tower mechanism is later restarted with the right cipher, this subterranean pulse will beat in harmony once more.\n\nA small note beside the panel also hints at how to seal or divert the archive of truth if you intend to carry it out of the valley."
+      },
       "onEnter": {
         "setFlags": { "unlocked_archive_lore": true }
       },
       "choices": [
         {
-          "text": "> Melangkah ke tengah ruang inti",
+          "text": {
+            "id": "> Melangkah ke tengah ruang inti",
+            "en": "> Step toward the center of the core chamber"
+          },
           "next": "b5_06"
         },
         {
-          "text": "> Menuju jalur lanjutan Bab 5 Klaster B",
+          "text": {
+            "id": "> Menuju jalur lanjutan Bab 5 Klaster B",
+            "en": "> Head to the next stretch of Chapter 5 Cluster B"
+          },
           "next": "b5_09"
         }
       ]
     },
     "b5_06": {
-      "text": "Di tengah ruang inti, kabut kelabu berputar pelan di sekitar tiang penyangga dan membentuk sosok samar yang menyerupai penjaga atau bayangan masa lalu. Suaranya terdengar berbisik di antara dengung mesin—menguji keteguhan niatmu sebelum naik ke puncak menara.\n\nApakah kau akan merespons dengan ketenangan dan empati, atau menjaga jarak dan melangkah tegas?",
+      "text": {
+        "id": "Di tengah ruang inti, kabut kelabu berputar pelan di sekitar tiang penyangga dan membentuk sosok samar yang menyerupai penjaga atau bayangan masa lalu. Suaranya terdengar berbisik di antara dengung mesin—menguji keteguhan niatmu sebelum naik ke puncak menara.\n\nApakah kau akan merespons dengan ketenangan dan empati, atau menjaga jarak dan melangkah tegas?",
+        "en": "In the center of the core chamber, grey mist swirls slowly around support pillars and forms a faint figure resembling a warden or a shadow of the past. A voice whispers amid the machinery's hum—testing the steadiness of your resolve before climbing to the tower summit.\n\nWill you respond with calm and empathy, or keep distance and step forward firmly?"
+      },
       "choices": [
         {
-          "text": "> Berbicara dengan tenang dan teguh menghadapi bayangan di ruang inti",
+          "text": {
+            "id": "> Berbicara dengan tenang dan teguh menghadapi bayangan di ruang inti",
+            "en": "> Speak calmly and firmly facing the shadow in the core chamber"
+          },
           "next": "b5_07",
           "skillCheck": {
             "stat": "cha",
@@ -1713,42 +2094,66 @@
           }
         },
         {
-          "text": "> Melanjutkan langkah ke jalur lanjutan Bab 5",
+          "text": {
+            "id": "> Melanjutkan langkah ke jalur lanjutan Bab 5",
+            "en": "> Continue toward the next stretch of Chapter 5"
+          },
           "next": "b5_08"
         }
       ]
     },
     "b5_07": {
-      "text": "Di balik bayangan tiang ruang inti, kau menemukan sebuah tabung segel dan catatan koordinat tangga spiral yang menghubungkan ruang mesin langsung ke ruang jam di puncak Menara Jam Orva.\n\nPengetahuan ini memberi keunggulan strategis saat menghadapi keputusan akhir di bab penutup.",
+      "text": {
+        "id": "Di balik bayangan tiang ruang inti, kau menemukan sebuah tabung segel dan catatan koordinat tangga spiral yang menghubungkan ruang mesin langsung ke ruang jam di puncak Menara Jam Orva.\n\nPengetahuan ini memberi keunggulan strategis saat menghadapi keputusan akhir di bab penutup.",
+        "en": "Behind the shadow of a core pillar, you find a seal canister and coordinate notes for a spiral staircase linking the machine hall straight to the clockroom atop Orva Clocktower.\n\nThis knowledge gives you a strategic edge when facing final choices in the closing chapter."
+      },
       "onEnter": {
         "stats": { "cha": 1 },
         "setFlags": { "found_warden_trail": true, "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> Menuju jalur lanjutan Bab 5 Klaster B",
+          "text": {
+            "id": "> Menuju jalur lanjutan Bab 5 Klaster B",
+            "en": "> Head to the next stretch of Chapter 5 Cluster B"
+          },
           "next": "b5_09"
         }
       ]
     },
     "b5_08": {
-      "text": "Di sisi timur ruang inti, tangga besi spiral yang menyempit menanjak menembus kegelapan ke arah poros Menara Jam Orva. Suara angin pegunungan mulai bercampur dengan dengung mesin yang kian dekat.\n\nKau bersiap menapaki bagian akhir sebelum tiba di puncak menara.",
+      "text": {
+        "id": "Di sisi timur ruang inti, tangga besi spiral yang menyempit menanjak menembus kegelapan ke arah poros Menara Jam Orva. Suara angin pegunungan mulai bercampur dengan dengung mesin yang kian dekat.\n\nKau bersiap menapaki bagian akhir sebelum tiba di puncak menara.",
+        "en": "On the east side of the core chamber, a narrowing iron spiral stair climbs through darkness toward the shaft of Orva Clocktower. Mountain wind begins mingling with the closer hum of machinery.\n\nYou prepare to climb the final stretch before reaching the tower summit."
+      },
       "choices": [
         {
-          "text": "> Menuju jalur lanjutan Bab 5 Klaster B",
+          "text": {
+            "id": "> Menuju jalur lanjutan Bab 5 Klaster B",
+            "en": "> Head to the next stretch of Chapter 5 Cluster B"
+          },
           "next": "b5_09"
         },
         {
-          "text": "> Memeriksa jalur naik menuju Bab 6",
+          "text": {
+            "id": "> Memeriksa jalur naik menuju Bab 6",
+            "en": "> Check the ascent route toward Chapter 6"
+          },
           "next": "b5_10"
         }
       ]
     },
     "b5_09": {
-      "text": "Tangga besi spiral menanjak menembus ruang poros yang dipenuhi roda transmisi berdiameter besar dan rantai penarik berlumut. Setiap putaran tangga memperlihatkan perubahan udara—dari hawa lembap berbau mineral di ruang inti menuju angin gunung yang lebih tajam di atas.\n\nPada beberapa anak tangga, terukir penanda tinggi air dan tekanan yang dulu dipakai para pencatat untuk memastikan menara jam tetap berdiri kokoh saat kabut menebal di lembah.",
+      "text": {
+        "id": "Tangga besi spiral menanjak menembus ruang poros yang dipenuhi roda transmisi berdiameter besar dan rantai penarik berlumut. Setiap putaran tangga memperlihatkan perubahan udara—dari hawa lembap berbau mineral di ruang inti menuju angin gunung yang lebih tajam di atas.\n\nPada beberapa anak tangga, terukir penanda tinggi air dan tekanan yang dulu dipakai para pencatat untuk memastikan menara jam tetap berdiri kokoh saat kabut menebal di lembah.",
+        "en": "The iron spiral staircase climbs through a shaft packed with large-diameter transmission gears and moss-slicked haul chains. Every turn of the stairs reveals shifting air—from damp mineral-heavy warmth in the core chamber to sharper mountain wind above.\n\nOn several treads are carved water-level and pressure markers once used by archivists to keep the clocktower standing firm whenever mist thickened in the valley."
+      },
       "choices": [
         {
-          "text": "> Menaiki tangga dengan langkah cepat dan ringan melewati celah sempit",
+          "text": {
+            "id": "> Menaiki tangga dengan langkah cepat dan ringan melewati celah sempit",
+            "en": "> Climb the stairs briskly and lightly past narrow gaps"
+          },
           "next": "b5_11",
           "skillCheck": {
             "stat": "agi",
@@ -1761,7 +2166,10 @@
           }
         },
         {
-          "text": "> Memeriksa tuas pengunci darurat pada bordes tangga poros",
+          "text": {
+            "id": "> Memeriksa tuas pengunci darurat pada bordes tangga poros",
+            "en": "> Inspect the emergency locking lever on the shaft landing"
+          },
           "next": "b5_12",
           "skillCheck": {
             "stat": "wit",
@@ -1771,16 +2179,25 @@
           }
         },
         {
-          "text": "> Melanjutkan pendakian menuju ujung Bab 5",
+          "text": {
+            "id": "> Melanjutkan pendakian menuju ujung Bab 5",
+            "en": "> Continue the ascent toward the end of Chapter 5"
+          },
           "next": "b5_14"
         }
       ]
     },
     "b5_10": {
-      "text": "Jalur naik di sisi luar poros melewati celah batu dan platform perawatan yang terbuka ke arah tebing dalam. Dari balik kabut yang bergulung pelan, terdengar suara angin bersiul menembus jeruji menara di atas.\n\nKau menjaga pijakan tetap mantap sambil memastikan seluruh bekal dan catatan tetap berada dalam jangkauan.",
+      "text": {
+        "id": "Jalur naik di sisi luar poros melewati celah batu dan platform perawatan yang terbuka ke arah tebing dalam. Dari balik kabut yang bergulung pelan, terdengar suara angin bersiul menembus jeruji menara di atas.\n\nKau menjaga pijakan tetap mantap sambil memastikan seluruh bekal dan catatan tetap berada dalam jangkauan.",
+        "en": "An exterior ascent route passes rock crevices and maintenance platforms open toward the inner cliff. Through slowly rolling mist comes wind whistling past tower grilles above.\n\nYou keep your footing steady while making sure all supplies and notes remain within reach."
+      },
       "choices": [
         {
-          "text": "> Menarik palka besi yang macet dengan tenaga penuh",
+          "text": {
+            "id": "> Menarik palka besi yang macet dengan tenaga penuh",
+            "en": "> Pull the jammed iron hatch open with full strength"
+          },
           "next": "b5_12",
           "skillCheck": {
             "stat": "str",
@@ -1793,66 +2210,105 @@
           }
         },
         {
-          "text": "> Menuju bordes akhir Bab 5",
+          "text": {
+            "id": "> Menuju bordes akhir Bab 5",
+            "en": "> Head to the final landing of Chapter 5"
+          },
           "next": "b5_14"
         }
       ]
     },
     "b5_11": {
-      "text": "Di sebuah bordes kecil di tengah poros, kau menemukan tas kulit usang milik seorang anggota ekspedisi yang sempat berhenti di sini sebelum mencapai puncak. Di dalamnya tersimpan catatan singkat tentang sandi mekanisme lonceng serta keyakinan bahwa nasib Lembah Orva akan ditentukan di ruang jam di atas.",
+      "text": {
+        "id": "Di sebuah bordes kecil di tengah poros, kau menemukan tas kulit usang milik seorang anggota ekspedisi yang sempat berhenti di sini sebelum mencapai puncak. Di dalamnya tersimpan catatan singkat tentang sandi mekanisme lonceng serta keyakinan bahwa nasib Lembah Orva akan ditentukan di ruang jam di atas.",
+        "en": "On a small landing midway up the shaft, you find a worn leather bag belonging to an expedition member who paused here before reaching the top. Inside are brief notes on the bell mechanism cipher and a conviction that Orva Valley's fate will be decided in the clockroom above."
+      },
       "onEnter": {
         "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan langkah ke bordes akhir Bab 5",
+          "text": {
+            "id": "> Melanjutkan langkah ke bordes akhir Bab 5",
+            "en": "> Continue to the final landing of Chapter 5"
+          },
           "next": "b5_14"
         }
       ]
     },
     "b5_12": {
-      "text": "Dengan ketepatan membaca mekanisme, kau mengencangkan baut pengaman bordes dan mencatat arah aliran tekanan menuju ruang jam. Langkah ini memberikan kesiapan tambahan sebelum menghadapi keputusan penentu di puncak menara.",
+      "text": {
+        "id": "Dengan ketepatan membaca mekanisme, kau mengencangkan baut pengaman bordes dan mencatat arah aliran tekanan menuju ruang jam. Langkah ini memberikan kesiapan tambahan sebelum menghadapi keputusan penentu di puncak menara.",
+        "en": "With keen mechanical reading, you tighten landing safety bolts and note pressure flow toward the clockroom. This step gives added readiness before facing the decisive choice atop the tower."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "resonator_attuned": true }
       },
       "choices": [
         {
-          "text": "> Melanjutkan langkah ke bordes akhir Bab 5",
+          "text": {
+            "id": "> Melanjutkan langkah ke bordes akhir Bab 5",
+            "en": "> Continue to the final landing of Chapter 5"
+          },
           "next": "b5_14"
         }
       ]
     },
     "b5_13": {
-      "text": "Anak tangga yang basah oleh embun dan getaran logam membuat kakimu sempat terpeleset saat menanjak. Benturan ringan pada besi penyangga meninggalkan nyeri di pergelangan kaki (-2 HP), namun kau tetap mampu berdiri tegak.",
+      "text": {
+        "id": "Anak tangga yang basah oleh embun dan getaran logam membuat kakimu sempat terpeleset saat menanjak. Benturan ringan pada besi penyangga meninggalkan nyeri di pergelangan kaki (-2 HP), namun kau tetap mampu berdiri tegak.",
+        "en": "Steps slick with condensation and metal vibration cause your foot to slip while climbing. A light knock against a support rail leaves an ache in your ankle (-2 HP), yet you stand tall."
+      },
       "choices": [
         {
-          "text": "> Menarik napas sebentar lalu menuju bordes akhir Bab 5",
+          "text": {
+            "id": "> Menarik napas sebentar lalu menuju bordes akhir Bab 5",
+            "en": "> Catch your breath briefly, then head to the final landing of Chapter 5"
+          },
           "next": "b5_14"
         }
       ]
     },
     "b5_14": {
-      "text": "Di ujung tangga poros, pintu kayu berlapis perunggu terbuka ke arah ruang jam dan puncak Menara Jam Orva. Angin pegunungan bertiup kencang bercampur kabut tipis yang berputar di sekitar jarum raksasa yang membeku.\n\nSeluruh perjalanan dari gerbang kabut, kanal roda air, desa bawah kabut, terowongan tua, hingga ruang inti kini bermuara ke bab penentuan terakhir.",
+      "text": {
+        "id": "Di ujung tangga poros, pintu kayu berlapis perunggu terbuka ke arah ruang jam dan puncak Menara Jam Orva. Angin pegunungan bertiup kencang bercampur kabut tipis yang berputar di sekitar jarum raksasa yang membeku.\n\nSeluruh perjalanan dari gerbang kabut, kanal roda air, desa bawah kabut, terowongan tua, hingga ruang inti kini bermuara ke bab penentuan terakhir.",
+        "en": "At the top of the shaft stairs, a bronze-plated timber door opens toward the clockroom and the summit of Orva Clocktower. Mountain wind blows strong, mingling with thin mist swirling around giant frozen hands.\n\nThe entire journey from the mist gate, waterwheel canal, mist-below village, old tunnels, and core chamber now converges on the final chapter of destiny."
+      },
       "choices": [
         {
-          "text": "> Memasuki Bab 6: Puncak Menara Jam & Penentuan Nasib",
+          "text": {
+            "id": "> Memasuki Bab 6: Puncak Menara Jam & Penentuan Nasib",
+            "en": "> Enter Chapter 6: Clocktower Summit & Destiny"
+          },
           "next": "b6_01",
           "effects": {
-            "chapter": "Bab 6: Puncak Menara Jam & Penentuan Nasib"
+            "chapter": {
+              "id": "Bab 6: Puncak Menara Jam & Penentuan Nasib",
+              "en": "Chapter 6: Clocktower Summit & Destiny"
+            }
           }
         }
       ]
     },
     "b6_01": {
-      "text": "Pintu berlapis perunggu terbuka ke ruang jam utama di puncak Menara Jam Orva. Roda gigi raksasa, bandul penyeimbang, dan tuas katup uap berdiri membeku di tengah ruang kubah terbuka tempat angin pegunungan berembus membawa kabut kelabu yang bergulung di bawah sana.\n\nDi balik panel kendali utama, tergeletak sebuah pelat catatan terakhir dari guru pencatatmu yang menjelaskan bahwa dari puncak inilah seluruh sistem lembah dapat ditenangkan, arsipnya dapat diamankan ke dunia luar, atau inti kekuatannya dapat direbut. Di sinilah perjalananmu mencapai puncaknya.",
+      "text": {
+        "id": "Pintu berlapis perunggu terbuka ke ruang jam utama di puncak Menara Jam Orva. Roda gigi raksasa, bandul penyeimbang, dan tuas katup uap berdiri membeku di tengah ruang kubah terbuka tempat angin pegunungan berembus membawa kabut kelabu yang bergulung di bawah sana.\n\nDi balik panel kendali utama, tergeletak sebuah pelat catatan terakhir dari guru pencatatmu yang menjelaskan bahwa dari puncak inilah seluruh sistem lembah dapat ditenangkan, arsipnya dapat diamankan ke dunia luar, atau inti kekuatannya dapat direbut. Di sinilah perjalananmu mencapai puncaknya.",
+        "en": "The bronze-plated door opens into the main clockroom atop Orva Clocktower. Giant gears, a balancing pendulum, and steam-valve levers stand frozen inside an open-domed hall where mountain wind blows carrying grey mist rolling below.\n\nBehind the main control panel lies a final note plate from your archivist mentor explaining that from this summit the entire valley system can be calmed, its archive secured for the outside world, or its core power seized. Here your journey reaches its peak."
+      },
       "choices": [
         {
-          "text": "> Memeriksa tuas bandul, katup penyeimbang, dan panel lonceng menara",
+          "text": {
+            "id": "> Memeriksa tuas bandul, katup penyeimbang, dan panel lonceng menara",
+            "en": "> Inspect the pendulum lever, balancing valve, and tower bell panel"
+          },
           "next": "b6_02"
         },
         {
-          "text": "> Menyelinap ke sisi panel tinggi untuk mengamati mekanisme tanpa memicu suara",
+          "text": {
+            "id": "> Menyelinap ke sisi panel tinggi untuk mengamati mekanisme tanpa memicu suara",
+            "en": "> Slip along the high panel side to observe the mechanism without making a sound"
+          },
           "next": "b6_03",
           "skillCheck": {
             "stat": "agi",
@@ -1865,7 +2321,10 @@
           }
         },
         {
-          "text": "> Mempelajari skema kendali inti dan arsip pada meja pengawas",
+          "text": {
+            "id": "> Mempelajari skema kendali inti dan arsip pada meja pengawas",
+            "en": "> Study the core control and archive schematics on the warden desk"
+          },
           "next": "b6_06",
           "skillCheck": {
             "stat": "wit",
@@ -1877,10 +2336,16 @@
       ]
     },
     "b6_02": {
-      "text": "Di hadapanmu berdiri konsol utama Menara Jam Orva dengan tuas bandul, jalur pipa tekanan dari ruang inti, serta tempat penyimpanan arsip ekspedisi. Setiap gerak di konsol ini akan menentukan apakah kau memikul tanggung jawab menjaga menara, membawa kebenaran arsip keluar lembah, atau mencoba menguasai kekuatan kabut.",
+      "text": {
+        "id": "Di hadapanmu berdiri konsol utama Menara Jam Orva dengan tuas bandul, jalur pipa tekanan dari ruang inti, serta tempat penyimpanan arsip ekspedisi. Setiap gerak di konsol ini akan menentukan apakah kau memikul tanggung jawab menjaga menara, membawa kebenaran arsip keluar lembah, atau mencoba menguasai kekuatan kabut.",
+        "en": "Before you stands the main console of Orva Clocktower with its pendulum lever, steam-pressure conduits from the core chamber, and an expedition archive slot. Every move at this console will decide whether you shoulder the duty of guarding the tower, carry the truth of the archive out of the valley, or try to command the mist's power."
+      },
       "choices": [
         {
-          "text": "> Menyelaraskan bandul dan katup untuk mengaktifkan kembali Menara Jam Orva",
+          "text": {
+            "id": "> Menyelaraskan bandul dan katup untuk mengaktifkan kembali Menara Jam Orva",
+            "en": "> Align pendulum and valves to restart Orva Clocktower"
+          },
           "next": "end_node_watchkeeper",
           "skillCheck": {
             "stat": "str",
@@ -1893,93 +2358,147 @@
           }
         },
         {
-          "text": "> Mengamankan catatan arsip dan sandi untuk dibawa keluar dari lembah",
+          "text": {
+            "id": "> Mengamankan catatan arsip dan sandi untuk dibawa keluar dari lembah",
+            "en": "> Secure archive records and ciphers to carry out of the valley"
+          },
           "next": "end_node_truth_carrier",
           "req": {
             "flagTrue": "unlocked_archive_lore"
           }
         },
         {
-          "text": "> Menyalurkan resonansi inti ke konsol demi menguasai kekuatan kabut",
+          "text": {
+            "id": "> Menyalurkan resonansi inti ke konsol demi menguasai kekuatan kabut",
+            "en": "> Channel core resonance into the console to master the mist's power"
+          },
           "next": "end_node_shadow_sovereign",
           "req": {
             "flagTrue": "resonator_attuned"
           }
         },
         {
-          "text": "> Melangkah ke tepi anjungan puncak untuk menenangkan diri",
+          "text": {
+            "id": "> Melangkah ke tepi anjungan puncak untuk menenangkan diri",
+            "en": "> Step to the edge of the summit platform to steady yourself"
+          },
           "next": "b6_07"
         }
       ]
     },
     "b6_03": {
-      "text": "Dengan pijakan lincah di sepanjang balok logam tinggi, kau mencapai sisi konsol tanpa menimbulkan dentuman yang mengganggu keseimbangan menara. Dari sudut pandang ini, seluruh tata letak lembah, kanal, desa, dan aliran kabut tampak jelas di bawah sana.",
+      "text": {
+        "id": "Dengan pijakan lincah di sepanjang balok logam tinggi, kau mencapai sisi konsol tanpa menimbulkan dentuman yang mengganggu keseimbangan menara. Dari sudut pandang ini, seluruh tata letak lembah, kanal, desa, dan aliran kabut tampak jelas di bawah sana.",
+        "en": "With nimble footing along high metal beams, you reach the console side without clatter that could disturb the tower's balance. From this vantage point, the entire layout of valley, canals, village, and mist currents spreads clearly below."
+      },
       "choices": [
         {
-          "text": "> Mengatur ulang bandul menara untuk menjaga keseimbangan Lembah Orva",
+          "text": {
+            "id": "> Mengatur ulang bandul menara untuk menjaga keseimbangan Lembah Orva",
+            "en": "> Reset the tower pendulum to maintain Orva Valley's balance"
+          },
           "next": "end_node_watchkeeper"
         },
         {
-          "text": "> Menuju konsol arsip dan jalur turun menuju anjungan puncak",
+          "text": {
+            "id": "> Menuju konsol arsip dan jalur turun menuju anjungan puncak",
+            "en": "> Head toward the archive console and path to the summit platform"
+          },
           "next": "b6_07"
         }
       ]
     },
     "b6_04": {
-      "text": "Kau membaca hubungan antara tekanan bawah tanah, sandi pengawas, dan getaran inti dengan jernih. Dengan pemahaman penuh atas catatan ekspedisi dan mekanisme menara, kau kini memegang kendali atas pilihan-pilihan paling menentukan di puncak Orva.",
+      "text": {
+        "id": "Kau membaca hubungan antara tekanan bawah tanah, sandi pengawas, dan getaran inti dengan jernih. Dengan pemahaman penuh atas catatan ekspedisi dan mekanisme menara, kau kini memegang kendali atas pilihan-pilihan paling menentukan di puncak Orva.",
+        "en": "You read the link between subterranean pressure, warden ciphers, and core vibrations clearly. With full grasp of the expedition records and tower machinery, you now hold command over the most decisive choices atop Orva."
+      },
       "onEnter": {
         "stats": { "wit": 1 },
         "setFlags": { "unlocked_archive_lore": true, "resonator_attuned": true }
       },
       "choices": [
         {
-          "text": "> Mengaktifkan kembali Menara Jam Orva sebagai penjaga keseimbangan",
+          "text": {
+            "id": "> Mengaktifkan kembali Menara Jam Orva sebagai penjaga keseimbangan",
+            "en": "> Restart Orva Clocktower as guardian of balance"
+          },
           "next": "end_node_watchkeeper"
         },
         {
-          "text": "> Menyiapkan berkas arsip dan sandi untuk menyingkap kebenaran ke luar",
+          "text": {
+            "id": "> Menyiapkan berkas arsip dan sandi untuk menyingkap kebenaran ke luar",
+            "en": "> Prepare archive dossiers and ciphers to reveal the truth outside"
+          },
           "next": "end_node_truth_carrier"
         },
         {
-          "text": "> Mengarahkan daya inti untuk menguasai kendali di balik kabut",
+          "text": {
+            "id": "> Mengarahkan daya inti untuk menguasai kendali di balik kabut",
+            "en": "> Direct core power to seize command behind the mist"
+          },
           "next": "end_node_shadow_sovereign"
         }
       ]
     },
     "b6_05": {
-      "text": "Hentakan mekanis yang keras dan angin kencang di puncak menara membuat pijakanmu sempat goyah saat tuas berderit (-2 HP). Meski tubuhmu terasa nyeri, kau berhasil bertahan dan menjaga pegangan pada struktur menara.",
+      "text": {
+        "id": "Hentakan mekanis yang keras dan angin kencang di puncak menara membuat pijakanmu sempat goyah saat tuas berderit (-2 HP). Meski tubuhmu terasa nyeri, kau berhasil bertahan dan menjaga pegangan pada struktur menara.",
+        "en": "A sharp mechanical jolt and strong summit wind throw off your footing as levers groan (-2 HP). Though your body aches, you hold fast and keep your grip on the tower structure."
+      },
       "choices": [
         {
-          "text": "> Bangkit dan melangkah ke anjungan puncak menara",
+          "text": {
+            "id": "> Bangkit dan melangkah ke anjungan puncak menara",
+            "en": "> Rise and step onto the tower's summit platform"
+          },
           "next": "b6_07"
         },
         {
-          "text": "> Mencoba kembali menyelaraskan mekanisme menara",
+          "text": {
+            "id": "> Mencoba kembali menyelaraskan mekanisme menara",
+            "en": "> Try aligning the tower mechanism once more"
+          },
           "next": "end_node_watchkeeper"
         }
       ]
     },
     "b6_06": {
-      "text": "Catatan pada meja pengawas memperlihatkan bagaimana guru pencatatmu menyusun arsip kebenaran sekaligus memperingatkan bahaya ambisi menguasai inti kabut tanpa batas. Semua petunjuk dari awal perjalanan kini terasa saling mengunci.",
+      "text": {
+        "id": "Catatan pada meja pengawas memperlihatkan bagaimana guru pencatatmu menyusun arsip kebenaran sekaligus memperingatkan bahaya ambisi menguasai inti kabut tanpa batas. Semua petunjuk dari awal perjalanan kini terasa saling mengunci.",
+        "en": "Notes on the warden desk reveal how your archivist mentor compiled the archive of truth while warning against the peril of ambition to master the mist core without limit. Every clue from the start of your journey now locks together."
+      },
       "onEnter": {
         "setFlags": { "unlocked_archive_lore": true }
       },
       "choices": [
         {
-          "text": "> Mengambil berkas arsip dan menempuh jalur pembawa kebenaran",
+          "text": {
+            "id": "> Mengambil berkas arsip dan menempuh jalur pembawa kebenaran",
+            "en": "> Take the archive dossiers and follow the truth-bearer path"
+          },
           "next": "end_node_truth_carrier"
         },
         {
-          "text": "> Kembali ke konsol utama untuk menilai pilihan lain",
+          "text": {
+            "id": "> Kembali ke konsol utama untuk menilai pilihan lain",
+            "en": "> Return to the main console to weigh other options"
+          },
           "next": "b6_02"
         }
       ]
     },
     "b6_07": {
-      "text": "Di anjungan terbuka puncak Menara Jam Orva, angin dingin menyapu wajahmu sementara kabut kelabu berputar pelan di sekeliling lembah. Segel Tembaga di sakumu terasa hangat—mengingatkanmu pada amanah yang membawamu ke tempat ini sejak awal.\n\nSaatnya membuat keputusan terakhir sebelum melangkah ke bagian paling ujung di puncak menara.",
+      "text": {
+        "id": "Di anjungan terbuka puncak Menara Jam Orva, angin dingin menyapu wajahmu sementara kabut kelabu berputar pelan di sekeliling lembah. Segel Tembaga di sakumu terasa hangat—mengingatkanmu pada amanah yang membawamu ke tempat ini sejak awal.\n\nSaatnya membuat keputusan terakhir sebelum melangkah ke bagian paling ujung di puncak menara.",
+        "en": "On the open platform atop Orva Clocktower, cold wind sweeps across your face while grey mist turns slowly around the valley. The Brass Seal in your pocket feels warm—reminding you of the charge that brought you here from the start.\n\nIt is time to make your final decision before stepping to the farthest edge of the tower summit."
+      },
       "choices": [
         {
-          "text": "> Berbicara tegas pada gema dan bayangan angin di puncak menara",
+          "text": {
+            "id": "> Berbicara tegas pada gema dan bayangan angin di puncak menara",
+            "en": "> Speak firmly to the echoes and wind shadows atop the tower"
+          },
           "next": "b6_08",
           "skillCheck": {
             "stat": "cha",
@@ -1989,27 +2508,42 @@
           }
         },
         {
-          "text": "> Melangkah ke titik penentuan terakhir di puncak menara",
+          "text": {
+            "id": "> Melangkah ke titik penentuan terakhir di puncak menara",
+            "en": "> Step to the final point of decision atop the tower"
+          },
           "next": "b6_08"
         }
       ]
     },
     "b6_08": {
-      "text": "Di hadapan roda waktu yang membeku dan kabut yang terus bergulung di bawah, seluruh jejak langkahmu telah membentuk siapa dirimu hari ini. Kau menegakkan tubuh dan menetapkan pilihan pamungkas bagi Lembah Orva.",
+      "text": {
+        "id": "Di hadapan roda waktu yang membeku dan kabut yang terus bergulung di bawah, seluruh jejak langkahmu telah membentuk siapa dirimu hari ini. Kau menegakkan tubuh dan menetapkan pilihan pamungkas bagi Lembah Orva.",
+        "en": "Before frozen wheels of time and mist ever rolling below, every step of your journey has shaped who you are today. You straighten your stance and set the ultimate choice for Orva Valley."
+      },
       "choices": [
         {
-          "text": "> Menghidupkan kembali Menara Jam Orva dan menjaga keseimbangan lembah",
+          "text": {
+            "id": "> Menghidupkan kembali Menara Jam Orva dan menjaga keseimbangan lembah",
+            "en": "> Restart Orva Clocktower and guard the valley's balance"
+          },
           "next": "end_node_watchkeeper"
         },
         {
-          "text": "> Membawa arsip kebenaran keluar dari lembah untuk membuka rahasia Orva",
+          "text": {
+            "id": "> Membawa arsip kebenaran keluar dari lembah untuk membuka rahasia Orva",
+            "en": "> Carry the archive of truth out of the valley to unveil Orva's secret"
+          },
           "next": "end_node_truth_carrier",
           "req": {
             "flagTrue": "unlocked_archive_lore"
           }
         },
         {
-          "text": "> Merebut kendali inti mekanisme dan menjadi penguasa di balik kabut",
+          "text": {
+            "id": "> Merebut kendali inti mekanisme dan menjadi penguasa di balik kabut",
+            "en": "> Seize control of the core mechanism and become sovereign behind the mist"
+          },
           "next": "end_node_shadow_sovereign",
           "req": {
             "flagTrue": "resonator_attuned"
@@ -2018,40 +2552,67 @@
       ]
     },
     "end_node_watchkeeper": {
-      "text": "Dengan dentuman mekanis yang menggema menembus kabut, bandul dan katup Menara Jam Orva kembali bergerak selaras. Tekanan bawah tanah mereda, kabut kelabu perlahan surut dari jalur-jalur vital, dan lonceng tanda kembali berbunyi sebagai penanda waktu serta keselamatan bagi Lembah Orva.\n\nKau memilih bertahan di menara sebagai penjaga baru—memikul tanggung jawab sunyi demi menjaga lembah tetap hidup dan seimbang.\n\n[ TAMAT — PENJAGA MENARA BARU ]",
+      "text": {
+        "id": "Dengan dentuman mekanis yang menggema menembus kabut, bandul dan katup Menara Jam Orva kembali bergerak selaras. Tekanan bawah tanah mereda, kabut kelabu perlahan surut dari jalur-jalur vital, dan lonceng tanda kembali berbunyi sebagai penanda waktu serta keselamatan bagi Lembah Orva.\n\nKau memilih bertahan di menara sebagai penjaga baru—memikul tanggung jawab sunyi demi menjaga lembah tetap hidup dan seimbang.\n\n[ TAMAT — PENJAGA MENARA BARU ]",
+        "en": "With a mechanical chime echoing through the mist, Orva Clocktower's pendulum and valves move in harmony once more. Underground pressure eases, grey mist slowly recedes from vital routes, and warning bells ring again as markers of time and safety for Orva Valley.\n\nYou choose to remain at the tower as the new watchkeeper—shouldering a quiet duty to keep the valley living and balanced.\n\n[ ENDING — THE NEW WATCHKEEPER ]"
+      },
       "ending": "end_watchkeeper",
       "choices": [
         {
-          "text": "> Mulai Ulang dari Awal",
+          "text": {
+            "id": "> Mulai Ulang dari Awal",
+            "en": "> Restart from the Beginning"
+          },
           "next": "b1_01",
           "effects": {
-            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+            "chapter": {
+              "id": "Bab 1: Gerbang Kabut & Bayangan Menara",
+              "en": "Chapter 1: Gate of Mist & Tower Shadow"
+            }
           }
         }
       ]
     },
     "end_node_truth_carrier": {
-      "text": "Kau mengamankan catatan arsip, log ekspedisi, dan sandi pengawas lalu menuruni jalur pegunungan menjauhi kabut yang bergejolak. Di balik punggung bukit Orva, cahaya pagi menyambut langkahmu membawa bukti nyata tentang apa yang sesungguhnya terjadi pada menara dan ekspedisi perintis.\n\nKebenaran Lembah Orva tidak lagi terkubur dalam kabut—namamu akan dikenang sebagai pembawa arsip yang membuka rahasia sejarah tersebut ke dunia luar.\n\n[ TAMAT — PEMBAWA ARSIP KEBENARAN ]",
+      "text": {
+        "id": "Kau mengamankan catatan arsip, log ekspedisi, dan sandi pengawas lalu menuruni jalur pegunungan menjauhi kabut yang bergejolak. Di balik punggung bukit Orva, cahaya pagi menyambut langkahmu membawa bukti nyata tentang apa yang sesungguhnya terjadi pada menara dan ekspedisi perintis.\n\nKebenaran Lembah Orva tidak lagi terkubur dalam kabut—namamu akan dikenang sebagai pembawa arsip yang membuka rahasia sejarah tersebut ke dunia luar.\n\n[ TAMAT — PEMBAWA ARSIP KEBENARAN ]",
+        "en": "You secure archive records, expedition logs, and warden ciphers, then descend mountain paths away from the churning mist. Beyond the Orva ridge, morning light greets your steps carrying hard proof of what truly happened to the tower and pioneer expedition.\n\nOrva Valley's truth is no longer buried in mist—your name will be remembered as the archive bearer who brought its history to light.\n\n[ ENDING — BEARER OF THE ARCHIVE ]"
+      },
       "ending": "end_truth_carrier",
       "choices": [
         {
-          "text": "> Mulai Ulang dari Awal",
+          "text": {
+            "id": "> Mulai Ulang dari Awal",
+            "en": "> Restart from the Beginning"
+          },
           "next": "b1_01",
           "effects": {
-            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+            "chapter": {
+              "id": "Bab 1: Gerbang Kabut & Bayangan Menara",
+              "en": "Chapter 1: Gate of Mist & Tower Shadow"
+            }
           }
         }
       ]
     },
     "end_node_shadow_sovereign": {
-      "text": "Melalui resonansi inti dan mekanisme menara, arus energi serta kabut kelabu tunduk pada kendalimu. Kabut tidak lagi sekadar menyelimuti lembah, melainkan bergerak mengikuti kehendakmu dari balik bayangan Menara Jam Orva.\n\nNamun kekuatan itu menuntut harga yang mahal: batas kemanusiaan dan ingatan lamamu perlahan luruh seiring kau menjadi penguasa tak terlihat di balik kabut.\n\n[ TAMAT — PENGUASA DI BALIK KABUT ]",
+      "text": {
+        "id": "Melalui resonansi inti dan mekanisme menara, arus energi serta kabut kelabu tunduk pada kendalimu. Kabut tidak lagi sekadar menyelimuti lembah, melainkan bergerak mengikuti kehendakmu dari balik bayangan Menara Jam Orva.\n\nNamun kekuatan itu menuntut harga yang mahal: batas kemanusiaan dan ingatan lamamu perlahan luruh seiring kau menjadi penguasa tak terlihat di balik kabut.\n\n[ TAMAT — PENGUASA DI BALIK KABUT ]",
+        "en": "Through core resonance and tower machinery, energy currents and grey mist bow to your command. Mist no longer merely shrouds the valley, moving instead at your will from behind Orva Clocktower's shadow.\n\nYet that power demands a steep price: your human bounds and old memories slowly dissolve as you become an unseen sovereign behind the mist.\n\n[ ENDING — SOVEREIGN BEHIND THE MIST ]"
+      },
       "ending": "end_shadow_sovereign",
       "choices": [
         {
-          "text": "> Mulai Ulang dari Awal",
+          "text": {
+            "id": "> Mulai Ulang dari Awal",
+            "en": "> Restart from the Beginning"
+          },
           "next": "b1_01",
           "effects": {
-            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+            "chapter": {
+              "id": "Bab 1: Gerbang Kabut & Bayangan Menara",
+              "en": "Chapter 1: Gate of Mist & Tower Shadow"
+            }
           }
         }
       ]
