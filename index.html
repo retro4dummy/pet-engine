@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Pocket Tabletop — Micro Web Game Engine</title>
+<title>PET Engine — Massive CYOA</title>
 <style>
   :root {
     --bg: #efefeb;
@@ -21,7 +21,7 @@
     min-height: 100vh;
   }
   #container {
-    width: 100%; max-width: 460px;
+    width: 100%; max-width: 480px;
     background: var(--card);
     border: 3px solid var(--border);
     box-shadow: 5px 5px 0 var(--border);
@@ -30,12 +30,35 @@
   header {
     display: flex; justify-content: space-between; align-items: center;
     border-bottom: 2px solid var(--border);
-    padding-bottom: 10px; margin-bottom: 14px;
+    padding-bottom: 10px; margin-bottom: 12px; gap: 8px;
   }
-  header h1 { font-size: 16px; margin: 0; letter-spacing: 0.5px; }
+  header h1 { font-size: 15px; margin: 0; letter-spacing: 0.5px; }
   .badge {
-    font-size: 11px; padding: 2px 6px;
+    font-size: 11px; padding: 2px 6px; white-space: nowrap;
     border: 1px solid var(--border); background: var(--tint);
+  }
+  .meta-bar {
+    font-size: 12px; color: var(--muted);
+    margin-bottom: 10px; display: flex; justify-content: space-between;
+  }
+  .stats-bar {
+    display: flex; flex-wrap: wrap; gap: 8px 12px;
+    background: var(--tint); border: 1px solid var(--border);
+    padding: 8px 10px; margin-bottom: 14px; font-size: 12px;
+  }
+  .narrative {
+    font-size: 15px; line-height: 1.6;
+    margin-bottom: 16px; min-height: 150px;
+    white-space: pre-line;
+  }
+  .roll-banner {
+    border: 2px solid var(--border); background: var(--tint);
+    padding: 8px 10px; margin-bottom: 12px; font-size: 13px;
+    display: none;
+  }
+  .ending-box {
+    border: 2px solid var(--border); background: var(--tint);
+    padding: 10px; margin-bottom: 14px; font-size: 13px;
   }
   .btn {
     display: block; width: 100%; text-align: left;
@@ -47,29 +70,19 @@
   }
   .btn:hover { background: var(--tint); }
   .btn:active { background: var(--fg); color: var(--card); }
-  .btn:disabled { opacity: 0.4; border-style: dashed; cursor: not-allowed; }
+  .btn:disabled { opacity: 0.45; border-style: dashed; cursor: not-allowed; }
   .btn-sm {
-    padding: 8px 10px; font-size: 12px; text-align: center; margin-bottom: 0;
-  }
-  .stats-bar {
-    display: flex; flex-wrap: wrap; gap: 10px;
-    background: var(--tint); border: 1px solid var(--border);
-    padding: 8px 10px; margin-bottom: 14px; font-size: 13px;
-  }
-  .narrative {
-    font-size: 15px; line-height: 1.6;
-    margin-bottom: 18px; min-height: 140px;
-    white-space: pre-line;
+    padding: 8px 6px; font-size: 11px; text-align: center; margin-bottom: 0;
   }
   .footer-nav {
-    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
     margin-top: 16px; padding-top: 12px;
     border-top: 2px dashed var(--border);
   }
   .panel {
     margin-top: 12px; padding: 10px;
     border: 2px solid var(--border); background: var(--bg);
-    font-size: 13px; display: none;
+    font-size: 12px; display: none; line-height: 1.5;
   }
   .game-card {
     border: 2px solid var(--border); padding: 12px; margin-bottom: 10px;
@@ -82,53 +95,33 @@
 
 <div id="container">
   <header>
-    <h1 id="header-title">POCKET TABLETOP</h1>
+    <h1 id="header-title">POCKET E-TABLETOP</h1>
     <span class="badge" id="mode-badge">HUB</span>
   </header>
 
-  <!-- VIEW 1: MENU UTAMA -->
+  <!-- HUB -->
   <div id="view-hub">
-    <p style="font-size:13px; margin-top:0;">Pilih mode permainan. Semua progres tersimpan otomatis di perangkatmu.</p>
-    
-    <div class="game-card">
-      <h3>1. Ekspedisi Menara Bisu</h3>
-      <p>Genre: Interactive Gamebook (CYOA) • Aktif</p>
-      <button class="btn btn-sm" onclick="startGame('tower_cyoa')">[ MAINKAN SEKARANG ]</button>
-    </div>
-
-    <div class="game-card">
-      <h3>2. Kasus Kereta Malam 04</h3>
-      <p>Genre: Detective Investigation • Tahap 2</p>
-      <button class="btn btn-sm" disabled>[ SEGERA HADIR ]</button>
-    </div>
-
-    <div class="game-card">
-      <h3>3. Kedalaman Katakombe</h3>
-      <p>Genre: Turn-Based Roguelike • Tahap 3</p>
-      <button class="btn btn-sm" disabled>[ SEGERA HADIR ]</button>
-    </div>
-
-    <div class="game-card">
-      <h3>4. Pos Penjaga Orbit</h3>
-      <p>Genre: Idle Strategy / Virtual Pet • Tahap 4</p>
-      <button class="btn btn-sm" disabled>[ SEGERA HADIR ]</button>
-    </div>
+    <p style="font-size:13px; margin-top:0;">Pilih petualangan. Progres tersimpan otomatis di browser; ending yang terbuka dicatat per cerita.</p>
+    <div id="game-list"></div>
   </div>
 
-  <!-- VIEW 2: LAYAR PERMAINAN CYOA -->
-  <div id="view-cyoa" style="display:none;">
-    <div class="stats-bar">
-      <span>HP: <b id="ui-hp">10</b></span>
-      <span>STAMINA: <b id="ui-sta">5</b></span>
-      <span>TAS: <b id="ui-inv">Kosong</b></span>
+  <!-- GAMEPLAY -->
+  <div id="view-game" style="display:none;">
+    <div class="meta-bar">
+      <span id="ui-chapter">Bab -</span>
+      <span id="ui-endings-count">Ending: 0/0</span>
     </div>
 
+    <div class="stats-bar" id="ui-stats"></div>
+    <div class="roll-banner" id="ui-roll"></div>
+    <div id="ui-ending-banner"></div>
     <div class="narrative" id="ui-text"></div>
     <div id="ui-choices"></div>
 
     <div class="footer-nav">
-      <button class="btn btn-sm" onclick="togglePanel('notes')">CATATAN</button>
-      <button class="btn btn-sm" onclick="resetCurrentGame()">ULANGI</button>
+      <button class="btn btn-sm" onclick="togglePanel('inv')">TAS & FLAG</button>
+      <button class="btn btn-sm" onclick="togglePanel('endings')">ENDING</button>
+      <button class="btn btn-sm" onclick="loadCheckpoint()">CHECKPOINT</button>
       <button class="btn btn-sm" onclick="backToHub()">MENU</button>
     </div>
     <div class="panel" id="ui-panel"></div>
@@ -136,142 +129,316 @@
 </div>
 
 <script>
-// === DATABASE SKENARIO (Bisa dipecah menjadi file .json terpisah di server) ===
-const GAMES = {
-  tower_cyoa: {
-    id: "tower_cyoa",
-    title: "MENARA BISU",
-    mode: "GAMEBOOK",
-    init: { node: "n1", hp: 10, sta: 5, inv: [], notes: [] },
-    nodes: {
-      n1: {
-        text: "Gerbang besi Menara Bisu berderit saat kau mendorongnya. Di halaman dalam terdapat sumur kering dan pintu kayu berukir simbol matahari.",
-        choices: [
-          { text: "> Periksa dasar sumur kering", next: "n2" },
-          { text: "> Buka pintu kayu berukir", next: "n3" },
-          { text: "> Amati dinding menara sekitar", next: "n4", note: "Ukiran dinding menunjukkan matahari terbit membuka jalan rahasia." }
-        ]
-      },
-      n2: {
-        text: "Di sela batu sumur kau menemukan sebuah Lencana Perunggu berkarat. Namun saat memanjat naik, batu pijakan runtuh dan menggores kakimu! (-2 HP)",
-        hp: -2,
-        item: "Lencana Perunggu",
-        choices: [
-          { text: "> Menuju pintu kayu berukir", next: "n3" }
-        ]
-      },
-      n3: {
-        text: "Pintu terbuka menuju aula gelap. Di tengah ruangan berdiri patung penjaga batu dengan cekungan bulat di dadanya.",
-        choices: [
-          { text: "> Pasang Lencana Perunggu ke patung", next: "n5", req: "Lencana Perunggu" },
-          { text: "> Paksa dorong patung dengan tenaga (-2 Stamina)", next: "n6", sta: -2 },
-          { text: "> Kembali ke halaman luar", next: "n1" }
-        ]
-      },
-      n4: {
-        text: "Kau menemukan tuas tersembunyi di balik lumut. Setelah ditarik, sebuah kompartemen kecil terbuka berisi Ramuan Herbal.",
-        item: "Ramuan Herbal",
-        choices: [
-          { text: "> Masuk melalui pintu kayu berukir", next: "n3" }
-        ]
-      },
-      n5: {
-        text: "Lencana Perunggu menyala redup! Patung bergeser membuka tangga spiral menuju puncak menara.\n\n[ BAB 1 SELESAI — SELAMAT! ]",
-        choices: [
-          { text: "> Kembali ke Menu Utama", next: "HUB" }
-        ]
-      },
-      n6: {
-        text: "Dengan tenaga penuh patung berhasil digeser sedikit, cukup untuk menyelinap masuk ke tangga rahasia.\n\n[ BAB 1 SELESAI — JALUR KEKUATAN! ]",
-        choices: [
-          { text: "> Kembali ke Menu Utama", next: "HUB" }
-        ]
-      }
-    }
+// Daftarkan file JSON cerita di folder games/
+const CATALOG = [
+  {
+    file: "games/cerita_utama.json",
+    fallbackTitle: "KRONIK LEMBAH KABUT",
+    fallbackDesc: "CYOA multi-bab dengan Skill Check, Flags, Checkpoint, dan Multiple Endings."
   }
-};
+];
 
-// === ENGINE STATE & CONTROLLER ===
-let currentGame = null;
+let activeStory = null;
 let state = null;
+let unlockedEndings = [];
+let lastRollMsg = "";
 
-function startGame(gameId) {
-  currentGame = GAMES[gameId];
-  const saved = localStorage.getItem("pt_save_" + gameId);
-  state = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(currentGame.init));
+async function initHub() {
+  const listEl = document.getElementById("game-list");
+  listEl.innerHTML = "";
 
-  document.getElementById("view-hub").style.display = "none";
-  document.getElementById("view-cyoa").style.display = "block";
-  document.getElementById("header-title").innerText = currentGame.title;
-  document.getElementById("mode-badge").innerText = currentGame.mode;
-  document.getElementById("ui-panel").style.display = "none";
-  renderCYOA();
+  for (const item of CATALOG) {
+    let meta = { title: item.fallbackTitle, desc: item.fallbackDesc, endingsTotal: "?" };
+    try {
+      const res = await fetch(item.file + "?v=" + Date.now());
+      if (res.ok) {
+        const data = await res.json();
+        meta.title = data.title || meta.title;
+        meta.desc = data.description || meta.desc;
+        meta.endingsTotal = Object.keys(data.endings || {}).length;
+      }
+    } catch (_) {}
+
+    const card = document.createElement("div");
+    card.className = "game-card";
+    card.innerHTML = `
+      <h3>${escapeHtml(meta.title)}</h3>
+      <p>${escapeHtml(meta.desc)} • Total Ending: ${meta.endingsTotal}</p>
+      <button class="btn btn-sm" onclick="openStory('${item.file}')">[ MAINKAN / LANJUTKAN ]</button>
+    `;
+    listEl.appendChild(card);
+  }
 }
 
-function renderCYOA() {
-  const node = currentGame.nodes[state.node];
-  document.getElementById("ui-hp").innerText = state.hp;
-  document.getElementById("ui-sta").innerText = state.sta;
-  document.getElementById("ui-inv").innerText = state.inv.length ? state.inv.join(", ") : "Kosong";
-
-  if (state.hp <= 0) {
-    document.getElementById("ui-text").innerText = "Energi kehidupanmu habis di dalam menara.\n\n[ GAME OVER ]";
-    document.getElementById("ui-choices").innerHTML = `<button class="btn" onclick="resetCurrentGame()">> Coba Lagi</button>`;
+async function openStory(filePath) {
+  try {
+    const res = await fetch(filePath + "?v=" + Date.now());
+    if (!res.ok) throw new Error("Gagal memuat file cerita.");
+    activeStory = await res.json();
+  } catch (err) {
+    alert("Error memuat cerita: " + err.message + "\nPastikan file JSON ada di repository.");
     return;
   }
 
-  document.getElementById("ui-text").innerText = node.text;
-  const box = document.getElementById("ui-choices");
-  box.innerHTML = "";
+  const storyKey = activeStory.id || filePath;
+  unlockedEndings = JSON.parse(localStorage.getItem("pet_endings_" + storyKey) || "[]");
 
-  node.choices.forEach(ch => {
+  const saved = localStorage.getItem("pet_save_" + storyKey);
+  if (saved) {
+    state = JSON.parse(saved);
+  } else {
+    state = createFreshState(activeStory);
+    saveCheckpoint();
+    saveState();
+  }
+
+  lastRollMsg = "";
+  document.getElementById("view-hub").style.display = "none";
+  document.getElementById("view-game").style.display = "block";
+  document.getElementById("header-title").innerText = activeStory.title || "CYOA";
+  document.getElementById("mode-badge").innerText = "CYOA";
+  document.getElementById("ui-panel").style.display = "none";
+  renderNode();
+}
+
+function createFreshState(story) {
+  const init = story.initialState || {};
+  return {
+    node: init.node || "start",
+    chapter: init.chapter || "Bab 1",
+    stats: Object.assign({ hp: 10, wit: 2, str: 2, cha: 2 }, init.stats || {}),
+    inv: Array.isArray(init.inv) ? [...init.inv] : [],
+    flags: Object.assign({}, init.flags || {})
+  };
+}
+
+function saveState() {
+  const storyKey = activeStory.id || activeStory.title;
+  localStorage.setItem("pet_save_" + storyKey, JSON.stringify(state));
+}
+
+function saveCheckpoint() {
+  const storyKey = activeStory.id || activeStory.title;
+  localStorage.setItem("pet_cp_" + storyKey, JSON.stringify(state));
+}
+
+function loadCheckpoint() {
+  const storyKey = activeStory.id || activeStory.title;
+  const cp = localStorage.getItem("pet_cp_" + storyKey);
+  if (!cp) {
+    alert("Belum ada checkpoint tersimpan.");
+    return;
+  }
+  state = JSON.parse(cp);
+  lastRollMsg = "Checkpoint bab dimuat.";
+  saveState();
+  renderNode();
+}
+
+function recordEnding(endingId) {
+  const storyKey = activeStory.id || activeStory.title;
+  if (!unlockedEndings.includes(endingId)) {
+    unlockedEndings.push(endingId);
+    localStorage.setItem("pet_endings_" + storyKey, JSON.stringify(unlockedEndings));
+  }
+}
+
+function checkCondition(cond) {
+  if (!cond) return true;
+  if (cond.hasItem && !state.inv.includes(cond.hasItem)) return false;
+  if (cond.lacksItem && state.inv.includes(cond.lacksItem)) return false;
+  if (cond.flagTrue && !state.flags[cond.flagTrue]) return false;
+  if (cond.flagFalse && !!state.flags[cond.flagFalse]) return false;
+  if (cond.minStat) {
+    for (const [k, minVal] of Object.entries(cond.minStat)) {
+      if ((state.stats[k] ?? 0) < minVal) return false;
+    }
+  }
+  return true;
+}
+
+function applyEffects(eff) {
+  if (!eff) return;
+  if (eff.stats) {
+    for (const [k, delta] of Object.entries(eff.stats)) {
+      state.stats[k] = (state.stats[k] ?? 0) + delta;
+    }
+  }
+  if (eff.addItem && !state.inv.includes(eff.addItem)) {
+    state.inv.push(eff.addItem);
+  }
+  if (eff.removeItem) {
+    state.inv = state.inv.filter(i => i !== eff.removeItem);
+  }
+  if (eff.setFlags) {
+    for (const [k, v] of Object.entries(eff.setFlags)) {
+      state.flags[k] = v;
+    }
+  }
+  if (eff.chapter) {
+    state.chapter = eff.chapter;
+    saveCheckpoint();
+  }
+}
+
+function renderNode() {
+  const node = activeStory.nodes[state.node];
+  const totalEndings = Object.keys(activeStory.endings || {}).length;
+
+  document.getElementById("ui-chapter").innerText = state.chapter || "Bab";
+  document.getElementById("ui-endings-count").innerText = `Ending: ${unlockedEndings.length}/${totalEndings}`;
+
+  // Stats
+  const statsEl = document.getElementById("ui-stats");
+  statsEl.innerHTML = Object.entries(state.stats)
+    .map(([k, v]) => `<span>${k.toUpperCase()}: <b>${v}</b></span>`)
+    .join("");
+
+  // Roll banner
+  const rollEl = document.getElementById("ui-roll");
+  if (lastRollMsg) {
+    rollEl.style.display = "block";
+    rollEl.innerText = lastRollMsg;
+  } else {
+    rollEl.style.display = "none";
+  }
+
+  // Ending banner
+  const endBannerEl = document.getElementById("ui-ending-banner");
+  endBannerEl.innerHTML = "";
+
+  const choicesEl = document.getElementById("ui-choices");
+  choicesEl.innerHTML = "";
+
+  if (!node) {
+    document.getElementById("ui-text").innerText = `Node "${state.node}" tidak ditemukan di JSON.`;
+    return;
+  }
+
+  if (state.stats.hp <= 0 && !node.ending) {
+    document.getElementById("ui-text").innerText = "Kondisimu jatuh ke titik nol. Perjalanan terhenti di sini.\n\n[ GUGUR ]";
+    choicesEl.innerHTML = `
+      <button class="btn" onclick="loadCheckpoint()">> Kembali ke Checkpoint Bab</button>
+      <button class="btn" onclick="restartFromZero()">> Mulai Ulang dari Awal</button>
+    `;
+    return;
+  }
+
+  document.getElementById("ui-text").innerText = node.text || "";
+
+  if (node.ending && activeStory.endings && activeStory.endings[node.ending]) {
+    const endInfo = activeStory.endings[node.ending];
+    recordEnding(node.ending);
+    document.getElementById("ui-endings-count").innerText = `Ending: ${unlockedEndings.length}/${totalEndings}`;
+    endBannerEl.innerHTML = `
+      <div class="ending-box">
+        <b>ENDING TERCAPAI: ${escapeHtml(endInfo.title)}</b><br>
+        <span>${escapeHtml(endInfo.summary || "")}</span>
+      </div>
+    `;
+  }
+
+  (node.choices || []).forEach(ch => {
     const btn = document.createElement("button");
     btn.className = "btn";
-    const allowed = !ch.req || state.inv.includes(ch.req);
-    btn.innerText = ch.req && !allowed ? `${ch.text} [Butuh: ${ch.req}]` : ch.text;
-    btn.disabled = !allowed;
-    btn.onclick = () => makeChoice(ch);
-    box.appendChild(btn);
+    const ok = checkCondition(ch.req);
+    let label = ch.text;
+    if (ch.skillCheck) {
+      label += ` [Uji ${ch.skillCheck.stat.toUpperCase()} DC ${ch.skillCheck.dc}]`;
+    }
+    if (!ok) {
+      label += " (Syarat belum terpenuhi)";
+    }
+    btn.innerText = label;
+    btn.disabled = !ok;
+    btn.onclick = () => handleChoice(ch);
+    choicesEl.appendChild(btn);
   });
 }
 
-function makeChoice(ch) {
-  if (ch.next === "HUB") { backToHub(); return; }
-  if (ch.sta && state.sta + ch.sta < 0) {
-    alert("Stamina tidak mencukupi!");
+function handleChoice(ch) {
+  lastRollMsg = "";
+  let targetId = ch.next;
+
+  if (ch.skillCheck) {
+    const sc = ch.skillCheck;
+    const d6 = Math.floor(Math.random() * 6) + 1;
+    const mod = state.stats[sc.stat] ?? 0;
+    const total = d6 + mod;
+    const passed = total >= sc.dc;
+    lastRollMsg = `Uji ${sc.stat.toUpperCase()}: Dadu(${d6}) + Stat(${mod}) = ${total} vs DC ${sc.dc} -> ${passed ? "BERHASIL" : "GAGAL"}`;
+    targetId = passed ? sc.onSuccess : sc.onFail;
+    applyEffects(passed ? sc.successEffects : sc.failEffects);
+  }
+
+  applyEffects(ch.effects);
+  state.node = targetId;
+
+  const nextNode = activeStory.nodes[state.node];
+  if (nextNode && nextNode.onEnter) {
+    applyEffects(nextNode.onEnter);
+  }
+
+  saveState();
+  renderNode();
+}
+
+function restartFromZero() {
+  state = createFreshState(activeStory);
+  lastRollMsg = "Petualangan dimulai ulang dari awal.";
+  saveCheckpoint();
+  saveState();
+  renderNode();
+}
+
+function togglePanel(tab) {
+  const p = document.getElementById("ui-panel");
+  const isSameOpen = p.style.display === "block" && p.dataset.tab === tab;
+  if (isSameOpen) {
+    p.style.display = "none";
     return;
   }
-  if (ch.sta) state.sta += ch.sta;
-  if (ch.note && !state.notes.includes(ch.note)) state.notes.push(ch.note);
-
-  const target = currentGame.nodes[ch.next];
-  state.node = ch.next;
-  if (target.hp) state.hp += target.hp;
-  if (target.item && !state.inv.includes(target.item)) state.inv.push(target.item);
-
-  localStorage.setItem("pt_save_" + currentGame.id, JSON.stringify(state));
-  renderCYOA();
-}
-
-function togglePanel() {
-  const p = document.getElementById("ui-panel");
-  if (p.style.display === "block") { p.style.display = "none"; return; }
+  p.dataset.tab = tab;
   p.style.display = "block";
-  p.innerHTML = "<b>CATATAN PETUALANGAN:</b><br>" +
-    (state.notes.length ? state.notes.map(n => "• " + n).join("<br>") : "<i>Belum ada catatan.</i>");
-}
 
-function resetCurrentGame() {
-  localStorage.removeItem("pt_save_" + currentGame.id);
-  startGame(currentGame.id);
+  if (tab === "inv") {
+    const items = state.inv.length ? state.inv.join(", ") : "Kosong";
+    const activeFlags = Object.entries(state.flags).filter(([, v]) => !!v).map(([k]) => k);
+    p.innerHTML = `
+      <b>INVENTARIS:</b> ${escapeHtml(items)}<br>
+      <b>JEJAK / FLAGS:</b> ${activeFlags.length ? escapeHtml(activeFlags.join(", ")) : "Belum ada"}<br><br>
+      <button class="btn btn-sm" onclick="restartFromZero()">[ RESET TOTAL DARI AWAL ]</button>
+    `;
+  } else if (tab === "endings") {
+    const endings = activeStory.endings || {};
+    const rows = Object.entries(endings).map(([id, info]) => {
+      const found = unlockedEndings.includes(id);
+      return found
+        ? `• <b>${escapeHtml(info.title)}</b>: ${escapeHtml(info.summary || "")}`
+        : `• <i>[??? — Belum Terbuka]</i>`;
+    });
+    p.innerHTML = `<b>GALERI ENDING (${unlockedEndings.length}/${Object.keys(endings).length}):</b><br>` +
+      (rows.length ? rows.join("<br>") : "<i>Belum ada data ending.</i>");
+  }
 }
 
 function backToHub() {
-  document.getElementById("view-cyoa").style.display = "none";
+  document.getElementById("view-game").style.display = "none";
   document.getElementById("view-hub").style.display = "block";
-  document.getElementById("header-title").innerText = "POCKET TABLETOP";
+  document.getElementById("header-title").innerText = "POCKET E-TABLETOP";
   document.getElementById("mode-badge").innerText = "HUB";
+  initHub();
 }
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+initHub();
 </script>
 </body>
 </html>
