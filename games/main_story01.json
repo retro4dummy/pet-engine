@@ -1,142 +1,336 @@
 {
   "id": "kronik_lembah_kabut",
   "title": "KRONIK LEMBAH KABUT",
-  "description": "Petualangan multi-bab dengan uji kemampuan, memori keputusan, dan banyak akhir cerita.",
+  "description": "Petualangan 6 bab di Lembah Orva dengan 5 statistik utama, latar dunia mendalam, dan percabangan menuju 5 True Endings sejak pertengahan cerita.",
   "initialState": {
     "node": "b1_01",
-    "chapter": "Bab 1: Gerbang Kabut",
-    "stats": { "hp": 10, "wit": 2, "str": 2, "cha": 2 },
-    "inv": ["Lentera Minyak"],
+    "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara",
+    "stats": {
+      "hp": 10,
+      "wit": 2,
+      "str": 2,
+      "cha": 2,
+      "agi": 2
+    },
+    "inv": [
+      "Lentera Minyak",
+      "Segel Tembaga"
+    ],
     "flags": {}
   },
   "endings": {
-    "end_penjaga_baru": {
-      "title": "Ending I: Penjaga Menara Baru",
-      "summary": "Kau menggantikan posisi penjaga lama dan menjaga keseimbangan kabut di lembah."
+    "end_sanctuary_guide": {
+      "title": "Ending I: Penunjuk Jalan ke Suaka",
+      "summary": "Kau memandu para penyintas menembus kabut melalui jalur aman dan membuka harapan baru di luar Lembah Orva."
     },
-    "end_rahasia_terungkap": {
-      "title": "Ending II: Arsip Kebenaran",
-      "summary": "Kau membawa bukti asal-usul kabut keluar lembah meski harus meninggalkan harta menara."
+    "end_vanished_echo": {
+      "title": "Ending II: Gema di Dalam Kabut",
+      "summary": "Kau menelusuri anomali kabut dan ingatan lembah hingga menyatu dengan rahasia Orva tanpa meninggalkan jejak."
     },
-    "end_penguasa_bayangan": {
-      "title": "Ending III: Takhta di Balik Kabut",
-      "summary": "Kau merebut kendali mekanisme kuno lembah dengan mengorbankan kemanusiaanmu."
+    "end_watchkeeper": {
+      "title": "Ending III: Penjaga Menara Baru",
+      "summary": "Kau menghidupkan kembali mekanisme Menara Jam Orva dan memikul tugas menjaga keseimbangan lembah."
+    },
+    "end_truth_carrier": {
+      "title": "Ending IV: Pembawa Arsip Kebenaran",
+      "summary": "Kau membawa bukti catatan dan sandi pengawas keluar dari lembah untuk mengungkap kebenaran di balik kabut."
+    },
+    "end_shadow_sovereign": {
+      "title": "Ending V: Penguasa di Balik Kabut",
+      "summary": "Kau menguasai inti mekanisme lembah dengan harga mahal yang mengubah dirimu selamanya."
     }
   },
   "nodes": {
     "b1_01": {
-      "text": "Kabut kelabu menyelimuti jalan setapak menuju Lembah Orva. Di persimpangan batu, sebuah pos jaga tua berdiri miring dengan pintu kayu setengah terbuka. Di arah timur, terdengar dengung roda air dari reruntuhan pabrik.",
+      "text": "Angin pegunungan membawa bau besi basah dan abu dingin saat kau tiba di ambang Lembah Orva. Dahulu lembah ini hidup dari penempaan logam murni, jalur kanal beroda air, dan jadwal pergerakan yang teratur. Kini Kabut Kelabu merayap pelan—mengaburkan arah mata angin, meredam suara langkah, dan membuat ingatan terasa kabur jika terlalu lama dihirup.\n\nDi punggung bukit utara yang menjulang di balik kabut, siluet Menara Jam Orva berdiri kaku. Menara itu bukan sekadar penunjuk waktu, melainkan pusat pengatur katup tekanan uap dan lonceng tanda kabut atau banjir bagi seluruh lembah. Jarumnya telah membeku, tepat seperti pesan terenkripsi dari guru pencatatmu—arsitek muda yang menghilang bersama ekspedisi perintis—sebelum kau menyandang tugas rahasia sebagai kurir penyelidik dengan Segel Tembaga di saku mantelmu.\n\nDi depanmu, gerbang batu retak terbelah menjadi tiga arah: pos jaga lama di kiri, jalur menyelinap di balik dinding runtuhan di tengah, dan jalan setapak menurun ke arah dengung roda air di kanan.",
       "choices": [
         {
-          "text": "> Masuk ke pos jaga tua",
+          "text": "> Memeriksa pos jaga tua di sisi kiri",
           "next": "b1_02"
         },
         {
-          "text": "> Menyusuri jalur timur menuju roda air",
+          "text": "> Menyusuri celah bayangan di tengah reruntuhan",
           "next": "b1_03",
           "skillCheck": {
-            "stat": "wit",
+            "stat": "agi",
             "dc": 5,
             "onSuccess": "b1_04",
             "onFail": "b1_05",
-            "failEffects": { "stats": { "hp": -2 } }
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
           }
+        },
+        {
+          "text": "> Menuruni lereng berbatu menuju suara roda air",
+          "next": "b1_06"
         }
       ]
     },
     "b1_02": {
-      "text": "Di meja pos jaga terdapat buku catatan penjaga yang sobek dan sebuah Kunci Kuningan. Seseorang jelas baru saja pergi dari sini sebelum kabut menebal.",
+      "text": "Pintu kayu pos jaga bergeser pelan dengan decit kering. Di dalam ruangan sempit berdebu itu, meja kayu lapuk menopang pelita padam, papan jadwal pergeseran penjaga menara, dan sebuah laci besi yang setengah terbuka.\n\nJadwal terakhir terhenti tiga minggu lalu—hari yang sama ketika lonceng Menara Jam Orva berhenti berdentang. Di dasar laci, jari-jarimu menyentuh Kunci Kuningan berat berukir roda gigi, serta secarik log yang menyebut bahwa seorang pengamat sempat melihat bayangan bergerak di dekat kanal sebelum kabut menebal.",
       "onEnter": {
         "addItem": "Kunci Kuningan",
-        "setFlags": { "tahu_jejak_penjaga": true }
+        "setFlags": { "found_warden_trail": true }
       },
       "choices": [
         {
-          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
-          "next": "b2_01",
-          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+          "text": "> Membaca ulang catatan jadwal sambil mengamati jendela belakang",
+          "next": "b1_07",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b1_08",
+            "onFail": "b1_07"
+          }
+        },
+        {
+          "text": "> Keluar dan menyusuri sisi luar menuju tepi jurang/kanal",
+          "next": "b1_09"
         }
       ]
     },
     "b1_03": {
-      "text": "Jalur berlumut licin dan jebakan kawat tua menyambar kakimu sebelum sempat menghindar (-2 HP). Namun kau berhasil merangkak keluar ke gerbang bagian dalam.",
+      "text": "Kabut menggulung pekat di sela dinding batu yang hancur. Kau mencoba melangkah tanpa suara, tetapi pecahan genting bergeser di bawah sepatumu dan memicu pegas jebakan kawat tua yang disembunyikan di balik semak duri.\n\nSayatan tajam menggores lengan dan betismu sebelum kau berhasil menarik diri menjauh (-2 HP). Meski terluka, kau melihat bekas tapak sepatu yang baru saja melewati celah sempit menuju arah bawah lembah.",
+      "onEnter": {
+        "setFlags": { "found_warden_trail": true }
+      },
       "choices": [
         {
-          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
-          "next": "b2_01",
-          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+          "text": "> Menekan luka dan terus melangkah ke arah bekas jejak",
+          "next": "b1_09"
+        },
+        {
+          "text": "> Berhenti sejenak menenangkan napas dan memeriksa sekitar",
+          "next": "b1_07"
         }
       ]
     },
     "b1_04": {
-      "text": "Kau membaca pola retakan tanah dan menonaktifkan jebakan kawat dengan aman. Di balik batu, kau menemukan Botol Eliksir.",
+      "text": "Dengan kelincahan terlatih, kau meluncur melewati celah sempit dan melompati kawat pegas tanpa menimbulkan bunyi sedikit pun. Di balik bongkahan batu penahan, kau menemukan sebuah kantong kecil berisi Botol Eliksir penenang luka serta catatan sketsa katup uap.\n\nSketsa itu menunjukkan bagaimana tekanan uap dari kanal bawah terhubung ke ruang mesin Menara Jam Orva—sebuah petunjuk penting tentang mengapa menara tersebut membeku.",
       "onEnter": {
         "addItem": "Botol Eliksir",
-        "setFlags": { "ahli_jebakan": true }
+        "setFlags": { "found_warden_trail": true, "mist_memory_touched": true }
       },
       "choices": [
         {
-          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
-          "next": "b2_01",
-          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+          "text": "> Melanjutkan perjalanan menuju jalur tepi lembah",
+          "next": "b1_09"
+        },
+        {
+          "text": "> Mempelajari sketsa katup sebelum melangkah lagi",
+          "next": "b1_08"
         }
       ]
     },
     "b1_05": {
-      "text": "Langkahmu terpeleset di tepian jurang kecil (-2 HP), tetapi kau berhasil menarik diri ke jalur utama gerbang dalam.",
+      "text": "Kabut tebal mengaburkan jarak pandang tepat saat kakimu menyentuh pijakan miring. Kau tergelincir dan membentur batu tajam sebelum sempat menyeimbangkan tubuh (-2 HP).\n\nDi balik rasa nyeri dan napas yang memburu, kau menyadari kabut di titik ini terasa lebih dingin dari udara pegunungan biasa—seolah membawa sisa embun dari kedalaman lembah.",
       "choices": [
         {
-          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
-          "next": "b2_01",
-          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+          "text": "> Bangkit pelan dan bergerak menuju arah suara air",
+          "next": "b1_09"
+        },
+        {
+          "text": "> Mengamati pola kabut di sekitar sebelum memilih arah",
+          "next": "b1_07"
         }
       ]
     },
-    "b2_01": {
-      "text": "Di hadapanmu berdiri pintu perunggu besar dengan tiga celah mekanisme: sebuah tuas, lubang kunci kuningan, dan panel simbol kuno.",
+    "b1_06": {
+      "text": "Lereng berbatu menuruni tebing kecil menuju suara gemuruh air yang bercampur dengung logam berirama lambat. Dari ketinggian ini, tampak jelas bagaimana jalur air lembah berliku menuju sumbatan puing dan roda kayu besar yang berputar tersendat.\n\nDi dekat tepi jalur, sebuah peti perkakas lapangan tergeletak setengah tertimbun lumut, sementara dari balik tikungan batu terdengar suara batuk tertahan seseorang yang bersembunyi.",
       "choices": [
         {
-          "text": "> Gunakan Kunci Kuningan pada lubang kunci",
-          "next": "end_node_1",
-          "req": { "hasItem": "Kunci Kuningan" }
+          "text": "> Mendekati suara batuk dengan sikap terbuka dan tenang",
+          "next": "b1_10",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b1_10",
+            "onFail": "b1_09",
+            "failEffects": {
+              "setFlags": { "met_stranger_guide": true }
+            }
+          }
         },
         {
-          "text": "> Baca panel simbol berdasarkan jejak penjaga",
-          "next": "end_node_2",
-          "req": { "flagTrue": "tahu_jejak_penjaga" }
+          "text": "> Memeriksa peti perkakas sebelum menyapa siapa pun",
+          "next": "b1_08"
+        }
+      ]
+    },
+    "b1_07": {
+      "text": "Kau menyalakan Lentera Minyak dengan nyala kecil yang terjaga agar tidak menarik perhatian terlalu jauh. Di bawah cahaya temaram itu, guratan pada dinding dan batu penanda menunjukkan bahwa Lembah Orva pernah memiliki sistem peringatan dini setiap kali kabut pekat naik dari dasar cekungan.\n\nKini sistem itu bisu. Tanpa lonceng penanda dan katup tekanan yang bekerja, siapa pun yang berada di dalam lembah kehilangan patokan waktu maupun arah.",
+      "choices": [
+        {
+          "text": "> Mengikatkan Segel Tembaga dengan aman lalu melangkah ke depan",
+          "next": "b1_09"
         },
         {
-          "text": "> Tarik tuas utama dengan paksa",
-          "next": "end_node_3",
+          "text": "> Mengintai ke arah bawah sebelum turun",
+          "next": "b1_11"
+        }
+      ]
+    },
+    "b1_08": {
+      "text": "Ketelitianmu membuahkan hasil. Pada sudut papan atau peti yang terabaikan, terukir tanda kecil berbentuk roda jam dan garis putus—sandi awal yang biasa dipakai para pencatat Menara Jam Orva untuk menandai jalur aman yang masih bisa dilewati.\n\nPengetahuan ini membuatmu lebih siap membaca tanda-tanda tersembunyi di sepanjang lembah.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan menyusuri jalur menuju tepi kanal",
+          "next": "b1_11"
+        },
+        {
+          "text": "> Menuju titik pertemuan jalur di bawah",
+          "next": "b1_09"
+        }
+      ]
+    },
+    "b1_09": {
+      "text": "Jalur-jalur kecil di gerbang lembah perlahan menyatu di sebuah persimpangan berbatu yang menghadap ke arah kanal dan bayangan Menara Jam Orva di kejauhan. Kabut bergerak seperti napas lambat di antara pepohonan mati.\n\nDi sini, kau harus memutuskan apakah akan terus menyisir pinggiran jalur untuk mencari jejak penyintas atau langsung menuruni tebing menuju area roda air.",
+      "choices": [
+        {
+          "text": "> Menyisir pinggiran jalur untuk mencari tanda penyintas",
+          "next": "b1_10"
+        },
+        {
+          "text": "> Menuruni jalur batu menuju kawasan roda air",
+          "next": "b1_11"
+        }
+      ]
+    },
+    "b1_10": {
+      "text": "Dari balik batu besar yang tertutup lumut, muncul sosok bertudung kain kasar dengan wajah pucat bekas terpapar kabut. Ia memperkenalkan diri sebagai mantan pengawas jalur yang bertahan hidup di pinggir lembah, meski sorot matanya penuh kewaspadaan.\n\nMenurutnya, beberapa orang sempat mencoba mencari jalan keluar lewat terowongan lama setelah Menara Jam Orva membeku, namun kabut menelan rute biasa dan memaksa mereka berpencar. Ia bersedia berbagi informasi tentang kondisi jalur ke depan jika kau bersikap jujur dan jelas tentang tujuanmu.",
+      "onEnter": {
+        "setFlags": { "met_stranger_guide": true }
+      },
+      "choices": [
+        {
+          "text": "> Menanyakan rute teraman menuju kawasan roda air dan desa",
+          "next": "b1_11"
+        },
+        {
+          "text": "> Menanyakan kabar ekspedisi dan arsitek Menara Jam Orva",
+          "next": "b1_12"
+        }
+      ]
+    },
+    "b1_11": {
+      "text": "Jalur menurun membawamu ke tepian kanal batu yang mengalir pelan di bawah dinding cadas. Air kanal tampak keruh oleh endapan abu, sementara roda kayu raksasa di bagian hilir berputar tersendat dengan suara berderak kering setiap kali tekanan air berubah.\n\nDi balik sisa tiang penyangga jembatan kecil, kabut menggantung rendah. Jika kau ingin terus ke arah hilir menuju kawasan desa dan reruntuhan kanal tanpa menarik perhatian terlalu besar, ketepatan langkah dan kewaspadaan terhadap sumbatan jalur sangat menentukan.",
+      "choices": [
+        {
+          "text": "> Menyelinap menyusuri pinggir kanal yang teduh bayangan",
+          "next": "b1_13",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b1_14",
+            "onFail": "b1_15",
+            "failEffects": {
+              "stats": { "hp": -1 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa sumbatan kayu dan jalur air di dekat roda",
+          "next": "b1_14",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 6,
+            "onSuccess": "b1_14",
+            "onFail": "b1_13"
+          }
+        },
+        {
+          "text": "> Melanjutkan langkah ke pos pemeriksaan dekat jembatan",
+          "next": "b1_16"
+        }
+      ]
+    },
+    "b1_12": {
+      "text": "Sang mantan pengawas jalur menatap ke arah punggung bukit utara tempat Menara Jam Orva berdiri kaku. Ia bercerita bahwa bertahun-tahun lalu, seorang arsitek muda bersama rombongan pencatat ekspedisi pernah memasang sensor tekanan dan lonceng peringatan di menara agar warga tahu kapan kabut pekat naik dari dasar lembah.\n\nKetika menara itu berhenti berdetak tiga minggu lalu, rombongan pencatat tersebut sedang memeriksa jalur pipa bawah tanah menuju lembah dalam. Sejak itu, sebagian orang mencoba menembus keluar lewat jalur lama, sementara yang lain menghilang ke dalam kabut. Segel Tembaga yang kau bawa membuat sang pengawas yakin bahwa kedatanganmu bukan sekadar kebetulan.",
+      "onEnter": {
+        "setFlags": { "found_warden_trail": true, "met_stranger_guide": true }
+      },
+      "choices": [
+        {
+          "text": "> Memintanya menunjukkan tanda jalur aman menuju Bab 2",
+          "next": "b1_14",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b1_14",
+            "onFail": "b1_16"
+          }
+        },
+        {
+          "text": "> Berpamitan dan bergerak menuju jalur jembatan lembah",
+          "next": "b1_16"
+        }
+      ]
+    },
+    "b1_13": {
+      "text": "Kabut bergulung rapat di sepanjang tepian kanal, menyamarkan batas antara batu pijakan yang kokoh dan lumut basah yang licin. Kau menjaga napas tetap teratur agar langkahmu tidak terdengar oleh siapa pun yang mungkin mengawasi dari balik reruntuhan.\n\nDari kejauhan, dentuman pelan dari arah menara dan desisan uap lemah terdengar seperti bisikan mekanis yang terputus-putus.",
+      "choices": [
+        {
+          "text": "> Menyingkirkan ranting penghalang dengan tenaga dan terus maju",
+          "next": "b1_16",
           "skillCheck": {
             "stat": "str",
-            "dc": 6,
-            "onSuccess": "end_node_3",
-            "onFail": "b2_01",
-            "failEffects": { "stats": { "hp": -3 } }
+            "dc": 5,
+            "onSuccess": "b1_14",
+            "onFail": "b1_15",
+            "failEffects": {
+              "stats": { "hp": -1 }
+            }
+          }
+        },
+        {
+          "text": "> Menuju gerbang transisi di ujung jalur kanal",
+          "next": "b1_16"
+        }
+      ]
+    },
+    "b1_14": {
+      "text": "Di balik batu penanda kanal, kau menemukan perkakas logam kecil berupa Kunci Inggris & Roda Gigi cadangan milik teknisi air lama, serta catatan singkat tentang arah aliran menuju kawasan kanal dan desa.\n\nMemiliki perkakas mekanis seperti ini bisa sangat berguna saat menghadapi katup macet, pintu besi berkarat, atau perangkat tua di dalam lembah.",
+      "onEnter": {
+        "addItem": "Kunci Inggris & Roda Gigi",
+        "setFlags": { "disabled_weir_trap": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan menuju gerbang Bab 2: Kanal Roda Air & Pinggir Lembah",
+          "next": "b2_01",
+          "effects": {
+            "chapter": "Bab 2: Kanal Roda Air & Pinggir Lembah"
           }
         }
       ]
     },
-    "end_node_1": {
-      "text": "Kunci kuningan berputar sempurna. Di ruang kendali sunyi, lencana penjaga berkedip mengundangmu mengambil alih tanggung jawab lembah.",
-      "ending": "end_penjaga_baru",
+    "b1_15": {
+      "text": "Pijakan batu yang rapuh bergeser saat kau menumpukan berat badan, membuat kakimu terantuk besi penyangga berkarat (-1 HP). Meski sempat terhuyung, kau berhasil menjaga keseimbangan dan tidak jatuh ke arus kanal yang dingin.\n\nDi balik rasa ngilu, kau mencatat letak pijakan yang rawan agar tidak mengulang kesalahan yang sama.",
       "choices": [
-        { "text": "> Mulai Ulang dari Awal", "next": "b1_01", "effects": { "chapter": "Bab 1: Gerbang Kabut" } }
+        {
+          "text": "> Melangkah hati-hati menuju gerbang Bab 2",
+          "next": "b2_01",
+          "effects": {
+            "chapter": "Bab 2: Kanal Roda Air & Pinggir Lembah"
+          }
+        }
       ]
     },
-    "end_node_2": {
-      "text": "Catatan penjaga membantumu menyusun urutan simbol. Pintu arsip terbuka dan mengungkap rahasia di balik kabut abadi.",
-      "ending": "end_rahasia_terungkap",
+    "b1_16": {
+      "text": "Di ujung jalur gerbang luar, lengkungan batu berukir lambang roda air dan jam menyambut langkahmu. Kabut di balik lengkungan ini tampak lebih pekat, menandai batas antara gerbang luar dan wilayah kanal yang lebih dalam.\n\nKau menarik napas dalam-dalam, memastikan Lentera Minyak dan Segel Tembaga siap, lalu melangkah memasuki kawasan kanal lembah.",
       "choices": [
-        { "text": "> Mulai Ulang dari Awal", "next": "b1_01", "effects": { "chapter": "Bab 1: Gerbang Kabut" } }
-      ]
-    },
-    "end_node_3": {
-      "text": "Mekanisme berderu keras saat tuas tertahan. Inti penggerak menyala di bawah kakimu, memberi kuasa penuh atas lembah.",
-      "ending": "end_penguasa_bayangan",
-      "choices": [
-        { "text": "> Mulai Ulang dari Awal", "next": "b1_01", "effects": { "chapter": "Bab 1: Gerbang Kabut" } }
+        {
+          "text": "> Memasuki Bab 2: Kanal Roda Air & Pinggir Lembah",
+          "next": "b2_01",
+          "effects": {
+            "chapter": "Bab 2: Kanal Roda Air & Pinggir Lembah"
+          }
+        }
       ]
     }
   }
