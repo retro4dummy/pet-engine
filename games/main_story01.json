@@ -1,0 +1,143 @@
+{
+  "id": "kronik_lembah_kabut",
+  "title": "KRONIK LEMBAH KABUT",
+  "description": "Petualangan multi-bab dengan uji kemampuan, memori keputusan, dan banyak akhir cerita.",
+  "initialState": {
+    "node": "b1_01",
+    "chapter": "Bab 1: Gerbang Kabut",
+    "stats": { "hp": 10, "wit": 2, "str": 2, "cha": 2 },
+    "inv": ["Lentera Minyak"],
+    "flags": {}
+  },
+  "endings": {
+    "end_penjaga_baru": {
+      "title": "Ending I: Penjaga Menara Baru",
+      "summary": "Kau menggantikan posisi penjaga lama dan menjaga keseimbangan kabut di lembah."
+    },
+    "end_rahasia_terungkap": {
+      "title": "Ending II: Arsip Kebenaran",
+      "summary": "Kau membawa bukti asal-usul kabut keluar lembah meski harus meninggalkan harta menara."
+    },
+    "end_penguasa_bayangan": {
+      "title": "Ending III: Takhta di Balik Kabut",
+      "summary": "Kau merebut kendali mekanisme kuno lembah dengan mengorbankan kemanusiaanmu."
+    }
+  },
+  "nodes": {
+    "b1_01": {
+      "text": "Kabut kelabu menyelimuti jalan setapak menuju Lembah Orva. Di persimpangan batu, sebuah pos jaga tua berdiri miring dengan pintu kayu setengah terbuka. Di arah timur, terdengar dengung roda air dari reruntuhan pabrik.",
+      "choices": [
+        {
+          "text": "> Masuk ke pos jaga tua",
+          "next": "b1_02"
+        },
+        {
+          "text": "> Menyusuri jalur timur menuju roda air",
+          "next": "b1_03",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b1_04",
+            "onFail": "b1_05",
+            "failEffects": { "stats": { "hp": -2 } }
+          }
+        }
+      ]
+    },
+    "b1_02": {
+      "text": "Di meja pos jaga terdapat buku catatan penjaga yang sobek dan sebuah Kunci Kuningan. Seseorang jelas baru saja pergi dari sini sebelum kabut menebal.",
+      "onEnter": {
+        "addItem": "Kunci Kuningan",
+        "setFlags": { "tahu_jejak_penjaga": true }
+      },
+      "choices": [
+        {
+          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
+          "next": "b2_01",
+          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+        }
+      ]
+    },
+    "b1_03": {
+      "text": "Jalur berlumut licin dan jebakan kawat tua menyambar kakimu sebelum sempat menghindar (-2 HP). Namun kau berhasil merangkak keluar ke gerbang bagian dalam.",
+      "choices": [
+        {
+          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
+          "next": "b2_01",
+          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+        }
+      ]
+    },
+    "b1_04": {
+      "text": "Kau membaca pola retakan tanah dan menonaktifkan jebakan kawat dengan aman. Di balik batu, kau menemukan Botol Eliksir.",
+      "onEnter": {
+        "addItem": "Botol Eliksir",
+        "setFlags": { "ahli_jebakan": true }
+      },
+      "choices": [
+        {
+          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
+          "next": "b2_01",
+          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+        }
+      ]
+    },
+    "b1_05": {
+      "text": "Langkahmu terpeleset di tepian jurang kecil (-2 HP), tetapi kau berhasil menarik diri ke jalur utama gerbang dalam.",
+      "choices": [
+        {
+          "text": "> Lanjut ke Bab 2: Gerbang Dalam",
+          "next": "b2_01",
+          "effects": { "chapter": "Bab 2: Gerbang Dalam" }
+        }
+      ]
+    },
+    "b2_01": {
+      "text": "Di hadapanmu berdiri pintu perunggu besar dengan tiga celah mekanisme: sebuah tuas, lubang kunci kuningan, dan panel simbol kuno.",
+      "choices": [
+        {
+          "text": "> Gunakan Kunci Kuningan pada lubang kunci",
+          "next": "end_node_1",
+          "req": { "hasItem": "Kunci Kuningan" }
+        },
+        {
+          "text": "> Baca panel simbol berdasarkan jejak penjaga",
+          "next": "end_node_2",
+          "req": { "flagTrue": "tahu_jejak_penjaga" }
+        },
+        {
+          "text": "> Tarik tuas utama dengan paksa",
+          "next": "end_node_3",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 6,
+            "onSuccess": "end_node_3",
+            "onFail": "b2_01",
+            "failEffects": { "stats": { "hp": -3 } }
+          }
+        }
+      ]
+    },
+    "end_node_1": {
+      "text": "Kunci kuningan berputar sempurna. Di ruang kendali sunyi, lencana penjaga berkedip mengundangmu mengambil alih tanggung jawab lembah.",
+      "ending": "end_penjaga_baru",
+      "choices": [
+        { "text": "> Mulai Ulang dari Awal", "next": "b1_01", "effects": { "chapter": "Bab 1: Gerbang Kabut" } }
+      ]
+    },
+    "end_node_2": {
+      "text": "Catatan penjaga membantumu menyusun urutan simbol. Pintu arsip terbuka dan mengungkap rahasia di balik kabut abadi.",
+      "ending": "end_rahasia_terungkap",
+      "choices": [
+        { "text": "> Mulai Ulang dari Awal", "next": "b1_01", "effects": { "chapter": "Bab 1: Gerbang Kabut" } }
+      ]
+    },
+    "end_node_3": {
+      "text": "Mekanisme berderu keras saat tuas tertahan. Inti penggerak menyala di bawah kakimu, memberi kuasa penuh atas lembah.",
+      "ending": "end_penguasa_bayangan",
+      "choices": [
+        { "text": "> Mulai Ulang dari Awal", "next": "b1_01", "effects": { "chapter": "Bab 1: Gerbang Kabut" } }
+      ]
+    }
+  }
+}
