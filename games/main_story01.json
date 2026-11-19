@@ -961,6 +961,297 @@
           }
         }
       ]
+    },
+    "b4_01": {
+      "text": "Tangga batu berujung pada terowongan tua yang dindingnya dipahat langsung ke batuan cadas dan diperkuat penyangga besi berkarat. Jauh sebelum Desa Bawah Kabut berkembang menjadi permukiman padat, terowongan ini digali sebagai jalur perawatan tersembunyi antara kanal, ruang arsip bawah tanah, dan poros bawah Menara Jam Orva.\n\nDi balik tirai kabut tipis yang merayap dari celah lantai, cahaya pantulan dari Lentera Minyak memperlihatkan rel kereta lori kecil yang telah bengkok serta ruang arsip tersembunyi di sisi barat lorong. Udara di sini terasa dingin dan senyap, seolah menyimpan rahasia ekspedisi perintis dan guru pencatatmu.",
+      "choices": [
+        {
+          "text": "> Menyelinap melewati bayangan pilar menuju ruang arsip tersembunyi",
+          "next": "b4_02",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b4_03",
+            "onFail": "b4_04",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa rel lori, dinding ukiran, dan mekanisme pintu arsip",
+          "next": "b4_05",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b4_03",
+            "onFail": "b4_02"
+          }
+        },
+        {
+          "text": "> Menelusuri cabang lorong tengah yang mengarah ke dalam terowongan",
+          "next": "b4_06"
+        }
+      ]
+    },
+    "b4_02": {
+      "text": "Di hadapanmu berdiri pintu besi berukir lambang roda jam dan jam pasir yang separuh tertutup runtuhan batu. Di samping kusen pintu terdapat lubang kunci mekanis dan panel tuas kecil yang kaku karena embun bawah tanah.\n\nDari celah engselnya, tercium bau kertas tua, minyak pelumas kering, dan sisa uap hangat dari saluran yang lebih dalam.",
+      "choices": [
+        {
+          "text": "> Membuka kunci pintu dengan Kunci Kuningan",
+          "next": "b4_03",
+          "req": {
+            "hasItem": "Kunci Kuningan"
+          }
+        },
+        {
+          "text": "> Mencongkel engsel pintu yang macet dengan tenaga penuh",
+          "next": "b4_03",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 6,
+            "onSuccess": "b4_03",
+            "onFail": "b4_04",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Melanjutkan langkah ke cabang lorong utama terowongan",
+          "next": "b4_06"
+        }
+      ]
+    },
+    "b4_03": {
+      "text": "Ruang Arsip Tersembunyi terbuka menampakkan meja panjang penuh gulungan peta, buku catatan eksperimen tekanan, dan peti kayu berlapis tembaga. Di atas meja utama tergeletak jurnal milik guru pencatatmu yang hilang—menjelaskan bahwa Menara Jam Orva sebenarnya dirancang untuk menahan tekanan inti kabut di bawah lembah, bukan sekadar mengatur air dan waktu.\n\nKetika katup penyeimbang di menara melemah dan inti di bawah mulai bergejolak, kabut kelabu meluap ke permukaan dan mengaburkan ingatan siapa pun yang berada terlalu dekat.",
+      "onEnter": {
+        "addItem": "Jurnal Pencatat Orva",
+        "stats": { "wit": 1 },
+        "setFlags": { "unlocked_archive_lore": true, "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Menyelaraskan Resonator Inti dengan catatan jurnal di meja",
+          "next": "b4_07",
+          "req": {
+            "hasItem": "Resonator Inti"
+          }
+        },
+        {
+          "text": "> Keluar dari ruang arsip dan menuju lorong tengah terowongan",
+          "next": "b4_06"
+        }
+      ]
+    },
+    "b4_04": {
+      "text": "Pijakan batu yang basah bergeser tiba-tiba saat kau berusaha menghindar dari bongkahan puing yang menggantung. Benturan keras di sisi lengan dan tulang rusuk membuatmu meringis tertahan (-2 HP).\n\nKau menarik diri ke sudut lorong sambil mengatur napas, memastikan perlengkapanmu tetap aman sebelum melangkah lagi.",
+      "choices": [
+        {
+          "text": "> Bangkit pelan dan menuju cabang lorong tengah terowongan",
+          "next": "b4_06"
+        },
+        {
+          "text": "> Menuju titik pertemuan jalur di Bab 4 Klaster A",
+          "next": "b4_08"
+        }
+      ]
+    },
+    "b4_05": {
+      "text": "Dengan mengamati lekukan rel lori dan tanda pahatan di dinding terowongan, kau melihat bagaimana gerobak material dulu mengangkut blok logam dan tabung tekanan dari ruang arsip menuju poros bawah menara.\n\nTanda panah kecil pada batu menunjukkan adanya celah tersembunyi di balik ceruk dekat persimpangan lorong.",
+      "onEnter": {
+        "setFlags": { "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Memeriksa ceruk di dekat jalur lori",
+          "next": "b4_07"
+        },
+        {
+          "text": "> Melangkah ke lorong tengah terowongan",
+          "next": "b4_06"
+        }
+      ]
+    },
+    "b4_06": {
+      "text": "Lorong tengah terowongan menyempit dengan lengkungan batu yang ditumbuhi lumut pucat dan akar-akar halus yang merayap dari atas. Dari kejauhan, terdengar suara detak logam pelan yang tidak beraturan—seperti bandul yang mencoba berayun tetapi tertahan sesuatu di kedalaman.\n\nDi persimpangan kecil, kabut menebal membentuk bayangan samar yang menyerupai siluet seseorang yang berdiri diam.",
+      "choices": [
+        {
+          "text": "> Menyapa bayangan itu dengan suara tenang dan berhati-hati",
+          "next": "b4_07",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b4_07",
+            "onFail": "b4_08"
+          }
+        },
+        {
+          "text": "> Menyelinap melewati sisi bayangan tanpa menarik perhatian",
+          "next": "b4_08",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b4_07",
+            "onFail": "b4_08"
+          }
+        },
+        {
+          "text": "> Maju langsung ke persimpangan lanjutan Bab 4",
+          "next": "b4_08"
+        }
+      ]
+    },
+    "b4_07": {
+      "text": "Di balik ceruk batu yang teduh, kau menemukan sisa perbekalan ekspedisi serta pelat sandi yang memperjelas cara kerja Sandi Pengawas dan Resonator Inti.\n\nKini kau memahami bahwa kunci menuju ruang inti dan puncak Menara Jam Orva tidak hanya bergantung pada kekuatan fisik, tetapi juga pemahaman atas catatan, sandi, dan kondisi mekanisme lembah.",
+      "onEnter": {
+        "addItem": "Botol Eliksir",
+        "setFlags": { "resonator_attuned": true, "unlocked_archive_lore": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan ke persimpangan Bab 4 Klaster A",
+          "next": "b4_08"
+        },
+        {
+          "text": "> Menuju lanjutan Bab 4 di kedalaman terowongan",
+          "next": "b4_09"
+        }
+      ]
+    },
+    "b4_08": {
+      "text": "Di ujung lorong terowongan tua, dua jalur besar mulai terlihat: satu menurun ke arah ruang mesin dan anomali inti kabut, sementara jalur lainnya menanjak ke arah poros tangga batu menuju Menara Jam Orva.\n\nSuara dengung dari bawah tanah kian terasa di telapak kaki, menandakan bahwa kau semakin dekat dengan pusat rahasia Lembah Orva.",
+      "choices": [
+        {
+          "text": "> Menuju lanjutan Bab 4 di kedalaman terowongan",
+          "next": "b4_09"
+        },
+        {
+          "text": "> Memeriksa jalur alternatif menuju Bab 4 Klaster B",
+          "next": "b4_10"
+        }
+      ]
+    },
+    "b4_09": {
+      "text": "Lorong dalam terowongan mengarah ke ruang peralihan di bawah poros Menara Jam Orva. Di dinding batu yang menghitam oleh jelaga dan uap lama, tampak roda gigi perunggu raksasa yang terhubung ke rantai penyeimbang vertikal—mekanisme yang dulu menjaga sinkronisasi antara tekanan bawah tanah dan lonceng menara di puncak bukit.\n\nDi sudut ruangan, sebuah meja kerja lapangan memuat catatan terakhir ekspedisi pencatat, lengkap dengan sketsa katup pengaman yang macet akibat endapan mineral dan kabut pekat.",
+      "choices": [
+        {
+          "text": "> Menyelinap ke balik pilar penyangga untuk mengamati mekanisme rantai",
+          "next": "b4_11",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b4_12",
+            "onFail": "b4_13",
+            "failEffects": {
+              "stats": { "hp": -1 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa pola mekanisme rantai dan catatan lapangan pencatat",
+          "next": "b4_12",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b4_12",
+            "onFail": "b4_11"
+          }
+        },
+        {
+          "text": "> Melanjutkan langkah menuju jalur akhir Bab 4",
+          "next": "b4_15"
+        }
+      ]
+    },
+    "b4_10": {
+      "text": "Jalur alternatif di sisi terowongan menyusuri saluran drainase lama yang lebih sempit namun terlindung dari reruntuhan utama. Kabut di sini merayap pelan seperti cairan perak pudar, membawa gema suara langkah serta potongan percakapan lama dari masa ketika lembah masih ramai.\n\nDi balik tikungan, sebuah pintu kisi besi mengarah ke ruang peralihan bawah tanah.",
+      "choices": [
+        {
+          "text": "> Mendorong kisi besi yang berkarat dengan tenaga penuh",
+          "next": "b4_12",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 5,
+            "onSuccess": "b4_12",
+            "onFail": "b4_13",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa engsel dan mekanisme kisi sebelum melintas",
+          "next": "b4_11"
+        },
+        {
+          "text": "> Bergerak menuju gerbang transisi Bab 4",
+          "next": "b4_15"
+        }
+      ]
+    },
+    "b4_11": {
+      "text": "Di ruang peralihan bawah tanah, kau menemukan bekas perkemahan singkat salah satu anggota ekspedisi yang sempat bertahan sebelum kabut semakin pekat. Sebuah pelat kuningan bertuliskan sandi darurat menempel di sisi kotak peralatan.\n\nPelat itu menjelaskan bahwa inti kabut di ruang mesin merespons getaran resonansi maupun keseimbangan katup tekanan.",
+      "onEnter": {
+        "setFlags": { "unlocked_archive_lore": true, "resonator_attuned": true }
+      },
+      "choices": [
+        {
+          "text": "> Menyusun catatan dan menuju gerbang akhir Bab 4",
+          "next": "b4_15"
+        },
+        {
+          "text": "> Memeriksa celah samping ruang peralihan",
+          "next": "b4_14"
+        }
+      ]
+    },
+    "b4_12": {
+      "text": "Dengan ketelitian dan pemahaman atas catatan yang terkumpul, kau berhasil menstabilkan katup bantu kecil di dekat poros sehingga uap berlebih tidak menyembur sembarangan. Di balik panel katup, tersimpan sebuah tabung kecil berisi pelumas mekanis serta petunjuk arah menuju ruang inti.\n\nLangkah ini membuatmu lebih siap menghadapi gejolak mekanisme dan anomali kabut di Bab 5.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "disabled_weir_trap": true, "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan menuju gerbang akhir Bab 4",
+          "next": "b4_15"
+        }
+      ]
+    },
+    "b4_13": {
+      "text": "Besi penyangga yang licin dan tepian batu tajam membuat pijakanmu goyah saat mencoba melewati rintangan di bawah tanah. Luka dan memar ringan membuat tenagamu sedikit terkuras (-2 HP), meski perlengkapan utamamu tetap aman.\n\nKau menarik napas pelan sebelum melanjutkan langkah ke depan.",
+      "choices": [
+        {
+          "text": "> Menuju gerbang akhir Bab 4 dengan hati-hati",
+          "next": "b4_15"
+        }
+      ]
+    },
+    "b4_14": {
+      "text": "Di sudut ruang peralihan yang redup, kau mendengar suara napas pelan dari balik tumpukan peti kayu—seorang perintis ekspedisi yang terluka dan terpisah dari rombongannya. Dengan sikap tenang dan meyakinkan, kau membantunya menenangkan diri dan mencatat informasi terakhir tentang ruang inti di bawah sana.\n\nIa berpesan bahwa di ruang inti terdapat dua pilihan besar: menahan dan menata ulang sistem, atau mengambil kendali penuh atas kekuatan mekanisme dan kabut.",
+      "onEnter": {
+        "stats": { "cha": 1 },
+        "setFlags": { "met_stranger_guide": true, "mist_memory_touched": true }
+      },
+      "choices": [
+        {
+          "text": "> Melangkah menuju gerbang akhir Bab 4",
+          "next": "b4_15"
+        }
+      ]
+    },
+    "b4_15": {
+      "text": "Di ujung lorong terdalam terowongan tua, pintu bundar berlapis baja kuno berdiri di hadapanmu. Getaran rendah terasa menembus lantai batu—denyut nadi mekanisme dan anomali kabut yang menyatukan seluruh misteri Lembah Orva.\n\nDi balik pintu ini menanti Nadi Mekanisme & Ruang Inti, tempat seluruh jejak ekspedisi, guru pencatatmu, dan Menara Jam Orva akan diuji.",
+      "choices": [
+        {
+          "text": "> Memasuki Bab 5: Nadi Mekanisme & Ruang Inti",
+          "next": "b5_01",
+          "effects": {
+            "chapter": "Bab 5: Nadi Mekanisme & Ruang Inti"
+          }
+        }
+      ]
     }
 }
 }
