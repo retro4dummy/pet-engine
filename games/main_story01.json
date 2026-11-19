@@ -332,6 +332,300 @@
           }
         }
       ]
+    },
+    "b2_01": {
+      "text": "Di balik lengkungan gerbang luar, kawasan Kanal Roda Air membentang di sepanjang cekungan batu yang dipenuhi uap dingin dan sisa saluran besi. Pada masa jayanya, kanal ini menyalurkan debit air dari hulu sungai menuju deretan roda air raksasa yang memutar penggilingan, bengkel penempaan, serta pompa tekanan uap yang terhubung hingga ke Menara Jam Orva.\n\nKini sebagian sudu roda kayu patah dimakan usia dan lumut, sementara batang kayu gelondongan serta puing batu menyumbat pintu air utama. Suara air yang terhambat berpadu dengan desis kabut kelabu yang merayap rendah di permukaan saluran.",
+      "choices": [
+        {
+          "text": "> Memeriksa pintu air utama dan batang penyumbat kanal",
+          "next": "b2_02"
+        },
+        {
+          "text": "> Menyusuri jalan setapak di atas dinding kanal yang sempit",
+          "next": "b2_03",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b2_04",
+            "onFail": "b2_05",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Mengamati tanda aliran dan skema katup di rumah pompa tua",
+          "next": "b2_06",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b2_04",
+            "onFail": "b2_02"
+          }
+        }
+      ]
+    },
+    "b2_02": {
+      "text": "Pintu air utama tertahan oleh tumpukan kayu hanyut dan rantai besi yang berkarat. Dari balik timbunan tersebut, tampak celah menuju ruang kontrol kanal tempat para operator dahulu mengatur pembagian air antara irigasi lembah dan saluran tekanan uap ke menara.\n\nSebuah papan peringatan pudar masih terbaca: jika tekanan kanal dibiarkan tidak seimbang terlalu lama, uap panas di saluran bawah akan memicu getaran dan kabut pekat di sekitar cekungan.",
+      "choices": [
+        {
+          "text": "> Mengungkit rantai dan kayu penyumbat dengan tenaga penuh",
+          "next": "b2_04",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 5,
+            "onSuccess": "b2_04",
+            "onFail": "b2_05",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Memanfaatkan perkakas mekanis untuk melonggarkan baut tuas",
+          "next": "b2_04",
+          "req": {
+            "hasItem": "Kunci Inggris & Roda Gigi"
+          }
+        },
+        {
+          "text": "> Meninggalkan pintu air dan menuju pondok tepi kanal",
+          "next": "b2_07"
+        }
+      ]
+    },
+    "b2_03": {
+      "text": "Dinding batu kanal hanya selebar dua telapak kaki dan basah oleh percikan air serta embun kabut. Di bawahnya, arus gelap mengalir menuju terowongan kecil yang mengarah ke bagian bawah lembah.\n\nKau melangkah terukur sambil menjaga keseimbangan tubuh, memperhatikan setiap lekukan batu agar tidak terpeleset ke saluran yang dingin.",
+      "choices": [
+        {
+          "text": "> Melompati celah batu menuju pondok penjaga kanal",
+          "next": "b2_07"
+        },
+        {
+          "text": "> Mengintai ke arah puing reruntuhan di pinggir lembah",
+          "next": "b2_08"
+        }
+      ]
+    },
+    "b2_04": {
+      "text": "Dengan usaha yang terukur, aliran kanal mulai bergerak lebih lancar melewati sudu roda air. Roda kayu raksasa itu berputar pelan—belum sempurna, tetapi cukup untuk menggerakkan pompa kecil dan menyingkap sebuah kotak arsip tahan air di bawah kisi saluran.\n\nDi dalamnya tersimpan catatan tekanan kanal terakhir yang ditulis oleh teknisi air sebelum ekspedisi pencatat menghilang, memuat petunjuk mengenai Sandi Pengawas yang digunakan di Menara Jam Orva.",
+      "onEnter": {
+        "addItem": "Sandi Pengawas",
+        "setFlags": { "disabled_weir_trap": true, "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Melangkah menuju pondok tepi kanal",
+          "next": "b2_07"
+        },
+        {
+          "text": "> Menelusuri pinggir lembah ke arah Desa Bawah Kabut",
+          "next": "b2_09"
+        }
+      ]
+    },
+    "b2_05": {
+      "text": "Pijakan yang licin dan hentakan mekanis yang tiba-tiba membuatmu kehilangan keseimbangan sesaat. Benturan keras di pinggir saluran meninggalkan memar dan nyeri yang cukup menguras tenaga (-2 HP).\n\nMeski begitu, kau berhasil merangkak naik ke daratan yang lebih kering dengan napas masih memburu.",
+      "choices": [
+        {
+          "text": "> Beristirahat sejenak lalu menuju pondok tepi kanal",
+          "next": "b2_07"
+        },
+        {
+          "text": "> Terus bergerak menyisir pinggir lembah",
+          "next": "b2_08"
+        }
+      ]
+    },
+    "b2_06": {
+      "text": "Di dalam rumah pompa tua yang berbau minyak mesin dan lumut, bagan pipa di dinding menunjukkan bahwa saluran uap dari kanal dulu dialirkan ke menara bukan sekadar untuk menggerakkan lonceng, melainkan juga menjaga kestabilan udara di cekungan bawah.\n\nSebuah catatan kecil di meja pengawas menyebutkan bahwa salah satu anggota ekspedisi sempat turun ke arah Desa Bawah Kabut membawa kunci dan perangkat pengukur.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Menuju pondok tepi kanal di dekat jembatan",
+          "next": "b2_07"
+        },
+        {
+          "text": "> Menyusuri jalur pinggir lembah menuju area desa",
+          "next": "b2_09"
+        }
+      ]
+    },
+    "b2_07": {
+      "text": "Sebuah pondok kayu beratap seng penyok berdiri di tikungan kanal. Di dekat ambang pintunya, seseorang duduk bersandar sambil membalut pergelangan kaki dengan kain lusuh—ia adalah mantan teknisi kanal yang dulu merawat katup air bersama para pencatat menara.\n\nIa menatapmu dengan mata lelah namun tajam. Baginya, kabut kelabu ini bukan kutukan gaib semata, melainkan dampak berantai dari matinya sistem tekanan dan hilangnya catatan pengawas di bawah lembah.",
+      "onEnter": {
+        "setFlags": { "met_stranger_guide": true }
+      },
+      "choices": [
+        {
+          "text": "> Berbicara tenang dengannya tentang kondisi jalur dan penyintas",
+          "next": "b2_08",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b2_08",
+            "onFail": "b2_09"
+          }
+        },
+        {
+          "text": "> Menanyakan rahasia di balik kabut dan Menara Jam Orva",
+          "next": "b2_10"
+        }
+      ]
+    },
+    "b2_08": {
+      "text": "Sang teknisi kanal memberi tahu bahwa beberapa warga dan perintis sempat berkumpul di tepi selatan pinggir lembah sebelum kabut menebal, mencari celah keluar atau tempat berlindung yang lebih tinggi dari genangan kabut.\n\nIa juga menggambar sketsa kasar rute pinggir lembah di atas tanah berdebu—petunjuk awal yang berguna jika suatu saat kau perlu memandu orang lain melewati kabut.",
+      "onEnter": {
+        "stats": { "cha": 1 },
+        "setFlags": { "evac_route_mapped": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan perjalanan ke titik persimpangan pinggir lembah",
+          "next": "b2_09"
+        },
+        {
+          "text": "> Memeriksa catatan arah menuju bagian tengah Bab 2",
+          "next": "b2_11"
+        }
+      ]
+    },
+    "b2_09": {
+      "text": "Jalur di pinggir lembah membentang di antara tebing berlumut dan kabut yang bergulung pelan dari arah cekungan. Dari kejauhan, atap-atap batu Desa Bawah Kabut mulai terlihat samar seperti pulau karang di tengah laut kelabu.\n\nDi balik kabut itu, terdengar samar suara lonceng kecil atau ketukan besi—tanda bahwa tidak seluruh bagian lembah benar-benar kosong.",
+      "choices": [
+        {
+          "text": "> Mengendap mendekati batas pinggir lembah untuk mengawasi",
+          "next": "b2_11",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b2_11",
+            "onFail": "b2_11"
+          }
+        },
+        {
+          "text": "> Melanjutkan menyusuri jalur utama menuju Bab 2 Klaster B",
+          "next": "b2_11"
+        }
+      ]
+    },
+    "b2_10": {
+      "text": "Dengan nada suara merendah, sang teknisi berbisik bahwa sebelum menghilang ke arah bawah lembah, guru pencatat yang kau cari sempat mempelajari anomali pada inti mesin tua—benda yang memancarkan getaran aneh setiap kali kabut memadat.\n\nSejak saat itu, siapa pun yang terlalu lama memandangi kabut di titik tertentu sering mengaku mendengar suara atau ingatan yang bukan miliknya sendiri.",
+      "onEnter": {
+        "setFlags": { "mist_memory_touched": true }
+      },
+      "choices": [
+        {
+          "text": "> Mencatat peringatan tersebut dan melangkah ke depan",
+          "next": "b2_11"
+        },
+        {
+          "text": "> Menyisir sisi luar jalur menuju lanjutan Bab 2",
+          "next": "b2_12"
+        }
+      ]
     }
-  }
+  },
+  "b2_11": {
+      "text": "Di sepanjang lereng selatan pinggir lembah, tumpukan karung logistik tua dan patok kayu berkarat menandai rute darurat yang dulu pernah dibuka para perintis dan penyelundup jalur pegunungan. Di balik kabut yang bergulung pelan, samar terdengar suara percakapan lirih dari arah ceruk batu yang agak tinggi.\n\nTempat itu tampak menjadi titik singgah sementara bagi mereka yang mencoba menghindari kabut pekat di dasar lembah, meski suasananya penuh kewaspadaan dan saling curiga.",
+      "choices": [
+        {
+          "text": "> Menyelinap mendekati ceruk batu tanpa mengeluarkan suara",
+          "next": "b2_13",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b2_14",
+            "onFail": "b2_15",
+            "failEffects": {
+              "stats": { "hp": -1 }
+            }
+          }
+        },
+        {
+          "text": "> Memperkenalkan diri secara terbuka dengan nada tenang",
+          "next": "b2_14",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b2_14",
+            "onFail": "b2_12"
+          }
+        },
+        {
+          "text": "> Menuju langsung ke jalur turun menuju Desa Bawah Kabut",
+          "next": "b2_16"
+        }
+      ]
+    },
+    "b2_12": {
+      "text": "Kabut di sisi luar jalur terasa lebih sunyi namun menipu mata. Di balik semak duri dan batu runtuhan, kau menemukan tanda panah ukiran lama milik kurir terdahulu yang pernah menyusuri pinggir lembah menuju Desa Bawah Kabut.\n\nTanda itu menunjukkan bahwa sebelum Menara Jam Orva membeku, para kurir dan pencatat ekspedisi sering menggunakan lorong-lorong kecil di pinggir lembah untuk mengirim laporan tanpa melewati jalan utama yang ramai.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Mengikuti tanda ukiran lama menuju jalur turun desa",
+          "next": "b2_16"
+        },
+        {
+          "text": "> Memeriksa sisa perbekalan di dekat patok kayu",
+          "next": "b2_14"
+        }
+      ]
+    },
+    "b2_13": {
+      "text": "Dengan langkah pelan dan bertumpu pada bagian batu yang kering, kau menyusuri tepi ceruk tanpa menimbulkan suara. Dari balik bayangan, tampak seorang penyelundup rute tua sedang memeriksa kompas logamnya yang jarumnya berputar tidak menentu akibat pengaruh kabut.\n\nIa bergumam bahwa sejak katup air dan menara jam berhenti selaras, kompas biasa sering kehilangan arah di sekitar cekungan desa, sementara sebagian penyintas memilih bertahan di bangunan batu yang lebih kokoh.",
+      "onEnter": {
+        "setFlags": { "met_stranger_guide": true, "evac_route_mapped": true }
+      },
+      "choices": [
+        {
+          "text": "> Menanyakan detail jalur aman di pinggir lembah",
+          "next": "b2_14"
+        },
+        {
+          "text": "> Melangkah turun menuju Desa Bawah Kabut",
+          "next": "b2_16"
+        }
+      ]
+    },
+    "b2_14": {
+      "text": "Di dekat sudut ceruk batu, kau menemukan sebuah peta lipat berbahan kain lilin yang pudar serta catatan rute pelarian lama yang sempat dirintis sebelum kabut menebal.\n\nPeta tersebut menandai titik-titik pijakan tinggi di pinggir lembah dan arah menuju tangga batu utama Desa Bawah Kabut—informasi berharga saat menyusun rencana keselamatan maupun menyelidiki pusat lembah.",
+      "onEnter": {
+        "addItem": "Peta Rute Lembah",
+        "setFlags": { "evac_route_mapped": true }
+      },
+      "choices": [
+        {
+          "text": "> Menggulung peta dan menuruni jalur menuju Desa Bawah Kabut",
+          "next": "b2_16"
+        }
+      ]
+    },
+    "b2_15": {
+      "text": "Sebuah kerikil bergulir di bawah tumitmu dan memicu suara gemeretak kecil di tebing curam. Saat berusaha menahan tubuh agar tidak jatuh, lenganmu tergores tepi batu tajam (-1 HP).\n\nMeski gagal menyelinap sepenuhnya tanpa suara, kau berhasil menstabilkan pijakan dan melihat arah tangga batu yang menurun ke kawasan desa di bawah.",
+      "choices": [
+        {
+          "text": "> Melangkah hati-hati menuju tangga batu di ujung jalur",
+          "next": "b2_16"
+        }
+      ]
+    },
+    "b2_16": {
+      "text": "Tangga batu berlumut menurun perlahan di balik tirai kabut kelabu, mengarah langsung ke jantung Desa Bawah Kabut. Di atas sana, Menara Jam Orva tetap berdiri membisu di punggung bukit utara, seolah mengawasi setiap langkah yang turun ke dasar cekungan.\n\nDi sinilah kisah memasuki pertengahan perjalanan—tempat berbagai jejak masa lalu, nasib para penyintas, dan rahasia kabut mulai saling bertaut.",
+      "choices": [
+        {
+          "text": "> Memasuki Bab 3: Desa Bawah Kabut & Percabangan Ending Awal",
+          "next": "b3_01",
+          "effects": {
+            "chapter": "Bab 3: Desa Bawah Kabut & Percabangan Ending Awal"
+          }
+        }
+      ]
+    }
 }
