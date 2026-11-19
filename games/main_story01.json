@@ -1252,6 +1252,473 @@
           }
         }
       ]
+    },
+    "b5_01": {
+      "text": "Pintu baja bundar terbuka dengan derit berat, memperlihatkan ruang luas berkubah batu yang menjadi pusat Nadi Mekanisme Lembah Orva. Di tengah ruangan berdiri inti silinder berbalut cincin tembaga dan kristal pucat yang berdenyut lambat, dikelilingi pipa tekanan tebal yang menjulang lurus ke arah poros bawah Menara Jam Orva.\n\nDi sinilah rahasia utama lembah terungkap: inti mekanisme ini dahulu dirancang untuk menyerap serta mengarahkan energi uap dan resonansi bawah tanah agar tidak meluap menjadi Kabut Kelabu yang mengacaukan ingatan. Namun sejak katup penyelarasan terganggu dan ekspedisi pencatat menghilang, denyut inti menjadi tidak stabil, sementara bayangan kabut yang menyerupai sosok pencatat sesekali melintas di tepi ruangan.",
+      "choices": [
+        {
+          "text": "> Menyelinap di balik lengkungan pipa untuk mendekati inti tanpa memicu getaran",
+          "next": "b5_02",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b5_03",
+            "onFail": "b5_04",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa panel kendali inti, cincin tembaga, dan aliran resonator",
+          "next": "b5_05",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 6,
+            "onSuccess": "b5_03",
+            "onFail": "b5_02"
+          }
+        },
+        {
+          "text": "> Menahan lonjakan tekanan pipa dengan tenaga fisik dan ketahanan",
+          "next": "b5_04",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 6,
+            "onSuccess": "b5_03",
+            "onFail": "b5_04",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        }
+      ]
+    },
+    "b5_02": {
+      "text": "Di sisi kiri ruang inti, sebuah meja instrumen kuno menampung tuas penyalur energi, slot resonansi kristal, dan catatan tangan yang tampak mirip tulisan guru pencatatmu. Tulisan itu memperingatkan bahwa inti ini dapat ditenangkan untuk memulihkan keseimbangan menara, atau dibuka paksa untuk menyerap kekuatan kabut bagi kepentingan yang lebih besar.\n\nSetiap pilihan memiliki konsekuensi besar terhadap arah akhir perjalananmu di puncak Menara Jam Orva.",
+      "choices": [
+        {
+          "text": "> Memasang Resonator Inti pada dudukan instrumen",
+          "next": "b5_03",
+          "req": {
+            "hasItem": "Resonator Inti"
+          }
+        },
+        {
+          "text": "> Menyesuaikan katup bantu dengan perkakas mekanis",
+          "next": "b5_03",
+          "req": {
+            "hasItem": "Kunci Inggris & Roda Gigi"
+          }
+        },
+        {
+          "text": "> Melangkah ke area tengah ruang inti untuk menilai situasi",
+          "next": "b5_06"
+        }
+      ]
+    },
+    "b5_03": {
+      "text": "Denyut kristal di pusat ruangan perlahan merespons tindakanmu dengan cahaya keperakan yang lebih teratur. Melalui resonansi yang selaras, kau menangkap kilasan ingatan terakhir guru pencatatmu sebelum menghilang: ia berusaha menahan kebocoran inti agar Menara Jam Orva tidak kolaps dan menelan seluruh lembah.\n\nKini jalur menuju puncak menara terbuka dengan tekanan yang jauh lebih terkendali.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "resonator_attuned": true, "mist_memory_touched": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan ke jalur pendakian menuju Bab 5 Klaster B",
+          "next": "b5_09"
+        },
+        {
+          "text": "> Memeriksa sudut bayangan di sisi kanan ruang inti",
+          "next": "b5_07"
+        }
+      ]
+    },
+    "b5_04": {
+      "text": "Gelombang tekanan uap dan getaran mekanis menghantam lantai batu saat keseimbangan ruang inti terganggu sesaat. Hantaman puing serta hawa panas yang menyengat membuat tubuhmu terasa perih dan kehabisan stamina (-2 HP).\n\nKau mundur selangkah ke balik pilar batu sambil mengatur napas, memastikan seluruh barang bawaanmu tetap utuh.",
+      "choices": [
+        {
+          "text": "> Menuju area tengah ruang inti dengan hati-hati",
+          "next": "b5_06"
+        },
+        {
+          "text": "> Bergerak ke jalur lanjutan Bab 5 Klaster A",
+          "next": "b5_08"
+        }
+      ]
+    },
+    "b5_05": {
+      "text": "Dari pembacaan skala tekanan dan ukiran pada cincin tembaga, kau melihat bahwa saluran utama ruang inti terhubung langsung ke bandul serta lonceng di Menara Jam Orva. Jika mekanisme menara di puncak kelak diaktifkan kembali dengan sandi yang tepat, nadi bawah tanah ini akan kembali berdetak selaras.\n\nSebuah catatan kecil di sisi panel juga menyinggung cara mengunci atau mengalihkan arsip kebenaran bila kau ingin membawanya keluar dari lembah.",
+      "onEnter": {
+        "setFlags": { "unlocked_archive_lore": true }
+      },
+      "choices": [
+        {
+          "text": "> Melangkah ke tengah ruang inti",
+          "next": "b5_06"
+        },
+        {
+          "text": "> Menuju jalur lanjutan Bab 5 Klaster B",
+          "next": "b5_09"
+        }
+      ]
+    },
+    "b5_06": {
+      "text": "Di tengah ruang inti, kabut kelabu berputar pelan di sekitar tiang penyangga dan membentuk sosok samar yang menyerupai penjaga atau bayangan masa lalu. Suaranya terdengar berbisik di antara dengung mesin—menguji keteguhan niatmu sebelum naik ke puncak menara.\n\nApakah kau akan merespons dengan ketenangan dan empati, atau menjaga jarak dan melangkah tegas?",
+      "choices": [
+        {
+          "text": "> Berbicara dengan tenang dan teguh menghadapi bayangan di ruang inti",
+          "next": "b5_07",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b5_07",
+            "onFail": "b5_08"
+          }
+        },
+        {
+          "text": "> Melanjutkan langkah ke jalur lanjutan Bab 5",
+          "next": "b5_08"
+        }
+      ]
+    },
+    "b5_07": {
+      "text": "Di balik bayangan tiang ruang inti, kau menemukan sebuah tabung segel dan catatan koordinat tangga spiral yang menghubungkan ruang mesin langsung ke ruang jam di puncak Menara Jam Orva.\n\nPengetahuan ini memberi keunggulan strategis saat menghadapi keputusan akhir di bab penutup.",
+      "onEnter": {
+        "stats": { "cha": 1 },
+        "setFlags": { "found_warden_trail": true, "mist_memory_touched": true }
+      },
+      "choices": [
+        {
+          "text": "> Menuju jalur lanjutan Bab 5 Klaster B",
+          "next": "b5_09"
+        }
+      ]
+    },
+    "b5_08": {
+      "text": "Di sisi timur ruang inti, tangga besi spiral yang menyempit menanjak menembus kegelapan ke arah poros Menara Jam Orva. Suara angin pegunungan mulai bercampur dengan dengung mesin yang kian dekat.\n\nKau bersiap menapaki bagian akhir sebelum tiba di puncak menara.",
+      "choices": [
+        {
+          "text": "> Menuju jalur lanjutan Bab 5 Klaster B",
+          "next": "b5_09"
+        },
+        {
+          "text": "> Memeriksa jalur naik menuju Bab 6",
+          "next": "b5_10"
+        }
+      ]
+    },
+    "b5_09": {
+      "text": "Tangga besi spiral menanjak menembus ruang poros yang dipenuhi roda transmisi berdiameter besar dan rantai penarik berlumut. Setiap putaran tangga memperlihatkan perubahan udara—dari hawa lembap berbau mineral di ruang inti menuju angin gunung yang lebih tajam di atas.\n\nPada beberapa anak tangga, terukir penanda tinggi air dan tekanan yang dulu dipakai para pencatat untuk memastikan menara jam tetap berdiri kokoh saat kabut menebal di lembah.",
+      "choices": [
+        {
+          "text": "> Menaiki tangga dengan langkah cepat dan ringan melewati celah sempit",
+          "next": "b5_11",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b5_12",
+            "onFail": "b5_13",
+            "failEffects": {
+              "stats": { "hp": -1 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa tuas pengunci darurat pada bordes tangga poros",
+          "next": "b5_12",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b5_12",
+            "onFail": "b5_11"
+          }
+        },
+        {
+          "text": "> Melanjutkan pendakian menuju ujung Bab 5",
+          "next": "b5_14"
+        }
+      ]
+    },
+    "b5_10": {
+      "text": "Jalur naik di sisi luar poros melewati celah batu dan platform perawatan yang terbuka ke arah tebing dalam. Dari balik kabut yang bergulung pelan, terdengar suara angin bersiul menembus jeruji menara di atas.\n\nKau menjaga pijakan tetap mantap sambil memastikan seluruh bekal dan catatan tetap berada dalam jangkauan.",
+      "choices": [
+        {
+          "text": "> Menarik palka besi yang macet dengan tenaga penuh",
+          "next": "b5_12",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 5,
+            "onSuccess": "b5_12",
+            "onFail": "b5_13",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Menuju bordes akhir Bab 5",
+          "next": "b5_14"
+        }
+      ]
+    },
+    "b5_11": {
+      "text": "Di sebuah bordes kecil di tengah poros, kau menemukan tas kulit usang milik seorang anggota ekspedisi yang sempat berhenti di sini sebelum mencapai puncak. Di dalamnya tersimpan catatan singkat tentang sandi mekanisme lonceng serta keyakinan bahwa nasib Lembah Orva akan ditentukan di ruang jam di atas.",
+      "onEnter": {
+        "setFlags": { "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan langkah ke bordes akhir Bab 5",
+          "next": "b5_14"
+        }
+      ]
+    },
+    "b5_12": {
+      "text": "Dengan ketepatan membaca mekanisme, kau mengencangkan baut pengaman bordes dan mencatat arah aliran tekanan menuju ruang jam. Langkah ini memberikan kesiapan tambahan sebelum menghadapi keputusan penentu di puncak menara.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "resonator_attuned": true }
+      },
+      "choices": [
+        {
+          "text": "> Melanjutkan langkah ke bordes akhir Bab 5",
+          "next": "b5_14"
+        }
+      ]
+    },
+    "b5_13": {
+      "text": "Anak tangga yang basah oleh embun dan getaran logam membuat kakimu sempat terpeleset saat menanjak. Benturan ringan pada besi penyangga meninggalkan nyeri di pergelangan kaki (-2 HP), namun kau tetap mampu berdiri tegak.",
+      "choices": [
+        {
+          "text": "> Menarik napas sebentar lalu menuju bordes akhir Bab 5",
+          "next": "b5_14"
+        }
+      ]
+    },
+    "b5_14": {
+      "text": "Di ujung tangga poros, pintu kayu berlapis perunggu terbuka ke arah ruang jam dan puncak Menara Jam Orva. Angin pegunungan bertiup kencang bercampur kabut tipis yang berputar di sekitar jarum raksasa yang membeku.\n\nSeluruh perjalanan dari gerbang kabut, kanal roda air, desa bawah kabut, terowongan tua, hingga ruang inti kini bermuara ke bab penentuan terakhir.",
+      "choices": [
+        {
+          "text": "> Memasuki Bab 6: Puncak Menara Jam & Penentuan Nasib",
+          "next": "b6_01",
+          "effects": {
+            "chapter": "Bab 6: Puncak Menara Jam & Penentuan Nasib"
+          }
+        }
+      ]
+    },
+    "b6_01": {
+      "text": "Pintu berlapis perunggu terbuka ke ruang jam utama di puncak Menara Jam Orva. Roda gigi raksasa, bandul penyeimbang, dan tuas katup uap berdiri membeku di tengah ruang kubah terbuka tempat angin pegunungan berembus membawa kabut kelabu yang bergulung di bawah sana.\n\nDi balik panel kendali utama, tergeletak sebuah pelat catatan terakhir dari guru pencatatmu yang menjelaskan bahwa dari puncak inilah seluruh sistem lembah dapat ditenangkan, arsipnya dapat diamankan ke dunia luar, atau inti kekuatannya dapat direbut. Di sinilah perjalananmu mencapai puncaknya.",
+      "choices": [
+        {
+          "text": "> Memeriksa tuas bandul, katup penyeimbang, dan panel lonceng menara",
+          "next": "b6_02"
+        },
+        {
+          "text": "> Menyelinap ke sisi panel tinggi untuk mengamati mekanisme tanpa memicu suara",
+          "next": "b6_03",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b6_04",
+            "onFail": "b6_05",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Mempelajari skema kendali inti dan arsip pada meja pengawas",
+          "next": "b6_06",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 6,
+            "onSuccess": "b6_04",
+            "onFail": "b6_02"
+          }
+        }
+      ]
+    },
+    "b6_02": {
+      "text": "Di hadapanmu berdiri konsol utama Menara Jam Orva dengan tuas bandul, jalur pipa tekanan dari ruang inti, serta tempat penyimpanan arsip ekspedisi. Setiap gerak di konsol ini akan menentukan apakah kau memikul tanggung jawab menjaga menara, membawa kebenaran arsip keluar lembah, atau mencoba menguasai kekuatan kabut.",
+      "choices": [
+        {
+          "text": "> Menyelaraskan bandul dan katup untuk mengaktifkan kembali Menara Jam Orva",
+          "next": "end_node_watchkeeper",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 5,
+            "onSuccess": "end_node_watchkeeper",
+            "onFail": "b6_05",
+            "failEffects": {
+              "stats": { "hp": -2 }
+            }
+          }
+        },
+        {
+          "text": "> Mengamankan catatan arsip dan sandi untuk dibawa keluar dari lembah",
+          "next": "end_node_truth_carrier",
+          "req": {
+            "flagTrue": "unlocked_archive_lore"
+          }
+        },
+        {
+          "text": "> Menyalurkan resonansi inti ke konsol demi menguasai kekuatan kabut",
+          "next": "end_node_shadow_sovereign",
+          "req": {
+            "flagTrue": "resonator_attuned"
+          }
+        },
+        {
+          "text": "> Melangkah ke tepi anjungan puncak untuk menenangkan diri",
+          "next": "b6_07"
+        }
+      ]
+    },
+    "b6_03": {
+      "text": "Dengan pijakan lincah di sepanjang balok logam tinggi, kau mencapai sisi konsol tanpa menimbulkan dentuman yang mengganggu keseimbangan menara. Dari sudut pandang ini, seluruh tata letak lembah, kanal, desa, dan aliran kabut tampak jelas di bawah sana.",
+      "choices": [
+        {
+          "text": "> Mengatur ulang bandul menara untuk menjaga keseimbangan Lembah Orva",
+          "next": "end_node_watchkeeper"
+        },
+        {
+          "text": "> Menuju konsol arsip dan jalur turun menuju anjungan puncak",
+          "next": "b6_07"
+        }
+      ]
+    },
+    "b6_04": {
+      "text": "Kau membaca hubungan antara tekanan bawah tanah, sandi pengawas, dan getaran inti dengan jernih. Dengan pemahaman penuh atas catatan ekspedisi dan mekanisme menara, kau kini memegang kendali atas pilihan-pilihan paling menentukan di puncak Orva.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "unlocked_archive_lore": true, "resonator_attuned": true }
+      },
+      "choices": [
+        {
+          "text": "> Mengaktifkan kembali Menara Jam Orva sebagai penjaga keseimbangan",
+          "next": "end_node_watchkeeper"
+        },
+        {
+          "text": "> Menyiapkan berkas arsip dan sandi untuk menyingkap kebenaran ke luar",
+          "next": "end_node_truth_carrier"
+        },
+        {
+          "text": "> Mengarahkan daya inti untuk menguasai kendali di balik kabut",
+          "next": "end_node_shadow_sovereign"
+        }
+      ]
+    },
+    "b6_05": {
+      "text": "Hentakan mekanis yang keras dan angin kencang di puncak menara membuat pijakanmu sempat goyah saat tuas berderit (-2 HP). Meski tubuhmu terasa nyeri, kau berhasil bertahan dan menjaga pegangan pada struktur menara.",
+      "choices": [
+        {
+          "text": "> Bangkit dan melangkah ke anjungan puncak menara",
+          "next": "b6_07"
+        },
+        {
+          "text": "> Mencoba kembali menyelaraskan mekanisme menara",
+          "next": "end_node_watchkeeper"
+        }
+      ]
+    },
+    "b6_06": {
+      "text": "Catatan pada meja pengawas memperlihatkan bagaimana guru pencatatmu menyusun arsip kebenaran sekaligus memperingatkan bahaya ambisi menguasai inti kabut tanpa batas. Semua petunjuk dari awal perjalanan kini terasa saling mengunci.",
+      "onEnter": {
+        "setFlags": { "unlocked_archive_lore": true }
+      },
+      "choices": [
+        {
+          "text": "> Mengambil berkas arsip dan menempuh jalur pembawa kebenaran",
+          "next": "end_node_truth_carrier"
+        },
+        {
+          "text": "> Kembali ke konsol utama untuk menilai pilihan lain",
+          "next": "b6_02"
+        }
+      ]
+    },
+    "b6_07": {
+      "text": "Di anjungan terbuka puncak Menara Jam Orva, angin dingin menyapu wajahmu sementara kabut kelabu berputar pelan di sekeliling lembah. Segel Tembaga di sakumu terasa hangat—mengingatkanmu pada amanah yang membawamu ke tempat ini sejak awal.\n\nSaatnya membuat keputusan terakhir sebelum melangkah ke bagian paling ujung di puncak menara.",
+      "choices": [
+        {
+          "text": "> Berbicara tegas pada gema dan bayangan angin di puncak menara",
+          "next": "b6_08",
+          "skillCheck": {
+            "stat": "cha",
+            "dc": 5,
+            "onSuccess": "b6_08",
+            "onFail": "b6_08"
+          }
+        },
+        {
+          "text": "> Melangkah ke titik penentuan terakhir di puncak menara",
+          "next": "b6_08"
+        }
+      ]
+    },
+    "b6_08": {
+      "text": "Di hadapan roda waktu yang membeku dan kabut yang terus bergulung di bawah, seluruh jejak langkahmu telah membentuk siapa dirimu hari ini. Kau menegakkan tubuh dan menetapkan pilihan pamungkas bagi Lembah Orva.",
+      "choices": [
+        {
+          "text": "> Menghidupkan kembali Menara Jam Orva dan menjaga keseimbangan lembah",
+          "next": "end_node_watchkeeper"
+        },
+        {
+          "text": "> Membawa arsip kebenaran keluar dari lembah untuk membuka rahasia Orva",
+          "next": "end_node_truth_carrier",
+          "req": {
+            "flagTrue": "unlocked_archive_lore"
+          }
+        },
+        {
+          "text": "> Merebut kendali inti mekanisme dan menjadi penguasa di balik kabut",
+          "next": "end_node_shadow_sovereign",
+          "req": {
+            "flagTrue": "resonator_attuned"
+          }
+        }
+      ]
+    },
+    "end_node_watchkeeper": {
+      "text": "Dengan dentuman mekanis yang menggema menembus kabut, bandul dan katup Menara Jam Orva kembali bergerak selaras. Tekanan bawah tanah mereda, kabut kelabu perlahan surut dari jalur-jalur vital, dan lonceng tanda kembali berbunyi sebagai penanda waktu serta keselamatan bagi Lembah Orva.\n\nKau memilih bertahan di menara sebagai penjaga baru—memikul tanggung jawab sunyi demi menjaga lembah tetap hidup dan seimbang.\n\n[ TAMAT — PENJAGA MENARA BARU ]",
+      "ending": "end_watchkeeper",
+      "choices": [
+        {
+          "text": "> Mulai Ulang dari Awal",
+          "next": "b1_01",
+          "effects": {
+            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+          }
+        }
+      ]
+    },
+    "end_node_truth_carrier": {
+      "text": "Kau mengamankan catatan arsip, log ekspedisi, dan sandi pengawas lalu menuruni jalur pegunungan menjauhi kabut yang bergejolak. Di balik punggung bukit Orva, cahaya pagi menyambut langkahmu membawa bukti nyata tentang apa yang sesungguhnya terjadi pada menara dan ekspedisi perintis.\n\nKebenaran Lembah Orva tidak lagi terkubur dalam kabut—namamu akan dikenang sebagai pembawa arsip yang membuka rahasia sejarah tersebut ke dunia luar.\n\n[ TAMAT — PEMBAWA ARSIP KEBENARAN ]",
+      "ending": "end_truth_carrier",
+      "choices": [
+        {
+          "text": "> Mulai Ulang dari Awal",
+          "next": "b1_01",
+          "effects": {
+            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+          }
+        }
+      ]
+    },
+    "end_node_shadow_sovereign": {
+      "text": "Melalui resonansi inti dan mekanisme menara, arus energi serta kabut kelabu tunduk pada kendalimu. Kabut tidak lagi sekadar menyelimuti lembah, melainkan bergerak mengikuti kehendakmu dari balik bayangan Menara Jam Orva.\n\nNamun kekuatan itu menuntut harga yang mahal: batas kemanusiaan dan ingatan lamamu perlahan luruh seiring kau menjadi penguasa tak terlihat di balik kabut.\n\n[ TAMAT — PENGUASA DI BALIK KABUT ]",
+      "ending": "end_shadow_sovereign",
+      "choices": [
+        {
+          "text": "> Mulai Ulang dari Awal",
+          "next": "b1_01",
+          "effects": {
+            "chapter": "Bab 1: Gerbang Kabut & Bayangan Menara"
+          }
+        }
+      ]
     }
 }
 }
