@@ -843,6 +843,120 @@
           }
         }
       ]
+    },
+    "b3_11": {
+      "text": "Di sisi selatan desa, deretan rumah batu yang setengah runtuh berbatasan langsung dengan tebing terowongan tua. Pipa-pipa tembaga berdiameter besar melintang di sepanjang dinding—bekas jalur distribusi uap dan sinyal yang dulu menghubungkan area permukiman bawah dengan ruang mesin dan Menara Jam Orva.\n\nDi balik pintu besi yang separuh terbuka, udara dingin berembus keluar membawa aroma mineral dan logam basah. Dari sini, kau bisa menelusuri celah samping, memeriksa ruang pompa selatan, atau bersiap turun ke kedalaman.",
+      "choices": [
+        {
+          "text": "> Menyelinap ke balik dinding pipa menuju celah observasi",
+          "next": "b3_12",
+          "skillCheck": {
+            "stat": "agi",
+            "dc": 5,
+            "onSuccess": "b3_13",
+            "onFail": "b3_14",
+            "failEffects": {
+              "stats": { "hp": -1 }
+            }
+          }
+        },
+        {
+          "text": "> Memeriksa katup pipa dan ukiran tanda pada dinding selatan",
+          "next": "b3_15",
+          "skillCheck": {
+            "stat": "wit",
+            "dc": 5,
+            "onSuccess": "b3_13",
+            "onFail": "b3_16"
+          }
+        },
+        {
+          "text": "> Melanjutkan langkah ke arah pintu masuk terowongan",
+          "next": "b3_17"
+        }
+      ]
+    },
+    "b3_12": {
+      "text": "Dengan gerak pelan dan terukur, kau merayap di balik bayangan pipa tembaga yang berembun. Dari titik tersebut, tampak jelas bagaimana jalur terowongan di bawah desa mengarah langsung ke ruang arsip tersembunyi dan saluran utama menuju Menara Jam Orva.\n\nTidak ada penjaga di sekitar sini, tetapi kabut yang merembes dari celah lantai terasa jauh lebih pekat dibanding di alun-alun.",
+      "choices": [
+        {
+          "text": "> Memeriksa sudut ceruk di dekat jalur pipa",
+          "next": "b3_13"
+        },
+        {
+          "text": "> Bergerak menuju mulut terowongan di ujung selatan",
+          "next": "b3_17"
+        }
+      ]
+    },
+    "b3_13": {
+      "text": "Di balik tumpukan kotak penyimpanan tua, kau menemukan sebuah Resonator Inti kecil berbahan kuningan dan kristal buram—perangkat pengukur getaran yang dulu dipakai pencatat ekspedisi untuk memantau denyut mekanisme di kedalaman lembah.\n\nSaat kau menggenggamnya, perangkat itu bergetar pelan seirama dengan dengung samar yang datang dari bawah tanah.",
+      "onEnter": {
+        "addItem": "Resonator Inti",
+        "setFlags": { "resonator_attuned": true, "found_warden_trail": true }
+      },
+      "choices": [
+        {
+          "text": "> Menyimpan Resonator Inti dan melangkah ke mulut terowongan",
+          "next": "b3_17"
+        }
+      ]
+    },
+    "b3_14": {
+      "text": "Tanganmu menyentuh permukaan pipa yang licin oleh kondensasi dan lumut saat kau berusaha menjaga keseimbangan di atas batu miring. Pijakan bergeser sedikit dan membuat lututmu terbentur tepi logam (-1 HP).\n\nMeski kurang mulus, kau berhasil bertahan dan melihat arah tangga menuju terowongan di depan.",
+      "choices": [
+        {
+          "text": "> Melangkah hati-hati menuju mulut terowongan",
+          "next": "b3_17"
+        }
+      ]
+    },
+    "b3_15": {
+      "text": "Pada pelat penunjuk di dekat katup selatan, terukir catatan singkat bahwa sebagian pencatat ekspedisi turun ke terowongan bawah tanah membawa kunci arsip dan perangkat penyelarasan sebelum kabut menguasai lembah.\n\nCatatan itu juga mengingatkan bahwa setiap perubahan besar pada katup atau inti mekanisme akan berdampak langsung pada kestabilan Menara Jam Orva.",
+      "onEnter": {
+        "stats": { "wit": 1 },
+        "setFlags": { "unlocked_archive_lore": true }
+      },
+      "choices": [
+        {
+          "text": "> Menuju mulut terowongan di ujung sisi selatan",
+          "next": "b3_17"
+        }
+      ]
+    },
+    "b3_16": {
+      "text": "Di dekat sudut dinding batu, kau berpapasan dengan seorang warga tua penjaga gerbang selatan yang enggan turun ke bawah tanah. Dengan nada ragu, ia memperingatkan bahwa lorong di bawah penuh udara lembap, percabangan tua, dan sisa mekanisme yang tidak lagi patuh pada perintah biasa.\n\nJika kau ingin menembus rintangan fisik di bawah sana, kekuatan tubuh atau kecermatan membaca jalur akan sangat membantu.",
+      "onEnter": {
+        "setFlags": { "met_stranger_guide": true }
+      },
+      "choices": [
+        {
+          "text": "> Menguatkan tekad dan melangkah ke mulut terowongan",
+          "next": "b3_17",
+          "skillCheck": {
+            "stat": "str",
+            "dc": 5,
+            "onSuccess": "b3_13",
+            "onFail": "b3_17"
+          }
+        },
+        {
+          "text": "> Berterima kasih atas peringatannya lalu menuju terowongan",
+          "next": "b3_17"
+        }
+      ]
+    },
+    "b3_17": {
+      "text": "Di hadapanmu terbuka mulut terowongan batu yang menurun ke dalam perut Lembah Orva. Udara sejuk bercampur bau minyak tanah dan batu basah mengalir dari bawah, sementara di atas kepala, bayangan Menara Jam Orva seolah menanti jawaban atas mengapa waktunya terhenti.\n\nKau menarik napas dalam-dalam, menata langkah, dan bersiap turun ke kegelapan terowongan tua.",
+      "choices": [
+        {
+          "text": "> Memasuki Bab 4: Terowongan Tua & Arsip Tersembunyi",
+          "next": "b4_01",
+          "effects": {
+            "chapter": "Bab 4: Terowongan Tua & Arsip Tersembunyi"
+          }
+        }
+      ]
     }
 }
 }
