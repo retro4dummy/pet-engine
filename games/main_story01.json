@@ -44,17 +44,16 @@
     "Jurnal Pencatat Orva": {
       "id": "Jurnal Pencatat Orva",
       "en": "Orva Archivist Journal"
-    }
-  },
-  "Sandi Pengawas": {
+    },
+    "Sandi Pengawas": {
       "id": "Sandi Pengawas",
-      "en": "Warden Chiper"
-    }
-  },
-  "Peta Rute Lembah": {
+      "en": "Warden Cipher"
+    },
+    "Peta Rute Lembah": {
       "id": "Peta Rute Lembah",
       "en": "Valley Route Map"
-    },
+    }
+  },
   "initialState": {
     "node": "b1_01",
     "chapter": {
