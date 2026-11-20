@@ -54,7 +54,7 @@
   "Peta Rute Lembah": {
       "id": "Peta Rute Lembah",
       "en": "Valley Route Map"
-    }
+    },
   "initialState": {
     "node": "b1_01",
     "chapter": {
