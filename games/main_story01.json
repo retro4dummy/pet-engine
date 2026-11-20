@@ -8,6 +8,54 @@
     "id": "Petualangan 6 bab di Lembah Orva dengan 5 statistik utama, latar dunia mendalam, dan percabangan menuju 5 True Endings sejak pertengahan cerita.",
     "en": "A 6-chapter adventure in Orva Valley featuring 5 core stats, rich world lore, and early ending branches starting mid-story."
   },
+  "items": {
+    "Lentera Minyak": {
+      "id": "Lentera Minyak",
+      "en": "Oil Lantern"
+    },
+    "Segel Tembaga": {
+      "id": "Segel Tembaga",
+      "en": "Brass Seal"
+    },
+    "Ransum Perjalanan": {
+      "id": "Ransum Perjalanan",
+      "en": "Travel Rations"
+    },
+    "Botol Eliksir": {
+      "id": "Botol Eliksir",
+      "en": "Elixir Vial"
+    },
+    "Kunci Kuningan": {
+      "id": "Kunci Kuningan",
+      "en": "Brass Key"
+    },
+    "Kunci Inggris & Roda Gigi": {
+      "id": "Kunci Inggris & Roda Gigi",
+      "en": "Wrench & Gear Set"
+    },
+    "Catatan Arsip Orva": {
+      "id": "Catatan Arsip Orva",
+      "en": "Orva Archive Notes"
+    },
+    "Resonator Inti": {
+      "id": "Resonator Inti",
+      "en": "Core Resonator"
+    },
+    "Jurnal Pencatat Orva": {
+      "id": "Jurnal Pencatat Orva",
+      "en": "Orva Archivist Journal"
+    }
+  },
+  "Sandi Pengawas": {
+      "id": "Sandi Pengawas",
+      "en": "Warden Chiper"
+    }
+  },
+  "Peta Rute Lembah": {
+      "id": "Peta Rute Lembah",
+      "en": "Valley Route Map"
+    }
+  },
   "initialState": {
     "node": "b1_01",
     "chapter": {
